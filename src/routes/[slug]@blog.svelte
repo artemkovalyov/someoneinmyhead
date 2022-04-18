@@ -1,7 +1,7 @@
 <script>
-  import { posts } from '$lib/store';
-  import { Md } from './Md.md';
+  import { blogStore } from '$lib/stores';
+
+  const post = $blogStore.posts[0].content;
 </script>
 
-<svelte:component this={Md} />
-<p>{$posts.art}</p>
+<svelte:component this={post} />

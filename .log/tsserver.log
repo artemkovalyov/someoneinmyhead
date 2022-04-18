@@ -11708,3 +11708,526 @@ Info 9866 [19:27:31.011] Finishing updateGraphWorker: Project: /umetra/someonein
 Info 9867 [19:27:33.248] Before ensureProjectForOpenFiles:
 Info 9868 [19:27:33.248] After ensureProjectForOpenFiles:
 Info 9869 [19:27:33.248] got projects updated in background, updating diagnostics for /umetra/someoneinmyhead/src/lib/get-posts.ts,/umetra/someoneinmyhead/src/lib/store.ts,/umetra/someoneinmyhead/src/lib/site.config.ts
+Info 9870 [20:24:42.688] DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src :: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Config: /umetra/someoneinmyhead/tsconfig.json WatchType: Wild card directory
+Info 9871 [20:24:42.689] Elapsed:: 0.7445819973945618ms DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src :: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Config: /umetra/someoneinmyhead/tsconfig.json WatchType: Wild card directory
+Info 9872 [20:24:42.689] DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src :: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Project: /umetra/someoneinmyhead/tsconfig.json WatchType: Failed Lookup Locations
+Info 9873 [20:24:42.689] Elapsed:: 0.20993301272392273ms DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src :: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Project: /umetra/someoneinmyhead/tsconfig.json WatchType: Failed Lookup Locations
+Info 9874 [20:24:42.946] Starting updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json
+Info 9875 [20:24:42.983] Finishing updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json Version: 1684 structureChanged: true structureIsReused:: SafeModules Elapsed: 37.02388298511505ms
+Info 9876 [20:24:42.984] Different program with same set of files
+Info 9877 [20:24:45.445] Before ensureProjectForOpenFiles:
+Info 9878 [20:24:45.445] After ensureProjectForOpenFiles:
+Info 9879 [20:24:45.445] got projects updated in background, updating diagnostics for /umetra/someoneinmyhead/src/lib/get-posts.ts,/umetra/someoneinmyhead/src/lib/store.ts,/umetra/someoneinmyhead/src/lib/site.config.ts
+Info 9880 [20:25:08.874] DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/Head.svelte 0:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Config: /umetra/someoneinmyhead/tsconfig.json WatchType: Wild card directory
+Info 9881 [20:25:08.875] Project: /umetra/someoneinmyhead/tsconfig.json Detected file add/remove of non supported extension: /umetra/someoneinmyhead/src/lib/components/Head.svelte
+Info 9882 [20:25:08.875] Elapsed:: 1.0427190065383911ms DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/Head.svelte 0:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Config: /umetra/someoneinmyhead/tsconfig.json WatchType: Wild card directory
+Info 9883 [20:25:08.875] DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/Head.svelte 0:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Project: /umetra/someoneinmyhead/tsconfig.json WatchType: Failed Lookup Locations
+Info 9884 [20:25:08.876] Elapsed:: 0.3151070177555084ms DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/Head.svelte 0:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Project: /umetra/someoneinmyhead/tsconfig.json WatchType: Failed Lookup Locations
+Info 9885 [20:27:49.975] DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/Head.svelte 0:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Config: /umetra/someoneinmyhead/tsconfig.json WatchType: Wild card directory
+Info 9886 [20:27:49.976] Project: /umetra/someoneinmyhead/tsconfig.json Detected file add/remove of non supported extension: /umetra/someoneinmyhead/src/lib/components/Head.svelte
+Info 9887 [20:27:49.976] Elapsed:: 0.42228201031684875ms DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/Head.svelte 0:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Config: /umetra/someoneinmyhead/tsconfig.json WatchType: Wild card directory
+Info 9888 [20:27:49.976] DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/Head.svelte 1:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Config: /umetra/someoneinmyhead/tsconfig.json WatchType: Wild card directory
+Info 9889 [20:27:49.976] Project: /umetra/someoneinmyhead/tsconfig.json Detected file add/remove of non supported extension: /umetra/someoneinmyhead/src/lib/components/Head.svelte
+Info 9890 [20:27:49.976] Elapsed:: 0.23347797989845276ms DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/Head.svelte 1:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Config: /umetra/someoneinmyhead/tsconfig.json WatchType: Wild card directory
+Info 9891 [20:27:49.976] DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/Head.svelte 0:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Project: /umetra/someoneinmyhead/tsconfig.json WatchType: Failed Lookup Locations
+Info 9892 [20:27:49.976] Elapsed:: 0.13044601678848267ms DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/Head.svelte 0:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Project: /umetra/someoneinmyhead/tsconfig.json WatchType: Failed Lookup Locations
+Info 9893 [20:27:49.976] DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/Head.svelte 1:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Project: /umetra/someoneinmyhead/tsconfig.json WatchType: Failed Lookup Locations
+Info 9894 [20:27:49.977] Elapsed:: 0.09152299165725708ms DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/Head.svelte 1:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Project: /umetra/someoneinmyhead/tsconfig.json WatchType: Failed Lookup Locations
+Info 9895 [21:02:11.347] Starting updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json
+Info 9896 [21:02:11.357] Finishing updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json Version: 1685 structureChanged: false structureIsReused:: Completely Elapsed: 9.316587001085281ms
+Info 9897 [21:02:11.357] Different program with same set of files
+Info 9898 [21:02:13.138] Starting updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json
+Info 9899 [21:02:13.148] Finishing updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json Version: 1686 structureChanged: false structureIsReused:: Completely Elapsed: 9.485871016979218ms
+Info 9900 [21:02:13.148] Different program with same set of files
+Info 9901 [21:02:13.156] getCompletionData: Get current token: 0.013023018836975098
+Info 9902 [21:02:13.156] getCompletionData: Is inside comment: 0.036421000957489014
+Info 9903 [21:02:13.156] getCompletionData: Get previous token: 0.04149201512336731
+Info 9904 [21:02:13.157] getCompletionsAtPosition: isCompletionListBlocker: 0.1452929973602295
+Info 9905 [21:02:13.157] getCompletionData: Semantic work: 0.7660479843616486
+Info 9906 [21:02:13.158] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 0.12688499689102173
+Info 9907 [21:02:13.511] Starting updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json
+Info 9908 [21:02:13.523] Finishing updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json Version: 1687 structureChanged: false structureIsReused:: Completely Elapsed: 11.506226986646652ms
+Info 9909 [21:02:13.523] Different program with same set of files
+Info 9910 [21:02:14.595] Starting updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json
+Info 9911 [21:02:14.605] Finishing updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json Version: 1688 structureChanged: false structureIsReused:: Completely Elapsed: 9.07557201385498ms
+Info 9912 [21:02:14.605] Different program with same set of files
+Info 9913 [21:02:15.568] Starting updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json
+Info 9914 [21:02:15.575] Finishing updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json Version: 1689 structureChanged: false structureIsReused:: Completely Elapsed: 6.684549987316132ms
+Info 9915 [21:02:15.575] Different program with same set of files
+Info 9916 [21:02:15.580] getCompletionData: Get current token: 0.011045008897781372
+Info 9917 [21:02:15.580] getCompletionData: Is inside comment: 0.02965599298477173
+Info 9918 [21:02:15.580] getCompletionData: Get previous token: 0.021077990531921387
+Info 9919 [21:02:15.580] getCompletionsAtPosition: isCompletionListBlocker: 0.005298972129821777
+Info 9920 [21:02:15.585] getExportInfoMap: cache miss or empty; calculating new results
+Info 9921 [21:02:15.618] getExportInfoMap: done in 33.38797798752785 ms
+Info 9922 [21:02:15.658] collectAutoImports: resolved 44 module specifiers, plus 27 ambient and -2836 from cache
+Info 9923 [21:02:15.658] collectAutoImports: response is complete
+Info 9924 [21:02:15.658] collectAutoImports: 40.194578021764755
+Info 9925 [21:02:15.658] getCompletionData: Semantic work: 78.05929899215698
+Info 9926 [21:02:15.670] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 10.82753998041153
+Info 9927 [21:02:17.317] Starting updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json
+Info 9928 [21:02:17.338] Finishing updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json Version: 1690 structureChanged: false structureIsReused:: Completely Elapsed: 20.392637014389038ms
+Info 9929 [21:02:17.338] Different program with same set of files
+Info 9930 [21:02:17.364] getCompletionData: Get current token: 0.010760009288787842
+Info 9931 [21:02:17.364] getCompletionData: Is inside comment: 0.02774500846862793
+Info 9932 [21:02:17.364] getCompletionData: Get previous token: 0.019989013671875
+Info 9933 [21:02:17.364] getCompletionsAtPosition: isCompletionListBlocker: 0.01544100046157837
+Info 9934 [21:02:17.368] getExportInfoMap: cache hit
+Info 9935 [21:02:17.373] collectAutoImports: resolved 0 module specifiers, plus 0 ambient and 3 from cache
+Info 9936 [21:02:17.373] collectAutoImports: response is complete
+Info 9937 [21:02:17.373] collectAutoImports: 5.050965994596481
+Info 9938 [21:02:17.373] getCompletionData: Semantic work: 8.905476987361908
+Info 9939 [21:02:17.385] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 11.538020998239517
+Info 9940 [21:02:18.462] Starting updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json
+Info 9941 [21:02:18.489] Finishing updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json Version: 1691 structureChanged: false structureIsReused:: Completely Elapsed: 26.995101004838943ms
+Info 9942 [21:02:18.489] Different program with same set of files
+Info 9943 [21:02:18.500] getCompletionData: Get current token: 0.01141500473022461
+Info 9944 [21:02:18.500] getCompletionData: Is inside comment: 0.027664989233016968
+Info 9945 [21:02:18.500] getCompletionData: Get previous token: 0.034328997135162354
+Info 9946 [21:02:18.500] getCompletionsAtPosition: isCompletionListBlocker: 0.018507003784179688
+Info 9947 [21:02:18.509] getExportInfoMap: cache hit
+Info 9948 [21:02:18.513] collectAutoImports: resolved 0 module specifiers, plus 0 ambient and 0 from cache
+Info 9949 [21:02:18.513] collectAutoImports: response is complete
+Info 9950 [21:02:18.513] collectAutoImports: 4.489869982004166
+Info 9951 [21:02:18.513] getCompletionData: Semantic work: 13.097308993339539
+Info 9952 [21:02:18.521] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 7.794658005237579
+Info 9953 [21:02:23.202] Starting updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json
+Info 9954 [21:02:23.208] Finishing updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json Version: 1692 structureChanged: false structureIsReused:: Completely Elapsed: 6.272011011838913ms
+Info 9955 [21:02:23.208] Different program with same set of files
+Info 9956 [21:02:24.321] Starting updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json
+Info 9957 [21:02:24.329] Finishing updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json Version: 1693 structureChanged: false structureIsReused:: Completely Elapsed: 7.889341980218887ms
+Info 9958 [21:02:24.329] Different program with same set of files
+Info 9959 [21:02:24.331] Starting updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json
+Info 9960 [21:02:24.335] Finishing updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json Version: 1694 structureChanged: false structureIsReused:: Completely Elapsed: 4.661210000514984ms
+Info 9961 [21:02:24.336] Different program with same set of files
+Info 9962 [21:02:24.892] Starting updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json
+Info 9963 [21:02:24.907] Finishing updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json Version: 1695 structureChanged: false structureIsReused:: Completely Elapsed: 14.772013992071152ms
+Info 9964 [21:02:24.907] Different program with same set of files
+Info 9965 [21:02:26.078] Starting updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json
+Info 9966 [21:02:26.094] Finishing updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json Version: 1696 structureChanged: false structureIsReused:: Completely Elapsed: 15.991663992404938ms
+Info 9967 [21:02:26.094] Different program with same set of files
+Info 9968 [21:02:27.572] Starting updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json
+Info 9969 [21:02:27.580] Finishing updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json Version: 1697 structureChanged: false structureIsReused:: Completely Elapsed: 7.696045994758606ms
+Info 9970 [21:02:27.580] Different program with same set of files
+Info 9971 [21:02:29.362] Starting updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json
+Info 9972 [21:02:29.368] Finishing updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json Version: 1698 structureChanged: false structureIsReused:: Completely Elapsed: 5.88325297832489ms
+Info 9973 [21:02:29.368] Different program with same set of files
+Info 9974 [21:02:30.165] Starting updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json
+Info 9975 [21:02:30.179] Finishing updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json Version: 1699 structureChanged: false structureIsReused:: Completely Elapsed: 13.492312997579575ms
+Info 9976 [21:02:30.179] Different program with same set of files
+Info 9977 [21:02:30.180] Starting updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json
+Info 9978 [21:02:30.196] Finishing updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json Version: 1700 structureChanged: false structureIsReused:: Completely Elapsed: 15.752225995063782ms
+Info 9979 [21:02:30.196] Different program with same set of files
+Info 9980 [21:02:30.506] Starting updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json
+Info 9981 [21:02:30.526] Finishing updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json Version: 1701 structureChanged: false structureIsReused:: Completely Elapsed: 19.67984101176262ms
+Info 9982 [21:02:30.526] Different program with same set of files
+Info 9983 [21:02:35.654] Starting updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json
+Info 9984 [21:02:35.671] Finishing updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json Version: 1702 structureChanged: false structureIsReused:: Completely Elapsed: 16.658427000045776ms
+Info 9985 [21:02:35.671] Different program with same set of files
+Info 9986 [21:02:38.387] Starting updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json
+Info 9987 [21:02:38.391] Finishing updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json Version: 1703 structureChanged: false structureIsReused:: Completely Elapsed: 3.97816801071167ms
+Info 9988 [21:02:38.391] Different program with same set of files
+Info 9989 [21:02:42.802] Starting updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json
+Info 9990 [21:02:42.810] Finishing updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json Version: 1704 structureChanged: false structureIsReused:: Completely Elapsed: 7.212873995304108ms
+Info 9991 [21:02:42.810] Different program with same set of files
+Info 9992 [21:02:43.280] Starting updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json
+Info 9993 [21:02:43.289] Finishing updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json Version: 1705 structureChanged: false structureIsReused:: Completely Elapsed: 8.772138983011246ms
+Info 9994 [21:02:43.289] Different program with same set of files
+Info 9995 [21:02:43.983] Starting updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json
+Info 9996 [21:02:43.992] Finishing updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json Version: 1706 structureChanged: false structureIsReused:: Completely Elapsed: 8.857950001955032ms
+Info 9997 [21:02:43.992] Different program with same set of files
+Info 9998 [21:02:43.998] getCompletionData: Get current token: 0.010015010833740234
+Info 9999 [21:02:43.998] getCompletionData: Is inside comment: 0.016983002424240112
+Info 10000[21:02:43.998] getCompletionData: Get previous token: 0.021196991205215454
+Info 10001[21:02:43.998] getCompletionsAtPosition: isCompletionListBlocker: 0.016906023025512695
+Info 10002[21:02:43.998] getCompletionData: Semantic work: 0.030364006757736206
+Info 10003[21:02:43.998] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 0.042905986309051514
+Info 10004[21:02:44.502] Starting updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json
+Info 10005[21:02:44.510] Finishing updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json Version: 1707 structureChanged: false structureIsReused:: Completely Elapsed: 7.849106013774872ms
+Info 10006[21:02:44.510] Different program with same set of files
+Info 10007[21:02:44.516] getCompletionData: Get current token: 0.011037975549697876
+Info 10008[21:02:44.516] getCompletionData: Is inside comment: 0.025498002767562866
+Info 10009[21:02:44.516] getCompletionData: Get previous token: 0.018097996711730957
+Info 10010[21:02:44.516] getCompletionsAtPosition: isCompletionListBlocker: 0.0077619850635528564
+Info 10011[21:02:44.522] getExportInfoMap: cache hit
+Info 10012[21:02:44.556] collectAutoImports: resolved 2 module specifiers, plus 0 ambient and -20 from cache
+Info 10013[21:02:44.556] collectAutoImports: response is complete
+Info 10014[21:02:44.556] collectAutoImports: 34.03039598464966
+Info 10015[21:02:44.556] getCompletionData: Semantic work: 39.336657017469406
+Info 10016[21:02:44.583] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 26.694798976182938
+Info 10017[21:02:46.769] Starting updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json
+Info 10018[21:02:46.773] Finishing updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json Version: 1708 structureChanged: false structureIsReused:: Completely Elapsed: 3.4649980068206787ms
+Info 10019[21:02:46.773] Different program with same set of files
+Info 10020[21:02:47.017] Format host information updated
+Info 10021[21:02:47.017] Format host information updated
+Info 10022[21:02:47.018] Starting updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json
+Info 10023[21:02:47.024] Finishing updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json Version: 1709 structureChanged: false structureIsReused:: Completely Elapsed: 6.124628007411957ms
+Info 10024[21:02:47.024] Different program with same set of files
+Info 10025[21:02:47.024] getCompletionData: Get current token: 0.03090900182723999
+Info 10026[21:02:47.024] getCompletionData: Is inside comment: 0.014667004346847534
+Info 10027[21:02:47.024] getCompletionData: Get previous token: 0.044454991817474365
+Info 10028[21:02:47.024] getCompletionsAtPosition: isCompletionListBlocker: 0.007139027118682861
+Info 10029[21:02:47.031] getCompletionData: Semantic work: 6.225930005311966
+Info 10030[21:02:47.033] getCompletionData: Get current token: 0.01580798625946045
+Info 10031[21:02:47.033] getCompletionData: Is inside comment: 0.006750017404556274
+Info 10032[21:02:47.033] getCompletionData: Get previous token: 0.022064000368118286
+Info 10033[21:02:47.033] getCompletionsAtPosition: isCompletionListBlocker: 0.006004989147186279
+Info 10034[21:02:47.036] getCompletionData: Semantic work: 2.8558309972286224
+Info 10035[21:02:47.857] Starting updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json
+Info 10036[21:02:47.865] Finishing updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json Version: 1710 structureChanged: false structureIsReused:: Completely Elapsed: 7.403494983911514ms
+Info 10037[21:02:47.865] Different program with same set of files
+Info 10038[21:05:10.658] FileWatcher:: Triggered with /umetra/someoneinmyhead/.svelte-kit/tsconfig.json 1:: WatchInfo: /umetra/someoneinmyhead/.svelte-kit/tsconfig.json 2000 undefined Config: /umetra/someoneinmyhead/tsconfig.json WatchType: Extended config file
+Info 10039[21:05:10.659] Elapsed:: 1.1563519835472107ms FileWatcher:: Triggered with /umetra/someoneinmyhead/.svelte-kit/tsconfig.json 1:: WatchInfo: /umetra/someoneinmyhead/.svelte-kit/tsconfig.json 2000 undefined Config: /umetra/someoneinmyhead/tsconfig.json WatchType: Extended config file
+Info 10040[21:05:10.910] Reloading configured project /umetra/someoneinmyhead/tsconfig.json
+Info 10041[21:05:10.922] Config: /umetra/someoneinmyhead/tsconfig.json : {
+ "rootNames": [
+  "/umetra/someoneinmyhead/src/app.d.ts",
+  "/umetra/someoneinmyhead/src/lib/get-posts.ts",
+  "/umetra/someoneinmyhead/src/lib/site.config.ts",
+  "/umetra/someoneinmyhead/src/lib/store.ts"
+ ],
+ "options": {
+  "moduleResolution": 2,
+  "module": 6,
+  "lib": [
+   "lib.es2020.d.ts",
+   "lib.dom.d.ts"
+  ],
+  "target": 7,
+  "importsNotUsedAsValues": 2,
+  "preserveValueImports": true,
+  "isolatedModules": true,
+  "resolveJsonModule": true,
+  "sourceMap": true,
+  "esModuleInterop": true,
+  "skipLibCheck": true,
+  "forceConsistentCasingInFileNames": true,
+  "baseUrl": "/umetra/someoneinmyhead",
+  "allowJs": true,
+  "checkJs": true,
+  "paths": {
+   "$lib": [
+    "src/lib"
+   ],
+   "$lib/*": [
+    "src/lib/*"
+   ]
+  },
+  "rootDirs": [
+   "/umetra/someoneinmyhead",
+   "/umetra/someoneinmyhead/.svelte-kit/types"
+  ],
+  "pathsBasePath": "/umetra/someoneinmyhead/.svelte-kit",
+  "configFilePath": "/umetra/someoneinmyhead/tsconfig.json"
+ }
+}
+Info 10042[21:05:10.927] Starting updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json
+Info 10043[21:05:10.928] Finishing updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json Version: 1711 structureChanged: false structureIsReused:: Completely Elapsed: 0.35784199833869934ms
+Info 10044[21:05:13.160] Before ensureProjectForOpenFiles:
+Info 10045[21:05:13.160] After ensureProjectForOpenFiles:
+Info 10046[21:05:13.160] got projects updated in background, updating diagnostics for /umetra/someoneinmyhead/src/lib/get-posts.ts,/umetra/someoneinmyhead/src/lib/store.ts,/umetra/someoneinmyhead/src/lib/site.config.ts
+Info 10047[21:33:49.828] Starting updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json
+Info 10048[21:33:49.837] Finishing updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json Version: 1712 structureChanged: false structureIsReused:: Completely Elapsed: 8.268536001443863ms
+Info 10049[21:33:49.837] Different program with same set of files
+Info 10050[21:33:51.259] Starting updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json
+Info 10051[21:33:51.273] Finishing updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json Version: 1713 structureChanged: false structureIsReused:: Completely Elapsed: 13.538058996200562ms
+Info 10052[21:33:51.273] Different program with same set of files
+Info 10053[21:33:51.891] Starting updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json
+Info 10054[21:33:51.911] Finishing updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json Version: 1714 structureChanged: false structureIsReused:: Completely Elapsed: 20.094053000211716ms
+Info 10055[21:33:51.911] Different program with same set of files
+Info 10056[21:33:52.404] Starting updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json
+Info 10057[21:33:52.413] Finishing updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json Version: 1715 structureChanged: false structureIsReused:: Completely Elapsed: 8.987161993980408ms
+Info 10058[21:33:52.413] Different program with same set of files
+Info 10059[21:33:53.168] Starting updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json
+Info 10060[21:33:53.176] Finishing updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json Version: 1716 structureChanged: false structureIsReused:: Completely Elapsed: 8.031304001808167ms
+Info 10061[21:33:53.176] Different program with same set of files
+Info 10062[21:33:54.463] Starting updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json
+Info 10063[21:33:54.471] Finishing updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json Version: 1717 structureChanged: false structureIsReused:: Completely Elapsed: 7.949209988117218ms
+Info 10064[21:33:54.471] Different program with same set of files
+Info 10065[21:33:56.278] Starting updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json
+Info 10066[21:33:56.287] Finishing updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json Version: 1718 structureChanged: false structureIsReused:: Completely Elapsed: 8.424609005451202ms
+Info 10067[21:33:56.287] Different program with same set of files
+Info 10068[21:33:57.257] Starting updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json
+Info 10069[21:33:57.264] Finishing updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json Version: 1719 structureChanged: false structureIsReused:: Completely Elapsed: 6.4126119911670685ms
+Info 10070[21:33:57.264] Different program with same set of files
+Info 10071[21:33:57.646] Starting updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json
+Info 10072[21:33:57.657] Finishing updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json Version: 1720 structureChanged: false structureIsReused:: Completely Elapsed: 10.687932014465332ms
+Info 10073[21:33:57.657] Different program with same set of files
+Info 10074[21:33:57.926] Starting updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json
+Info 10075[21:33:57.931] Finishing updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json Version: 1721 structureChanged: false structureIsReused:: Completely Elapsed: 5.0103619992733ms
+Info 10076[21:33:57.931] Different program with same set of files
+Info 10077[21:33:58.183] Starting updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json
+Info 10078[21:33:58.192] Finishing updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json Version: 1722 structureChanged: false structureIsReused:: Completely Elapsed: 8.93522697687149ms
+Info 10079[21:33:58.192] Different program with same set of files
+Info 10080[21:33:58.956] Starting updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json
+Info 10081[21:33:58.974] Finishing updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json Version: 1723 structureChanged: false structureIsReused:: Completely Elapsed: 17.829497009515762ms
+Info 10082[21:33:58.974] Different program with same set of files
+Info 10083[21:40:11.547] FileWatcher:: Triggered with /umetra/someoneinmyhead/.svelte-kit/tsconfig.json 1:: WatchInfo: /umetra/someoneinmyhead/.svelte-kit/tsconfig.json 2000 undefined Config: /umetra/someoneinmyhead/tsconfig.json WatchType: Extended config file
+Info 10084[21:40:11.548] Elapsed:: 0.20534899830818176ms FileWatcher:: Triggered with /umetra/someoneinmyhead/.svelte-kit/tsconfig.json 1:: WatchInfo: /umetra/someoneinmyhead/.svelte-kit/tsconfig.json 2000 undefined Config: /umetra/someoneinmyhead/tsconfig.json WatchType: Extended config file
+Info 10085[21:40:11.798] Reloading configured project /umetra/someoneinmyhead/tsconfig.json
+Info 10086[21:40:11.821] Config: /umetra/someoneinmyhead/tsconfig.json : {
+ "rootNames": [
+  "/umetra/someoneinmyhead/src/app.d.ts",
+  "/umetra/someoneinmyhead/src/lib/get-posts.ts",
+  "/umetra/someoneinmyhead/src/lib/site.config.ts",
+  "/umetra/someoneinmyhead/src/lib/store.ts"
+ ],
+ "options": {
+  "moduleResolution": 2,
+  "module": 6,
+  "lib": [
+   "lib.es2020.d.ts",
+   "lib.dom.d.ts"
+  ],
+  "target": 7,
+  "importsNotUsedAsValues": 2,
+  "preserveValueImports": true,
+  "isolatedModules": true,
+  "resolveJsonModule": true,
+  "sourceMap": true,
+  "esModuleInterop": true,
+  "skipLibCheck": true,
+  "forceConsistentCasingInFileNames": true,
+  "baseUrl": "/umetra/someoneinmyhead",
+  "allowJs": true,
+  "checkJs": true,
+  "paths": {
+   "$lib": [
+    "src/lib"
+   ],
+   "$lib/*": [
+    "src/lib/*"
+   ]
+  },
+  "rootDirs": [
+   "/umetra/someoneinmyhead",
+   "/umetra/someoneinmyhead/.svelte-kit/types"
+  ],
+  "pathsBasePath": "/umetra/someoneinmyhead/.svelte-kit",
+  "configFilePath": "/umetra/someoneinmyhead/tsconfig.json"
+ }
+}
+Info 10087[21:40:11.831] Starting updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json
+Info 10088[21:40:11.832] Finishing updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json Version: 1724 structureChanged: false structureIsReused:: Completely Elapsed: 0.8991050124168396ms
+Info 10089[21:40:14.048] Before ensureProjectForOpenFiles:
+Info 10090[21:40:14.048] After ensureProjectForOpenFiles:
+Info 10091[21:40:14.048] got projects updated in background, updating diagnostics for /umetra/someoneinmyhead/src/lib/get-posts.ts,/umetra/someoneinmyhead/src/lib/store.ts,/umetra/someoneinmyhead/src/lib/site.config.ts
+Info 10092[21:42:05.282] Starting updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json
+Info 10093[21:42:05.326] Finishing updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json Version: 1725 structureChanged: true structureIsReused:: Not Elapsed: 43.60872799158096ms
+Info 10094[21:42:05.326] Project '/umetra/someoneinmyhead/tsconfig.json' (Configured)
+Info 10095[21:42:05.326] 	Files (160)
+
+Info 10096[21:42:05.326] -----------------------------------------------
+Info 10097[21:42:05.984] DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/store.ts 0:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Config: /umetra/someoneinmyhead/tsconfig.json WatchType: Wild card directory
+Info 10098[21:42:05.988] Elapsed:: 3.4312520027160645ms DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/store.ts 0:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Config: /umetra/someoneinmyhead/tsconfig.json WatchType: Wild card directory
+Info 10099[21:42:05.988] DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/stores.ts 1:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Config: /umetra/someoneinmyhead/tsconfig.json WatchType: Wild card directory
+Info 10100[21:42:05.989] Elapsed:: 0.6871629953384399ms DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/stores.ts 1:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Config: /umetra/someoneinmyhead/tsconfig.json WatchType: Wild card directory
+Info 10101[21:42:05.989] DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/store.ts 0:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Project: /umetra/someoneinmyhead/tsconfig.json WatchType: Failed Lookup Locations
+Info 10102[21:42:05.991] Elapsed:: 1.6400499939918518ms DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/store.ts 0:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Project: /umetra/someoneinmyhead/tsconfig.json WatchType: Failed Lookup Locations
+Info 10103[21:42:05.991] DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/stores.ts 1:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Project: /umetra/someoneinmyhead/tsconfig.json WatchType: Failed Lookup Locations
+Info 10104[21:42:05.992] Elapsed:: 0.41212698817253113ms DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/stores.ts 1:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Project: /umetra/someoneinmyhead/tsconfig.json WatchType: Failed Lookup Locations
+Info 10105[21:42:06.245] Starting updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json
+Info 10106[21:42:06.309] Finishing updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json Version: 1726 structureChanged: true structureIsReused:: Not Elapsed: 63.98973700404167ms
+Info 10107[21:42:06.309] Project '/umetra/someoneinmyhead/tsconfig.json' (Configured)
+Info 10108[21:42:06.309] 	Files (161)
+
+Info 10109[21:42:06.309] -----------------------------------------------
+Info 10110[21:42:08.490] Before ensureProjectForOpenFiles:
+Info 10111[21:42:08.490] After ensureProjectForOpenFiles:
+Info 10112[21:42:08.490] got projects updated in background, updating diagnostics for /umetra/someoneinmyhead/src/lib/get-posts.ts,/umetra/someoneinmyhead/src/lib/site.config.ts
+Info 10113[21:42:23.135] Search path: /umetra/someoneinmyhead/src/lib
+Info 10114[21:42:23.135] For info: /umetra/someoneinmyhead/src/lib/stores.ts :: Config file name: /umetra/someoneinmyhead/tsconfig.json
+Info 10115[21:52:01.839] FileWatcher:: Triggered with /umetra/someoneinmyhead/.svelte-kit/tsconfig.json 1:: WatchInfo: /umetra/someoneinmyhead/.svelte-kit/tsconfig.json 2000 undefined Config: /umetra/someoneinmyhead/tsconfig.json WatchType: Extended config file
+Info 10116[21:52:01.839] Elapsed:: 0.06504097580909729ms FileWatcher:: Triggered with /umetra/someoneinmyhead/.svelte-kit/tsconfig.json 1:: WatchInfo: /umetra/someoneinmyhead/.svelte-kit/tsconfig.json 2000 undefined Config: /umetra/someoneinmyhead/tsconfig.json WatchType: Extended config file
+Info 10117[21:52:02.089] Reloading configured project /umetra/someoneinmyhead/tsconfig.json
+Info 10118[21:52:02.104] Config: /umetra/someoneinmyhead/tsconfig.json : {
+ "rootNames": [
+  "/umetra/someoneinmyhead/src/app.d.ts",
+  "/umetra/someoneinmyhead/src/lib/get-posts.ts",
+  "/umetra/someoneinmyhead/src/lib/site.config.ts",
+  "/umetra/someoneinmyhead/src/lib/stores.ts"
+ ],
+ "options": {
+  "moduleResolution": 2,
+  "module": 6,
+  "lib": [
+   "lib.es2020.d.ts",
+   "lib.dom.d.ts"
+  ],
+  "target": 7,
+  "importsNotUsedAsValues": 2,
+  "preserveValueImports": true,
+  "isolatedModules": true,
+  "resolveJsonModule": true,
+  "sourceMap": true,
+  "esModuleInterop": true,
+  "skipLibCheck": true,
+  "forceConsistentCasingInFileNames": true,
+  "baseUrl": "/umetra/someoneinmyhead",
+  "allowJs": true,
+  "checkJs": true,
+  "paths": {
+   "$lib": [
+    "src/lib"
+   ],
+   "$lib/*": [
+    "src/lib/*"
+   ]
+  },
+  "rootDirs": [
+   "/umetra/someoneinmyhead",
+   "/umetra/someoneinmyhead/.svelte-kit/types"
+  ],
+  "pathsBasePath": "/umetra/someoneinmyhead/.svelte-kit",
+  "configFilePath": "/umetra/someoneinmyhead/tsconfig.json"
+ }
+}
+Info 10119[21:52:02.118] Starting updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json
+Info 10120[21:52:02.128] Finishing updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json Version: 1727 structureChanged: false structureIsReused:: Completely Elapsed: 10.398414999246597ms
+Info 10121[21:52:02.128] Different program with same set of files
+Info 10122[21:52:04.340] Before ensureProjectForOpenFiles:
+Info 10123[21:52:04.340] After ensureProjectForOpenFiles:
+Info 10124[21:52:04.342] got projects updated in background, updating diagnostics for /umetra/someoneinmyhead/src/lib/get-posts.ts,/umetra/someoneinmyhead/src/lib/site.config.ts,/umetra/someoneinmyhead/src/lib/stores.ts
+Info 10125[21:55:51.930] FileWatcher:: Triggered with /umetra/someoneinmyhead/.svelte-kit/tsconfig.json 1:: WatchInfo: /umetra/someoneinmyhead/.svelte-kit/tsconfig.json 2000 undefined Config: /umetra/someoneinmyhead/tsconfig.json WatchType: Extended config file
+Info 10126[21:55:51.930] Elapsed:: 0.20224401354789734ms FileWatcher:: Triggered with /umetra/someoneinmyhead/.svelte-kit/tsconfig.json 1:: WatchInfo: /umetra/someoneinmyhead/.svelte-kit/tsconfig.json 2000 undefined Config: /umetra/someoneinmyhead/tsconfig.json WatchType: Extended config file
+Info 10127[21:55:52.180] Reloading configured project /umetra/someoneinmyhead/tsconfig.json
+Info 10128[21:55:52.185] Config: /umetra/someoneinmyhead/tsconfig.json : {
+ "rootNames": [
+  "/umetra/someoneinmyhead/src/app.d.ts",
+  "/umetra/someoneinmyhead/src/lib/get-posts.ts",
+  "/umetra/someoneinmyhead/src/lib/site.config.ts",
+  "/umetra/someoneinmyhead/src/lib/stores.ts"
+ ],
+ "options": {
+  "moduleResolution": 2,
+  "module": 6,
+  "lib": [
+   "lib.es2020.d.ts",
+   "lib.dom.d.ts"
+  ],
+  "target": 7,
+  "importsNotUsedAsValues": 2,
+  "preserveValueImports": true,
+  "isolatedModules": true,
+  "resolveJsonModule": true,
+  "sourceMap": true,
+  "esModuleInterop": true,
+  "skipLibCheck": true,
+  "forceConsistentCasingInFileNames": true,
+  "baseUrl": "/umetra/someoneinmyhead",
+  "allowJs": true,
+  "checkJs": true,
+  "paths": {
+   "$lib": [
+    "src/lib"
+   ],
+   "$lib/*": [
+    "src/lib/*"
+   ]
+  },
+  "rootDirs": [
+   "/umetra/someoneinmyhead",
+   "/umetra/someoneinmyhead/.svelte-kit/types"
+  ],
+  "pathsBasePath": "/umetra/someoneinmyhead/.svelte-kit",
+  "configFilePath": "/umetra/someoneinmyhead/tsconfig.json"
+ }
+}
+Info 10129[21:55:52.191] Starting updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json
+Info 10130[21:55:52.191] Finishing updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json Version: 1728 structureChanged: false structureIsReused:: Completely Elapsed: 0.4960800111293793ms
+Info 10131[21:55:54.431] Before ensureProjectForOpenFiles:
+Info 10132[21:55:54.431] After ensureProjectForOpenFiles:
+Info 10133[21:55:54.431] got projects updated in background, updating diagnostics for /umetra/someoneinmyhead/src/lib/get-posts.ts,/umetra/someoneinmyhead/src/lib/site.config.ts
+Info 10134[21:56:49.954] FileWatcher:: Triggered with /umetra/someoneinmyhead/.svelte-kit/tsconfig.json 1:: WatchInfo: /umetra/someoneinmyhead/.svelte-kit/tsconfig.json 2000 undefined Config: /umetra/someoneinmyhead/tsconfig.json WatchType: Extended config file
+Info 10135[21:56:49.954] Elapsed:: 0.04995700716972351ms FileWatcher:: Triggered with /umetra/someoneinmyhead/.svelte-kit/tsconfig.json 1:: WatchInfo: /umetra/someoneinmyhead/.svelte-kit/tsconfig.json 2000 undefined Config: /umetra/someoneinmyhead/tsconfig.json WatchType: Extended config file
+Info 10136[21:56:50.204] Reloading configured project /umetra/someoneinmyhead/tsconfig.json
+Info 10137[21:56:50.209] Config: /umetra/someoneinmyhead/tsconfig.json : {
+ "rootNames": [
+  "/umetra/someoneinmyhead/src/app.d.ts",
+  "/umetra/someoneinmyhead/src/lib/get-posts.ts",
+  "/umetra/someoneinmyhead/src/lib/site.config.ts",
+  "/umetra/someoneinmyhead/src/lib/stores.ts"
+ ],
+ "options": {
+  "moduleResolution": 2,
+  "module": 6,
+  "lib": [
+   "lib.es2020.d.ts",
+   "lib.dom.d.ts"
+  ],
+  "target": 7,
+  "importsNotUsedAsValues": 2,
+  "preserveValueImports": true,
+  "isolatedModules": true,
+  "resolveJsonModule": true,
+  "sourceMap": true,
+  "esModuleInterop": true,
+  "skipLibCheck": true,
+  "forceConsistentCasingInFileNames": true,
+  "baseUrl": "/umetra/someoneinmyhead",
+  "allowJs": true,
+  "checkJs": true,
+  "paths": {
+   "$lib": [
+    "src/lib"
+   ],
+   "$lib/*": [
+    "src/lib/*"
+   ]
+  },
+  "rootDirs": [
+   "/umetra/someoneinmyhead",
+   "/umetra/someoneinmyhead/.svelte-kit/types"
+  ],
+  "pathsBasePath": "/umetra/someoneinmyhead/.svelte-kit",
+  "configFilePath": "/umetra/someoneinmyhead/tsconfig.json"
+ }
+}
+Info 10138[21:56:50.214] Starting updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json
+Info 10139[21:56:50.214] Finishing updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json Version: 1729 structureChanged: false structureIsReused:: Completely Elapsed: 0.39194899797439575ms
+Info 10140[21:56:52.454] Before ensureProjectForOpenFiles:
+Info 10141[21:56:52.455] After ensureProjectForOpenFiles:
+Info 10142[21:56:52.456] got projects updated in background, updating diagnostics for /umetra/someoneinmyhead/src/lib/get-posts.ts,/umetra/someoneinmyhead/src/lib/site.config.ts
+Info 10143[22:00:09.140] Search path: /umetra/someoneinmyhead/src/lib
+Info 10144[22:00:09.140] For info: /umetra/someoneinmyhead/src/lib/stores.ts :: Config file name: /umetra/someoneinmyhead/tsconfig.json
+Info 10145[22:00:36.864] Starting updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json
+Info 10146[22:00:36.872] Finishing updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json Version: 1730 structureChanged: false structureIsReused:: Completely Elapsed: 7.937000006437302ms
+Info 10147[22:00:36.873] Different program with same set of files
+Info 10148[22:00:36.880] getCompletionData: Get current token: 0.01220199465751648
+Info 10149[22:00:36.880] getCompletionData: Is inside comment: 0.0275459885597229
+Info 10150[22:00:36.880] getCompletionData: Get previous token: 0.0192050039768219
+Info 10151[22:00:36.880] getCompletionsAtPosition: isCompletionListBlocker: 0.01745399832725525
+Info 10152[22:00:36.887] getExportInfoMap: cache miss or empty; calculating new results
+Info 10153[22:00:36.932] getExportInfoMap: done in 45.10943701863289 ms
+Info 10154[22:00:36.967] collectAutoImports: resolved 1 module specifiers, plus 27 ambient and 601 from cache
+Info 10155[22:00:36.967] collectAutoImports: response is complete
+Info 10156[22:00:36.967] collectAutoImports: 34.88895198702812
+Info 10157[22:00:36.967] getCompletionData: Semantic work: 86.64765200018883
+Info 10158[22:00:36.980] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 12.521268010139465
+Info 10159[22:00:38.442] Format host information updated
+Info 10160[22:00:38.443] Format host information updated
+Info 10161[22:00:38.443] Starting updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json
+Info 10162[22:00:38.449] Finishing updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json Version: 1731 structureChanged: false structureIsReused:: Completely Elapsed: 5.66482400894165ms
+Info 10163[22:00:38.449] Different program with same set of files
+Info 10164[22:00:38.449] getCompletionData: Get current token: 0.023941010236740112
+Info 10165[22:00:38.449] getCompletionData: Is inside comment: 0.010071992874145508
+Info 10166[22:00:38.449] getCompletionData: Get previous token: 0.03714999556541443
+Info 10167[22:00:38.449] getCompletionsAtPosition: isCompletionListBlocker: 0.01844501495361328
+Info 10168[22:00:38.457] getCompletionData: Semantic work: 7.4572130143642426
+Info 10169[22:00:38.458] getCompletionData: Get current token: 0.027435004711151123
+Info 10170[22:00:38.458] getCompletionData: Is inside comment: 0.0043840110301971436
+Info 10171[22:00:38.458] getCompletionData: Get previous token: 0.014349013566970825
+Info 10172[22:00:38.458] getCompletionsAtPosition: isCompletionListBlocker: 0.013015002012252808
+Info 10173[22:00:38.462] getCompletionData: Semantic work: 4.378733992576599
+Info 10174[22:00:48.297] Starting updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json
+Info 10175[22:00:48.308] Finishing updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json Version: 1732 structureChanged: false structureIsReused:: Completely Elapsed: 10.801163017749786ms
+Info 10176[22:00:48.308] Different program with same set of files
+Info 10177[22:00:49.082] Starting updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json
+Info 10178[22:00:49.101] Finishing updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json Version: 1733 structureChanged: false structureIsReused:: Completely Elapsed: 18.1526959836483ms
+Info 10179[22:00:49.101] Different program with same set of files
+Info 10180[22:00:49.102] Starting updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json
+Info 10181[22:00:49.124] Finishing updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json Version: 1734 structureChanged: false structureIsReused:: Completely Elapsed: 22.467831999063492ms
+Info 10182[22:00:49.125] Different program with same set of files
+Info 10183[22:00:49.461] Starting updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json
+Info 10184[22:00:49.473] Finishing updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json Version: 1735 structureChanged: false structureIsReused:: Completely Elapsed: 11.403315991163254ms
+Info 10185[22:00:49.473] Different program with same set of files

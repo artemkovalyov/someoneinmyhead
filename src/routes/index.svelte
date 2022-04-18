@@ -1,7 +1,5 @@
 <script>
-  import { blogStore } from '$lib/store';
-
-  console.log(blogStore);
+  import { blogStore } from '$lib/stores';
 </script>
 
 <main class="prose-sm md:prose-base lg:prose-lg xl:prose-xl 2xl:prose-2xl">

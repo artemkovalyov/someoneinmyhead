@@ -4,15 +4,17 @@ interface Config {
   theme?: Object;
   basePath?: string;
   postsPerPage: number;
+  author: string;
   navbar: Array<Object>;
 }
 
 export default (): Config => {
   return {
-    title: 'My blog, yay!',
+    title: 'Someone In My Head',
     description: 'My Blog description, yay!',
     basePath: 'http://localhost:3000',
     postsPerPage: 7,
+    author: 'Artem Kovalov',
     // Main top menu links
     navbar: [
       {
