@@ -1,0 +1,38 @@
+[15:03:07.477] Global cache location '/home/artem/.cache/typescript/4.6', safe file path '/home/artem/.nvm/versions/node/v16.14.2/lib/node_modules/typescript/lib/typingSafeList.json', types map path /home/artem/.nvm/versions/node/v16.14.2/lib/node_modules/typescript/lib/typesMap.json
+[15:03:07.478] Processing cache location '/home/artem/.cache/typescript/4.6'
+[15:03:07.478] Trying to find '/home/artem/.cache/typescript/4.6/package.json'...
+[15:03:07.479] Loaded content of '/home/artem/.cache/typescript/4.6/package.json': {"private":true,"dependencies":{"types-registry":"^0.1.588"},"devDependencies":{"@types/assert":"^1.5.6","@types/babel__core":"^7.1.19","@types/cookie":"^0.5.0","@types/eslint":"^8.4.1","@types/eslint-config-prettier":"^6.11.0","@types/eslint-plugin-prettier":"^3.1.0","@types/estree":"^0.0.51","@types/events":"^3.0.0","@types/lodash.castarray":"^4.4.6","@types/lodash.merge":"^4.6.6","@types/mermaid":"^8.2.9","@types/prettier":"^2.6.0","@types/prismjs":"^1.26.0","@types/react":"^18.0.3","@types/react-dom":"^18.0.0","@types/react-table":"^7.7.10","@types/sass":"^1.43.1","@types/tailwindcss":"^3.0.10","@types/ws":"^8.5.3"}}
+[15:03:07.479] Loaded content of '/home/artem/.cache/typescript/4.6/package-lock.json'
+[15:03:07.490] Adding entry into typings cache: 'assert' => '/home/artem/.cache/typescript/4.6/node_modules/@types/assert/index.d.ts'
+[15:03:07.492] Adding entry into typings cache: 'babel__core' => '/home/artem/.cache/typescript/4.6/node_modules/@types/babel__core/index.d.ts'
+[15:03:07.494] Adding entry into typings cache: 'cookie' => '/home/artem/.cache/typescript/4.6/node_modules/@types/cookie/index.d.ts'
+[15:03:07.496] Adding entry into typings cache: 'eslint' => '/home/artem/.cache/typescript/4.6/node_modules/@types/eslint/index.d.ts'
+[15:03:07.498] Adding entry into typings cache: 'eslint-config-prettier' => '/home/artem/.cache/typescript/4.6/node_modules/@types/eslint-config-prettier/index.d.ts'
+[15:03:07.500] Adding entry into typings cache: 'eslint-plugin-prettier' => '/home/artem/.cache/typescript/4.6/node_modules/@types/eslint-plugin-prettier/index.d.ts'
+[15:03:07.501] Adding entry into typings cache: 'estree' => '/home/artem/.cache/typescript/4.6/node_modules/@types/estree/index.d.ts'
+[15:03:07.503] Adding entry into typings cache: 'events' => '/home/artem/.cache/typescript/4.6/node_modules/@types/events/index.d.ts'
+[15:03:07.505] Adding entry into typings cache: 'lodash.castarray' => '/home/artem/.cache/typescript/4.6/node_modules/@types/lodash.castarray/index.d.ts'
+[15:03:07.508] Adding entry into typings cache: 'lodash.merge' => '/home/artem/.cache/typescript/4.6/node_modules/@types/lodash.merge/index.d.ts'
+[15:03:07.510] Adding entry into typings cache: 'mermaid' => '/home/artem/.cache/typescript/4.6/node_modules/@types/mermaid/index.d.ts'
+[15:03:07.512] Adding entry into typings cache: 'prettier' => '/home/artem/.cache/typescript/4.6/node_modules/@types/prettier/index.d.ts'
+[15:03:07.514] Adding entry into typings cache: 'prismjs' => '/home/artem/.cache/typescript/4.6/node_modules/@types/prismjs/index.d.ts'
+[15:03:07.519] Adding entry into typings cache: 'react' => '/home/artem/.cache/typescript/4.6/node_modules/@types/react/index.d.ts'
+[15:03:07.521] Adding entry into typings cache: 'react-dom' => '/home/artem/.cache/typescript/4.6/node_modules/@types/react-dom/index.d.ts'
+[15:03:07.522] Adding entry into typings cache: 'react-table' => '/home/artem/.cache/typescript/4.6/node_modules/@types/react-table/index.d.ts'
+[15:03:07.523] Adding entry into typings cache: 'sass' => '/home/artem/.cache/typescript/4.6/node_modules/@types/sass/index.d.ts'
+[15:03:07.524] Adding entry into typings cache: 'tailwindcss' => '/home/artem/.cache/typescript/4.6/node_modules/@types/tailwindcss/index.d.ts'
+[15:03:07.525] Adding entry into typings cache: 'ws' => '/home/artem/.cache/typescript/4.6/node_modules/@types/ws/index.d.ts'
+[15:03:07.525] Finished processing cache location '/home/artem/.cache/typescript/4.6'
+[15:03:07.525] Process id: 265834
+[15:03:07.525] NPM location: /home/artem/.nvm/versions/node/v16.14.2/bin/npm (explicit '--npmLocation' not  provided)
+[15:03:07.525] validateDefaultNpmLocation: false
+[15:03:07.526] Npm config file: /home/artem/.cache/typescript/4.6/package.json
+[15:03:07.526] Updating types-registry npm package...
+[15:03:07.526] Exec: /home/artem/.nvm/versions/node/v16.14.2/bin/npm install --ignore-scripts types-registry@latest
+[15:03:08.421]     Succeeded. stdout:
+    
+    up to date, audited 34 packages in 737ms
+
+found 0 vulnerabilities
+
+[15:03:08.421] Updated types-registry npm package
