@@ -5,7 +5,13 @@ interface Config {
   basePath?: string;
   postsPerPage: number;
   author: string;
-  navbar: Array<Object>;
+  navbar: Array<Navbar>;
+}
+
+interface Navbar {
+  label: string;
+  href?: string;
+  path?: string;
 }
 
 export default (): Config => {

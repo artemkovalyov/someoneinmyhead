@@ -1,6 +1,6 @@
 ---
-slug: document-slag
-title: Document Title
+slug: beta-teta
+title: Beta
 description:  Description will go to meta
 series:  Series name
 seriesId:  Series ID

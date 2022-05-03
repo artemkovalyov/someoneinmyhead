@@ -1,5 +1,5 @@
 ---
-slug: document-slag
+slug: alfa
 title: Document Title
 description:  Description will go to meta
 series:  Series name

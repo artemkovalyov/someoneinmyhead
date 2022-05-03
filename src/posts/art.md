@@ -1,14 +1,15 @@
 ---
-slug: document-slag
-title: Document Title
+slug: art-slug
+title: Art
 description:  Description will go to meta
 series:  Series name
 seriesId:  Series ID
-date:  Mon Apr 18 17:32:33 2022
 image:  path to image
-author:  Artem Kovalov
-published:  false
-publishAt:  Mon Apr 18 17:32:33 2022
+author:  ArtAuthor
+section: wow wow
+publishedTime:  Mon Apr 18 17:32:33 2022
+modifiedTime: ''
+expirationTime: ''
 tags:
 - a
 - b

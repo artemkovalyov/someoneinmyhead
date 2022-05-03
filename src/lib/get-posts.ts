@@ -1,4 +1,4 @@
-// directly import all the blog posts thanks to Vite's feature: https://vitejs.dev/guide/features.html#glob-import
+// directly import all the blog posts from the file system thanks to Vite's feature: https://vitejs.dev/guide/features.html#glob-import
 const postModules = import.meta.globEager('../posts/**/*');
 
 interface Metadata {
@@ -22,19 +22,22 @@ interface Posts {
   content: Object;
 }
 
-export default (): Array<Posts> =>
+// process imported posts data and map into an Array of post objects with semantical structure
+const Posts Array<Posts> =>
   Object.entries(postModules).map(([path, post]): Posts => {
+    // collect and augment the metadata
     const metadata = {
-      ...post.metadata,
       date: new Date(post.metadata.date),
-      publishAt: new Date(post.metadata.publishAt)
+      publishAt: new Date(post.metadata.publishAt),
+      ...post.metadata
     };
-
+    // markdown data to render with `mdsvex`
     const content = post.default;
 
+    // post structure
     return {
-      path,
-      metadata,
-      content
+      path, // path to the markdown post file
+      metadata, // metadata collected from the frontmatter
+      content // actual markdown to reneder
     };
   });
