@@ -640,3 +640,287 @@ Info 469  [21:46:04.002] DirectoryWatcher:: Triggered with /umetra/someoneinmyhe
 Info 470  [21:46:04.003] Elapsed:: 0.14806398749351501ms DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/NavBar.svelte 0:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Project: /umetra/someoneinmyhead/tsconfig.json WatchType: Failed Lookup Locations
 Info 471  [21:46:04.003] DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/NavBar.svelte 1:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Project: /umetra/someoneinmyhead/tsconfig.json WatchType: Failed Lookup Locations
 Info 472  [21:46:04.003] Elapsed:: 0.15931400656700134ms DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/NavBar.svelte 1:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Project: /umetra/someoneinmyhead/tsconfig.json WatchType: Failed Lookup Locations
+Info 473  [22:08:05.517] DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/HumburgeMenu.svelte 0:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Config: /umetra/someoneinmyhead/tsconfig.json WatchType: Wild card directory
+Info 474  [22:08:05.518] Project: /umetra/someoneinmyhead/tsconfig.json Detected file add/remove of non supported extension: /umetra/someoneinmyhead/src/lib/components/HumburgeMenu.svelte
+Info 475  [22:08:05.518] Elapsed:: 0.1733519732952118ms DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/HumburgeMenu.svelte 0:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Config: /umetra/someoneinmyhead/tsconfig.json WatchType: Wild card directory
+Info 476  [22:08:05.518] DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/HumburgeMenu.svelte 0:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Project: /umetra/someoneinmyhead/tsconfig.json WatchType: Failed Lookup Locations
+Info 477  [22:08:05.518] Elapsed:: 0.054857999086380005ms DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/HumburgeMenu.svelte 0:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Project: /umetra/someoneinmyhead/tsconfig.json WatchType: Failed Lookup Locations
+Info 478  [22:12:35.181] DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/Logo.svelte 0:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Config: /umetra/someoneinmyhead/tsconfig.json WatchType: Wild card directory
+Info 479  [22:12:35.182] Project: /umetra/someoneinmyhead/tsconfig.json Detected file add/remove of non supported extension: /umetra/someoneinmyhead/src/lib/components/Logo.svelte
+Info 480  [22:12:35.182] Elapsed:: 0.2644430100917816ms DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/Logo.svelte 0:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Config: /umetra/someoneinmyhead/tsconfig.json WatchType: Wild card directory
+Info 481  [22:12:35.182] DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/Logo.svelte 0:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Project: /umetra/someoneinmyhead/tsconfig.json WatchType: Failed Lookup Locations
+Info 482  [22:12:35.182] Elapsed:: 0.21167898178100586ms DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/Logo.svelte 0:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Project: /umetra/someoneinmyhead/tsconfig.json WatchType: Failed Lookup Locations
+Info 483  [22:13:08.732] DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/Logo.svelte 0:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Config: /umetra/someoneinmyhead/tsconfig.json WatchType: Wild card directory
+Info 484  [22:13:08.732] Project: /umetra/someoneinmyhead/tsconfig.json Detected file add/remove of non supported extension: /umetra/someoneinmyhead/src/lib/components/Logo.svelte
+Info 485  [22:13:08.732] Elapsed:: 0.5039310157299042ms DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/Logo.svelte 0:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Config: /umetra/someoneinmyhead/tsconfig.json WatchType: Wild card directory
+Info 486  [22:13:08.733] DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/Logo.svelte 1:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Config: /umetra/someoneinmyhead/tsconfig.json WatchType: Wild card directory
+Info 487  [22:13:08.733] Project: /umetra/someoneinmyhead/tsconfig.json Detected file add/remove of non supported extension: /umetra/someoneinmyhead/src/lib/components/Logo.svelte
+Info 488  [22:13:08.733] Elapsed:: 0.42857199907302856ms DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/Logo.svelte 1:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Config: /umetra/someoneinmyhead/tsconfig.json WatchType: Wild card directory
+Info 489  [22:13:08.733] DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/Logo.svelte 0:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Project: /umetra/someoneinmyhead/tsconfig.json WatchType: Failed Lookup Locations
+Info 490  [22:13:08.733] Elapsed:: 0.16475701332092285ms DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/Logo.svelte 0:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Project: /umetra/someoneinmyhead/tsconfig.json WatchType: Failed Lookup Locations
+Info 491  [22:13:08.733] DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/Logo.svelte 1:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Project: /umetra/someoneinmyhead/tsconfig.json WatchType: Failed Lookup Locations
+Info 492  [22:13:08.734] Elapsed:: 0.11411699652671814ms DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/Logo.svelte 1:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Project: /umetra/someoneinmyhead/tsconfig.json WatchType: Failed Lookup Locations
+Info 493  [22:14:03.443] DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/HumburgeMenu.svelte 0:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Config: /umetra/someoneinmyhead/tsconfig.json WatchType: Wild card directory
+Info 494  [22:14:03.443] Project: /umetra/someoneinmyhead/tsconfig.json Detected file add/remove of non supported extension: /umetra/someoneinmyhead/src/lib/components/HumburgeMenu.svelte
+Info 495  [22:14:03.444] Elapsed:: 0.41742199659347534ms DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/HumburgeMenu.svelte 0:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Config: /umetra/someoneinmyhead/tsconfig.json WatchType: Wild card directory
+Info 496  [22:14:03.444] DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/HumburgeMenu.svelte 1:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Config: /umetra/someoneinmyhead/tsconfig.json WatchType: Wild card directory
+Info 497  [22:14:03.444] Project: /umetra/someoneinmyhead/tsconfig.json Detected file add/remove of non supported extension: /umetra/someoneinmyhead/src/lib/components/HumburgeMenu.svelte
+Info 498  [22:14:03.444] Elapsed:: 0.26586800813674927ms DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/HumburgeMenu.svelte 1:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Config: /umetra/someoneinmyhead/tsconfig.json WatchType: Wild card directory
+Info 499  [22:14:03.444] DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/HumburgeMenu.svelte 0:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Project: /umetra/someoneinmyhead/tsconfig.json WatchType: Failed Lookup Locations
+Info 500  [22:14:03.444] Elapsed:: 0.12868201732635498ms DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/HumburgeMenu.svelte 0:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Project: /umetra/someoneinmyhead/tsconfig.json WatchType: Failed Lookup Locations
+Info 501  [22:14:03.444] DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/HumburgeMenu.svelte 1:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Project: /umetra/someoneinmyhead/tsconfig.json WatchType: Failed Lookup Locations
+Info 502  [22:14:03.445] Elapsed:: 0.1401209831237793ms DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/HumburgeMenu.svelte 1:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Project: /umetra/someoneinmyhead/tsconfig.json WatchType: Failed Lookup Locations
+Info 503  [22:16:08.014] DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/HumburgeMenu.svelte 0:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Config: /umetra/someoneinmyhead/tsconfig.json WatchType: Wild card directory
+Info 504  [22:16:08.015] Project: /umetra/someoneinmyhead/tsconfig.json Detected file add/remove of non supported extension: /umetra/someoneinmyhead/src/lib/components/HumburgeMenu.svelte
+Info 505  [22:16:08.015] Elapsed:: 0.5265700221061707ms DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/HumburgeMenu.svelte 0:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Config: /umetra/someoneinmyhead/tsconfig.json WatchType: Wild card directory
+Info 506  [22:16:08.015] DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/HumburgeMenu.svelte 1:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Config: /umetra/someoneinmyhead/tsconfig.json WatchType: Wild card directory
+Info 507  [22:16:08.016] Project: /umetra/someoneinmyhead/tsconfig.json Detected file add/remove of non supported extension: /umetra/someoneinmyhead/src/lib/components/HumburgeMenu.svelte
+Info 508  [22:16:08.016] Elapsed:: 0.7391859889030457ms DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/HumburgeMenu.svelte 1:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Config: /umetra/someoneinmyhead/tsconfig.json WatchType: Wild card directory
+Info 509  [22:16:08.016] DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/HumburgeMenu.svelte 0:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Project: /umetra/someoneinmyhead/tsconfig.json WatchType: Failed Lookup Locations
+Info 510  [22:16:08.017] Elapsed:: 0.1811710000038147ms DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/HumburgeMenu.svelte 0:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Project: /umetra/someoneinmyhead/tsconfig.json WatchType: Failed Lookup Locations
+Info 511  [22:16:08.017] DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/HumburgeMenu.svelte 1:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Project: /umetra/someoneinmyhead/tsconfig.json WatchType: Failed Lookup Locations
+Info 512  [22:16:08.017] Elapsed:: 0.12745797634124756ms DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/HumburgeMenu.svelte 1:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Project: /umetra/someoneinmyhead/tsconfig.json WatchType: Failed Lookup Locations
+Info 513  [22:16:20.193] DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/HumburgeMenu.svelte 0:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Config: /umetra/someoneinmyhead/tsconfig.json WatchType: Wild card directory
+Info 514  [22:16:20.193] Project: /umetra/someoneinmyhead/tsconfig.json Detected file add/remove of non supported extension: /umetra/someoneinmyhead/src/lib/components/HumburgeMenu.svelte
+Info 515  [22:16:20.193] Elapsed:: 0.4946179986000061ms DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/HumburgeMenu.svelte 0:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Config: /umetra/someoneinmyhead/tsconfig.json WatchType: Wild card directory
+Info 516  [22:16:20.194] DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/HamburgeMenu.svelte 1:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Config: /umetra/someoneinmyhead/tsconfig.json WatchType: Wild card directory
+Info 517  [22:16:20.194] Project: /umetra/someoneinmyhead/tsconfig.json Detected file add/remove of non supported extension: /umetra/someoneinmyhead/src/lib/components/HamburgeMenu.svelte
+Info 518  [22:16:20.194] Elapsed:: 0.2888469994068146ms DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/HamburgeMenu.svelte 1:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Config: /umetra/someoneinmyhead/tsconfig.json WatchType: Wild card directory
+Info 519  [22:16:20.194] DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/HumburgeMenu.svelte 0:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Project: /umetra/someoneinmyhead/tsconfig.json WatchType: Failed Lookup Locations
+Info 520  [22:16:20.194] Elapsed:: 0.14774999022483826ms DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/HumburgeMenu.svelte 0:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Project: /umetra/someoneinmyhead/tsconfig.json WatchType: Failed Lookup Locations
+Info 521  [22:16:20.194] DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/HamburgeMenu.svelte 1:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Project: /umetra/someoneinmyhead/tsconfig.json WatchType: Failed Lookup Locations
+Info 522  [22:16:20.195] Elapsed:: 0.10857298970222473ms DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/HamburgeMenu.svelte 1:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Project: /umetra/someoneinmyhead/tsconfig.json WatchType: Failed Lookup Locations
+Info 523  [22:29:25.089] DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/HamburgeMenu.svelte 0:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Config: /umetra/someoneinmyhead/tsconfig.json WatchType: Wild card directory
+Info 524  [22:29:25.090] Project: /umetra/someoneinmyhead/tsconfig.json Detected file add/remove of non supported extension: /umetra/someoneinmyhead/src/lib/components/HamburgeMenu.svelte
+Info 525  [22:29:25.090] Elapsed:: 0.24540001153945923ms DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/HamburgeMenu.svelte 0:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Config: /umetra/someoneinmyhead/tsconfig.json WatchType: Wild card directory
+Info 526  [22:29:25.090] DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/HamburgeMenu.svelte 1:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Config: /umetra/someoneinmyhead/tsconfig.json WatchType: Wild card directory
+Info 527  [22:29:25.090] Project: /umetra/someoneinmyhead/tsconfig.json Detected file add/remove of non supported extension: /umetra/someoneinmyhead/src/lib/components/HamburgeMenu.svelte
+Info 528  [22:29:25.090] Elapsed:: 0.10359999537467957ms DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/HamburgeMenu.svelte 1:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Config: /umetra/someoneinmyhead/tsconfig.json WatchType: Wild card directory
+Info 529  [22:29:25.090] DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/HamburgeMenu.svelte 0:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Project: /umetra/someoneinmyhead/tsconfig.json WatchType: Failed Lookup Locations
+Info 530  [22:29:25.090] Elapsed:: 0.058414995670318604ms DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/HamburgeMenu.svelte 0:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Project: /umetra/someoneinmyhead/tsconfig.json WatchType: Failed Lookup Locations
+Info 531  [22:29:25.090] DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/HamburgeMenu.svelte 1:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Project: /umetra/someoneinmyhead/tsconfig.json WatchType: Failed Lookup Locations
+Info 532  [22:29:25.090] Elapsed:: 0.0413530170917511ms DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/HamburgeMenu.svelte 1:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Project: /umetra/someoneinmyhead/tsconfig.json WatchType: Failed Lookup Locations
+Info 533  [22:57:20.395] DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/node_modules :: WatchInfo: /umetra/someoneinmyhead/node_modules 1 undefined WatchType: node_modules for closed script infos and package.jsons affecting module specifier cache
+Info 534  [22:57:20.398] Elapsed:: 2.252775013446808ms DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/node_modules :: WatchInfo: /umetra/someoneinmyhead/node_modules 1 undefined WatchType: node_modules for closed script infos and package.jsons affecting module specifier cache
+Info 535  [22:57:20.398] DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/node_modules :: WatchInfo: /umetra/someoneinmyhead/node_modules 1 undefined Project: /umetra/someoneinmyhead/tsconfig.json WatchType: Failed Lookup Locations
+Info 536  [22:57:20.398] Elapsed:: 0.14890199899673462ms DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/node_modules :: WatchInfo: /umetra/someoneinmyhead/node_modules 1 undefined Project: /umetra/someoneinmyhead/tsconfig.json WatchType: Failed Lookup Locations
+Info 537  [22:57:20.625] FileWatcher:: Triggered with /umetra/someoneinmyhead/package.json 1:: WatchInfo: /umetra/someoneinmyhead/package.json 250 undefined WatchType: package.json file
+Info 538  [22:57:20.628] Elapsed:: 2.587796002626419ms FileWatcher:: Triggered with /umetra/someoneinmyhead/package.json 1:: WatchInfo: /umetra/someoneinmyhead/package.json 250 undefined WatchType: package.json file
+Info 539  [22:57:21.652] Starting updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json
+Info 540  [22:57:21.744] Finishing updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json Version: 67 structureChanged: true structureIsReused:: SafeModules Elapsed: 92.50070399045944ms
+Info 541  [22:57:21.744] Different program with same set of files
+Info 542  [23:03:05.476] Search path: /umetra/someoneinmyhead
+Info 543  [23:03:05.476] For info: /umetra/someoneinmyhead/tailwind.config.cjs :: Config file name: /umetra/someoneinmyhead/tsconfig.json
+Info 544  [23:03:05.485] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 545  [23:03:07.485] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 1 structureChanged: true structureIsReused:: Not Elapsed: 1999.5605329871178ms
+Info 546  [23:03:07.485] Project '/dev/null/inferredProject1*' (Inferred)
+Info 547  [23:03:07.485] 	Files (177)
+
+Info 548  [23:03:07.485] -----------------------------------------------
+Info 549  [23:03:07.493] AutoImportProviderProject: found 1 root files in 1 dependencies in 4.957098990678787 ms
+Info 550  [23:03:07.494] Starting updateGraphWorker: Project: /dev/null/autoImportProviderProject1*
+Info 551  [23:03:07.740] Finishing updateGraphWorker: Project: /dev/null/autoImportProviderProject1* Version: 1 structureChanged: true structureIsReused:: Not Elapsed: 246.59506699442863ms
+Info 552  [23:03:07.741] Project '/dev/null/autoImportProviderProject1*' (AutoImportProvider)
+Info 553  [23:03:07.741] 	Files (43)
+
+Info 554  [23:03:07.741] -----------------------------------------------
+Info 555  [23:03:08.389] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 556  [23:03:09.142] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 2 structureChanged: true structureIsReused:: Not Elapsed: 752.7114039957523ms
+Info 557  [23:03:09.142] Project '/dev/null/inferredProject1*' (Inferred)
+Info 558  [23:03:09.142] 	Files (403)
+
+Info 559  [23:03:09.142] -----------------------------------------------
+Info 560  [23:03:09.142] Project '/dev/null/autoImportProviderProject1*' (AutoImportProvider)
+Info 561  [23:03:09.142] 	Files (43)
+
+Info 562  [23:03:09.142] -----------------------------------------------
+Info 563  [23:03:10.639] Before ensureProjectForOpenFiles:
+Info 564  [23:03:10.640] After ensureProjectForOpenFiles:
+Info 565  [23:03:10.640] got projects updated in background, updating diagnostics for /umetra/someoneinmyhead/tailwind.config.cjs
+Info 566  [23:03:12.653] DirectoryWatcher:: Triggered with /home/artem/.cache/typescript/4.6/node_modules :: WatchInfo: /home/artem/.cache/typescript/4.6/node_modules 1 undefined Project: /dev/null/inferredProject1* WatchType: Failed Lookup Locations
+Info 567  [23:03:12.653] Elapsed:: 0.14115199446678162ms DirectoryWatcher:: Triggered with /home/artem/.cache/typescript/4.6/node_modules :: WatchInfo: /home/artem/.cache/typescript/4.6/node_modules 1 undefined Project: /dev/null/inferredProject1* WatchType: Failed Lookup Locations
+Info 568  [23:03:12.861] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 569  [23:03:13.052] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 3 structureChanged: true structureIsReused:: Not Elapsed: 190.92419001460075ms
+Info 570  [23:03:13.052] Project '/dev/null/inferredProject1*' (Inferred)
+Info 571  [23:03:13.052] 	Files (424)
+
+Info 572  [23:03:13.052] -----------------------------------------------
+Info 573  [23:03:13.052] Project '/dev/null/autoImportProviderProject1*' (AutoImportProvider)
+Info 574  [23:03:13.052] 	Files (43)
+
+Info 575  [23:03:13.052] -----------------------------------------------
+Info 576  [23:03:13.458] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 577  [23:03:13.546] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 4 structureChanged: true structureIsReused:: Not Elapsed: 88.10012498497963ms
+Info 578  [23:03:13.546] Project '/dev/null/inferredProject1*' (Inferred)
+Info 579  [23:03:13.546] 	Files (422)
+
+Info 580  [23:03:13.546] -----------------------------------------------
+Info 581  [23:03:13.546] Project '/dev/null/autoImportProviderProject1*' (AutoImportProvider)
+Info 582  [23:03:13.546] 	Files (43)
+
+Info 583  [23:03:13.546] -----------------------------------------------
+Info 584  [23:03:15.708] Before ensureProjectForOpenFiles:
+Info 585  [23:03:15.709] After ensureProjectForOpenFiles:
+Info 586  [23:03:15.709] got projects updated in background, updating diagnostics for /umetra/someoneinmyhead/tailwind.config.cjs
+Info 587  [23:03:48.042] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 588  [23:03:48.154] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 5 structureChanged: false structureIsReused:: Completely Elapsed: 111.57270899415016ms
+Info 589  [23:03:48.154] Different program with same set of files
+Info 590  [23:03:48.155] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 591  [23:03:48.217] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 6 structureChanged: false structureIsReused:: Completely Elapsed: 62.087513983249664ms
+Info 592  [23:03:48.218] Different program with same set of files
+Info 593  [23:03:48.379] getCompletionData: Get current token: 0.007137984037399292
+Info 594  [23:03:48.379] getCompletionData: Is inside comment: 0.0028859972953796387
+Info 595  [23:03:48.379] getCompletionData: Get previous token: 0.023145020008087158
+Info 596  [23:03:48.380] getCompletionsAtPosition: isCompletionListBlocker: 0.2905220091342926
+Info 597  [23:03:48.390] Starting updateGraphWorker: Project: /dev/null/autoImportProviderProject1*
+Info 598  [23:03:48.393] Finishing updateGraphWorker: Project: /dev/null/autoImportProviderProject1* Version: 2 structureChanged: true structureIsReused:: Not Elapsed: 2.887597978115082ms
+Info 599  [23:03:48.393] Project '/dev/null/autoImportProviderProject1*' (AutoImportProvider)
+Info 600  [23:03:48.393] 	Files (0)
+
+Info 601  [23:03:48.393] -----------------------------------------------
+Info 602  [23:03:48.394] getExportInfoMap: cache miss or empty; calculating new results
+Info 603  [23:03:48.679] getExportInfoMap: done in 291.66095900535583 ms
+Info 604  [23:03:48.790] collectAutoImports: resolved 87 module specifiers, plus 27 ambient and -55157 from cache
+Info 605  [23:03:48.790] collectAutoImports: response is complete
+Info 606  [23:03:48.790] collectAutoImports: 109.92646500468254
+Info 607  [23:03:48.790] getCompletionData: Semantic work: 409.8647239804268
+Info 608  [23:03:48.833] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 41.7880499958992
+Info 609  [23:03:49.509] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 610  [23:03:49.573] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 7 structureChanged: false structureIsReused:: Completely Elapsed: 63.66149201989174ms
+Info 611  [23:03:49.573] Different program with same set of files
+Info 612  [23:03:51.583] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 613  [23:03:51.649] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 8 structureChanged: false structureIsReused:: Completely Elapsed: 65.76213502883911ms
+Info 614  [23:03:51.649] Different program with same set of files
+Info 615  [23:03:51.652] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 616  [23:03:51.686] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 9 structureChanged: false structureIsReused:: Completely Elapsed: 34.3451030254364ms
+Info 617  [23:03:51.686] Different program with same set of files
+Info 618  [23:03:52.003] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 619  [23:03:52.061] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 10 structureChanged: false structureIsReused:: Completely Elapsed: 57.16770300269127ms
+Info 620  [23:03:52.061] Different program with same set of files
+Info 621  [23:03:52.063] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 622  [23:03:52.091] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 11 structureChanged: false structureIsReused:: Completely Elapsed: 28.699671000242233ms
+Info 623  [23:03:52.091] Different program with same set of files
+Info 624  [23:03:52.875] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 625  [23:03:52.930] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 12 structureChanged: false structureIsReused:: Completely Elapsed: 54.71066698431969ms
+Info 626  [23:03:52.930] Different program with same set of files
+Info 627  [23:03:53.192] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 628  [23:03:53.247] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 13 structureChanged: false structureIsReused:: Completely Elapsed: 55.51773199439049ms
+Info 629  [23:03:53.247] Different program with same set of files
+Info 630  [23:03:53.899] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 631  [23:03:53.956] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 14 structureChanged: false structureIsReused:: Completely Elapsed: 56.75138399004936ms
+Info 632  [23:03:53.956] Different program with same set of files
+Info 633  [23:03:55.365] Format host information updated
+Info 634  [23:03:55.365] Format host information updated
+Info 635  [23:03:55.366] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 636  [23:03:55.413] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 15 structureChanged: false structureIsReused:: Completely Elapsed: 46.85408800840378ms
+Info 637  [23:03:55.413] Different program with same set of files
+Info 638  [23:03:55.414] getCompletionData: Get current token: 0.034174978733062744
+Info 639  [23:03:55.414] getCompletionData: Is inside comment: 0.015341997146606445
+Info 640  [23:03:55.414] getCompletionData: Get previous token: 0.03943702578544617
+Info 641  [23:03:55.414] getCompletionsAtPosition: isCompletionListBlocker: 0.007927000522613525
+Info 642  [23:03:55.423] getCompletionData: Semantic work: 8.181230008602142
+Info 643  [23:03:55.427] getCompletionData: Get current token: 0.020914018154144287
+Info 644  [23:03:55.427] getCompletionData: Is inside comment: 0.010272026062011719
+Info 645  [23:03:55.427] getCompletionData: Get previous token: 0.027576982975006104
+Info 646  [23:03:55.427] getCompletionsAtPosition: isCompletionListBlocker: 0.00632399320602417
+Info 647  [23:03:55.433] getCompletionData: Semantic work: 5.683604001998901
+Info 648  [23:03:55.962] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 649  [23:03:55.997] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 16 structureChanged: false structureIsReused:: Completely Elapsed: 35.020247012376785ms
+Info 650  [23:03:55.997] Different program with same set of files
+Info 651  [23:03:56.745] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 652  [23:03:56.825] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 17 structureChanged: true structureIsReused:: SafeModules Elapsed: 79.96832600235939ms
+Info 653  [23:03:56.825] Different program with same set of files
+Info 654  [23:04:02.053] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 655  [23:04:02.138] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 18 structureChanged: true structureIsReused:: SafeModules Elapsed: 85.00140699744225ms
+Info 656  [23:04:02.138] Different program with same set of files
+Info 657  [23:04:02.204] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 658  [23:04:02.300] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 19 structureChanged: true structureIsReused:: SafeModules Elapsed: 95.48484098911285ms
+Info 659  [23:04:02.300] Different program with same set of files
+Info 660  [23:04:04.133] Format host information updated
+Info 661  [23:04:04.134] Format host information updated
+Info 662  [23:04:04.135] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 663  [23:04:04.222] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 20 structureChanged: true structureIsReused:: SafeModules Elapsed: 86.70982000231743ms
+Info 664  [23:04:04.222] Different program with same set of files
+Info 665  [23:04:05.417] DirectoryWatcher:: Triggered with /home/artem/.cache/typescript/4.6/node_modules :: WatchInfo: /home/artem/.cache/typescript/4.6/node_modules 1 undefined Project: /dev/null/inferredProject1* WatchType: Failed Lookup Locations
+Info 666  [23:04:05.418] Elapsed:: 0.457504004240036ms DirectoryWatcher:: Triggered with /home/artem/.cache/typescript/4.6/node_modules :: WatchInfo: /home/artem/.cache/typescript/4.6/node_modules 1 undefined Project: /dev/null/inferredProject1* WatchType: Failed Lookup Locations
+Info 667  [23:04:05.418] DirectoryWatcher:: Triggered with /home/artem/.cache/typescript/4.6/node_modules :: WatchInfo: /home/artem/.cache/typescript/4.6/node_modules 1 undefined WatchType: node_modules for closed script infos and package.jsons affecting module specifier cache
+Info 668  [23:04:05.418] Elapsed:: 0.7225649952888489ms DirectoryWatcher:: Triggered with /home/artem/.cache/typescript/4.6/node_modules :: WatchInfo: /home/artem/.cache/typescript/4.6/node_modules 1 undefined WatchType: node_modules for closed script infos and package.jsons affecting module specifier cache
+Info 669  [23:04:05.500] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 670  [23:04:05.659] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 21 structureChanged: true structureIsReused:: SafeModules Elapsed: 158.84695500135422ms
+Info 671  [23:04:05.659] Different program with same set of files
+Info 672  [23:04:08.001] Before ensureProjectForOpenFiles:
+Info 673  [23:04:08.002] After ensureProjectForOpenFiles:
+Info 674  [23:04:08.003] got projects updated in background, updating diagnostics for /umetra/someoneinmyhead/tailwind.config.cjs
+Info 675  [23:13:40.798] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 676  [23:13:40.887] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 22 structureChanged: true structureIsReused:: SafeModules Elapsed: 89.00297400355339ms
+Info 677  [23:13:40.887] Different program with same set of files
+Info 678  [23:13:41.183] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 679  [23:13:41.265] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 23 structureChanged: true structureIsReused:: SafeModules Elapsed: 81.44348099827766ms
+Info 680  [23:13:41.265] Different program with same set of files
+Info 681  [23:13:42.114] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 682  [23:13:42.153] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 24 structureChanged: false structureIsReused:: Completely Elapsed: 38.697736978530884ms
+Info 683  [23:13:42.153] Different program with same set of files
+Info 684  [23:13:42.154] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 685  [23:13:42.315] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 25 structureChanged: false structureIsReused:: Completely Elapsed: 160.80930200219154ms
+Info 686  [23:13:42.315] Different program with same set of files
+Info 687  [23:14:13.949] FileWatcher:: Triggered with /umetra/someoneinmyhead/.svelte-kit/tsconfig.json 1:: WatchInfo: /umetra/someoneinmyhead/.svelte-kit/tsconfig.json 2000 undefined Config: /umetra/someoneinmyhead/tsconfig.json WatchType: Extended config file
+Info 688  [23:14:13.949] Elapsed:: 0.38601699471473694ms FileWatcher:: Triggered with /umetra/someoneinmyhead/.svelte-kit/tsconfig.json 1:: WatchInfo: /umetra/someoneinmyhead/.svelte-kit/tsconfig.json 2000 undefined Config: /umetra/someoneinmyhead/tsconfig.json WatchType: Extended config file
+Info 689  [23:14:14.199] Reloading configured project /umetra/someoneinmyhead/tsconfig.json
+Info 690  [23:14:14.231] Config: /umetra/someoneinmyhead/tsconfig.json : {
+ "rootNames": [
+  "/umetra/someoneinmyhead/src/app.d.ts",
+  "/umetra/someoneinmyhead/src/lib/get-posts.ts",
+  "/umetra/someoneinmyhead/src/lib/posts.ts",
+  "/umetra/someoneinmyhead/src/lib/site.config.ts",
+  "/umetra/someoneinmyhead/src/lib/stores.ts"
+ ],
+ "options": {
+  "moduleResolution": 2,
+  "module": 6,
+  "lib": [
+   "lib.es2020.d.ts",
+   "lib.dom.d.ts"
+  ],
+  "target": 7,
+  "importsNotUsedAsValues": 2,
+  "preserveValueImports": true,
+  "isolatedModules": true,
+  "resolveJsonModule": true,
+  "sourceMap": true,
+  "esModuleInterop": true,
+  "skipLibCheck": true,
+  "forceConsistentCasingInFileNames": true,
+  "baseUrl": "/umetra/someoneinmyhead",
+  "allowJs": true,
+  "checkJs": true,
+  "paths": {
+   "$lib": [
+    "src/lib"
+   ],
+   "$lib/*": [
+    "src/lib/*"
+   ]
+  },
+  "rootDirs": [
+   "/umetra/someoneinmyhead",
+   "/umetra/someoneinmyhead/.svelte-kit/types"
+  ],
+  "pathsBasePath": "/umetra/someoneinmyhead/.svelte-kit",
+  "configFilePath": "/umetra/someoneinmyhead/tsconfig.json"
+ }
+}
+Info 691  [23:14:14.245] Starting updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json
+Info 692  [23:14:14.248] Finishing updateGraphWorker: Project: /umetra/someoneinmyhead/tsconfig.json Version: 68 structureChanged: false structureIsReused:: SafeModules Elapsed: 2.5297659933567047ms
+Info 693  [23:14:16.449] Before ensureProjectForOpenFiles:
+Info 694  [23:14:16.449] After ensureProjectForOpenFiles:
+Info 695  [23:14:16.450] got projects updated in background, updating diagnostics for /umetra/someoneinmyhead/tailwind.config.cjs
+Info 696  [23:35:52.671] DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/NavLinks.svelte 0:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Config: /umetra/someoneinmyhead/tsconfig.json WatchType: Wild card directory
+Info 697  [23:35:52.672] Project: /umetra/someoneinmyhead/tsconfig.json Detected file add/remove of non supported extension: /umetra/someoneinmyhead/src/lib/components/NavLinks.svelte
+Info 698  [23:35:52.672] Elapsed:: 1.2572329938411713ms DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/NavLinks.svelte 0:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Config: /umetra/someoneinmyhead/tsconfig.json WatchType: Wild card directory
+Info 699  [23:35:52.673] DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/NavLinks.svelte 1:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Config: /umetra/someoneinmyhead/tsconfig.json WatchType: Wild card directory
+Info 700  [23:35:52.673] Project: /umetra/someoneinmyhead/tsconfig.json Detected file add/remove of non supported extension: /umetra/someoneinmyhead/src/lib/components/NavLinks.svelte
+Info 701  [23:35:52.673] Elapsed:: 0.2529720067977905ms DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/NavLinks.svelte 1:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Config: /umetra/someoneinmyhead/tsconfig.json WatchType: Wild card directory
+Info 702  [23:35:52.673] DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/NavLinks.svelte 0:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Project: /umetra/someoneinmyhead/tsconfig.json WatchType: Failed Lookup Locations
+Info 703  [23:35:52.673] Elapsed:: 0.43807199597358704ms DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/NavLinks.svelte 0:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Project: /umetra/someoneinmyhead/tsconfig.json WatchType: Failed Lookup Locations
+Info 704  [23:35:52.674] DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/NavLinks.svelte 1:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Project: /umetra/someoneinmyhead/tsconfig.json WatchType: Failed Lookup Locations
+Info 705  [23:35:52.674] Elapsed:: 0.10318198800086975ms DirectoryWatcher:: Triggered with /umetra/someoneinmyhead/src/lib/components/NavLinks.svelte 1:: WatchInfo: /umetra/someoneinmyhead/src 1 undefined Project: /umetra/someoneinmyhead/tsconfig.json WatchType: Failed Lookup Locations

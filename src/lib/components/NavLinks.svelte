@@ -4,7 +4,7 @@
   const { navbar, basePath } = getConfig();
 </script>
 
-<div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+<div class="block flex-grow lg:flex lg:items-center lg:w-auto">
   <div class="xs:text-sm sm:text-xl lg:flex-grow">
     {#each navbar as nav}
       {#if nav.href !== undefined}
