@@ -1,7 +1,10 @@
-<script>
+<script lang="ts">
   import Header from '$lib/components/Header.svelte';
+  import SideMenu from '$lib/components/SideMenu.svelte';
   // import { HashIcon, HeartIcon, CloudIcon, CoffeeIcon } from 'svelte-feather-icons';
   import '$lib/main.css';
+
+  let isOpen: boolean = false;
 </script>
 
 <Header />
@@ -26,5 +29,6 @@
 <!-- </div> -->
 
 <main class="prose-base lg:prose-lg xl:prose-xl 2xl:prose-2xl">
+  <SideMenu bind:isOpen />
   <slot />
 </main>
