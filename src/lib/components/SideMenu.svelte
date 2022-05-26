@@ -1,21 +1,14 @@
 <script>
-  export let isOpen = false;
+  export let open = false;
 </script>
 
-<aside class="absolute w-full h-full bg-gray-200 border-r-2 shadow-lg" class:open={isOpen}>
+<aside
+  class="absolute w-full h-full bg-gray-200 border-r-2 shadow-lg transition-all transform duration-300 ease-in-out {open
+    ? 'left-0 origin-left'
+    : '-left-full'}"
+>
   <nav class="p-12 text-xl">
     <a class="block" href="#about">About</a>
     <a class="block" href="#contact">Contact</a>
   </nav>
 </aside>
-
-<style>
-  aside {
-    left: -100%;
-    transition: left 0.3s ease-in-out;
-  }
-
-  .open {
-    left: 0;
-  }
-</style>

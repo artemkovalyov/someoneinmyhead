@@ -4,10 +4,11 @@
   // import { HashIcon, HeartIcon, CloudIcon, CoffeeIcon } from 'svelte-feather-icons';
   import '$lib/main.css';
 
-  let isOpen: boolean = false;
+  let open: boolean = false;
 </script>
 
-<Header />
+<SideMenu bind:open />
+<Header bind:open />
 
 <!-- <div class="fixed top-0 left-0 h-screen w-16 m-0 flex flex-col bg-gray-900 text-white shadow-lg "> -->
 <!--   <div class="sidebar-icon"> -->
@@ -29,6 +30,5 @@
 <!-- </div> -->
 
 <main class="prose-base lg:prose-lg xl:prose-xl 2xl:prose-2xl">
-  <SideMenu bind:isOpen />
   <slot />
 </main>
