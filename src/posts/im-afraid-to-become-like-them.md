@@ -25,10 +25,10 @@ uuid: 33cdc549-3ca3-4dba-9a64-9f4c16a7558d
 ---
 
 ::: note "Short summary"
+
 After being multiple time in the situations where I clearly identified that change of the cultural environment would undermine my core values I faced a deep conflict and discomfort.
 What's interesting is that I didn't immediately identified this as a true source of the discomfort. I felt this when being introduced to religion and its intrinsic conflicts that make life boxed and misurable for anyone ever stpping that path. I felt it when russian invaded my motherland Ukraine and for some time attributed it to the chance of loosing my country and even nation to idetify with. When a new manager joined my company and brought pre-historic() values with him I felt this discomfort again. In both cases my response was to fight. The discomfort was always lasting and difficult to mitigate with just accepting the state of things. Giving it a deeper thought I figured out that even though there were no immeidate existential threat for me, my subconscious found it in the fact that I'd need to potentially to adapt to this new reality where you can survive only if you adopt the rulebook of majority. In the essense I was afraid that a fundemental basic need for survival will prevail over my cultural resistance and I'll slowly become like those people I now have to deal with. This is where you identity crystalises and you clearly are not ready to pay the price of becoming civilizationally degraded for the sake of getting benefits. Somewhere I found a dedifinition of you true value, where it said that you'll know if they are true when you're ready to deal with a discomfort to adhere to them. Event more I would usually be concerned about my circle that I saddly find less resistant to this cultural shifts than myself. That would mean for me loosing those often kindred souls forever.
 Even bounding society norms
-
 
 :::
 
