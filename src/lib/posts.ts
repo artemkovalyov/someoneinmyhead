@@ -43,4 +43,15 @@ const getPostById = (id: String): Post => posts.filter((post: Post) => post.uuid
 
 const getPosts = (): Array<Post> => posts;
 
-export { getPosts, getPostById, getPostBySlug };
+const getPostsSortedByDate = (): Array<Post> =>
+  // Sorts the post array by date, earliest first
+  posts
+    // Map dates to indices for simple sorting
+    .map((v, i) => ({
+      i,
+      v: new Date(v.publishedTime).valueOf()
+    }))
+    .sort((x, y) => y.v - x.v) // sort resulting array by dates
+    .map((v) => posts[v.i]); // return sorted posts by using indices from the sorted dates array
+
+export { getPosts, getPostsSortedByDate, getPostById, getPostBySlug };

@@ -1,21 +1,22 @@
 ---
-slug: art-slug
-title: Art
+slug: art
+title: test
 description:  Description will go to meta
+image:  path to image
+author:  Artem Kovalov
+isPublished:  false
+publishedTime:  2022-06-15T17:22:57+02:00
+modifiedTime:  2022-06-15T17:22:57+02:00
+expirationTime:  2022-06-15T17:22:57+02:00
 series:  Series name
 seriesId:  Series ID
-image:  path to image
-author:  ArtAuthor
-section: wow wow
-publishedTime:  Mon Apr 18 17:32:33 2022
-modifiedTime: ''
-expirationTime: ''
+section:  section name for Open Graph
 tags:
 - a
 - b
-uuid: 58f280cc-2600-4e1a-ac6c-a954b8f640c7
+uuid: 5bf12ed8-4149-4b00-9c2d-175db01df93b
 ---
 
-# ART
+## ART
 
 abc
