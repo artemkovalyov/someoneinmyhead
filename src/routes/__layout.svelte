@@ -29,6 +29,6 @@
 <!--   </div> -->
 <!-- </div> -->
 
-<main class="prose-base lg:prose-lg xl:prose-xl 2xl:prose-2xl">
-  <slot />
-</main>
+<!-- <main class="prose-base lg:prose-lg xl:prose-xl 2xl:prose-2xl"> -->
+<slot />
+<!-- </main> -->
