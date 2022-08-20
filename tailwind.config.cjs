@@ -1,8 +1,12 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  mode: 'jit',
-  content: ['./src/**/*.{html,js,svelte,ts,md}'],
+  content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
     extend: {}
   },
-  plugins: [require('@tailwindcss/typography')]
+  plugins: [
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/line-clamp'),
+    require('@tailwindcss/forms')
+  ]
 };

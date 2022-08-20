@@ -1,29 +1,12 @@
-<script context="module">
-  import { getPostBySlug } from '$lib/posts';
-
-  /** @type {import('./[slug]@blog').Load} */
-  export function load({ params, url }) {
-    const post = getPostBySlug(params.slug);
-    console.log(params);
-    if (post === undefined) {
-      return {
-        status: 404,
-        error: new Error(`Not found: ${url.pathname}`)
-      };
-    }
-    return {
-      props: {
-        post
-      }
-    };
-  }
-</script>
-
 <script lang="ts">
+  // import type {PageData} from './$types'
   import Head from '$lib/components/Head.svelte';
   import type { Post } from '$lib/posts';
 
-  export let post: Post;
+  export let data;
+  export let post: Post = data.post;
+
+  console.log(data);
 
   const meta = {
     type: 'article',
