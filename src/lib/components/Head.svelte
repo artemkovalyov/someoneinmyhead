@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import getConfig from '$lib/site.config';
 
   export let { title = '', description = '', author = '', basePath = '' } = getConfig();
@@ -7,14 +7,21 @@
   export let publishedTime = '';
   export let modifiedTime = '';
   export let expirationTime = '';
-  export let tags = [];
+  export let tags: string[] = [];
   export let section = '';
 
   console.log(publishedTime);
+  console.log(expirationTime);
 </script>
 
 <svelte:head>
   <title>{title}</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-material-dark.min.css"
+    type="text/css"
+    media="screen"
+  />
   <meta data-key="description" name="description" content={description} />
   <meta name="description" content={description} />
   <meta name="author" content={author} />
@@ -35,7 +42,10 @@
     {#if publishedTime}
       <meta property="article:published_time" content={new Date(publishedTime).toISOString()} />
     {/if}
-    {#if modifiedTime !== ''}
+    {#if modifiedTime}
+      <meta property="article:modified_time" content={new Date(modifiedTime).toISOString()} />
+    {/if}
+    {#if expirationTime !== ''}
       <meta property="article:expiration_time" content={new Date(expirationTime).toISOString()} />
     {/if}
     {#each tags as tag}

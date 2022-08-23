@@ -1,3 +1,6 @@
+/* @import url('prism-material-dark.css'); */
+/* @import url('prism-material-light.css'); */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
