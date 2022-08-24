@@ -8,7 +8,7 @@
   export let dark: boolean = false;
 </script>
 
-<nav class="grid grid-cols-12 p-6 w-full">
+<nav class="flex p-6 w-full">
   <Logo />
   <TopMenuLinks />
   <ThemeToggle bind:dark />
