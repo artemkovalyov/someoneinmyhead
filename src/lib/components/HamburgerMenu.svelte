@@ -2,7 +2,7 @@
   export let open: boolean = false;
 </script>
 
-<div class="md:hidden dark:text-emphasis-high">
+<div class="flex items-center md:hidden">
   <button on:click={() => (open = !open)} aria-pressed={open} tabindex={open ? 0 : -1}>
     <svg
       class="z-20 transform duration-300 ease-in-out {open ? 'scale-[0.9]' : ''}"
@@ -11,7 +11,7 @@
     >
       <line
         id="top"
-        class="stroke-gray-600 stroke-2 transform transition duration-500 ease-in-out {open
+        class="stroke-emphasis-high stroke-2 transform transition duration-500 ease-in-out {open
           ? 'translate-x-[6px] rotate-45'
           : ''}"
         x1="0"
@@ -21,7 +21,7 @@
       />
       <line
         id="middle"
-        class="stroke-gray-600 stroke-2 transform transition duration-500 ease-in-out {open
+        class="stroke-emphasis-high stroke-2 transform transition duration-500 ease-in-out {open
           ? 'opacity-0'
           : ''}"
         x1="0"
@@ -31,7 +31,7 @@
       />
       <line
         id="bottom"
-        class="stroke-gray-600 stroke-2 transform transition duration-500 ease-in-out {open
+        class="stroke-emphasis-high stroke-2 transform transition duration-500 ease-in-out {open
           ? '-translate-x-[12px] translate-y-[9px] -rotate-45'
           : ''}"
         x1="0"

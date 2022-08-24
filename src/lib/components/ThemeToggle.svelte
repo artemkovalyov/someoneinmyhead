@@ -10,7 +10,7 @@
 <button
   id="theme-toggle"
   type="button"
-  class="p-1 mx-2 text-base text-gray-500 rounded-lg dark:text-gray-400 hover:text-purple-500 dark:hover:text-purple-500"
+  class="text-base text-emphasis-black rounded-lg dark:text-emphasis-high hover:text-primary-core dark:hover:text-primary-core"
   on:click={toggleTheme}
 >
   {#if dark}

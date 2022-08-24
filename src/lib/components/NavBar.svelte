@@ -6,11 +6,14 @@
 
   export let open: boolean = false;
   export let dark: boolean = false;
+  export let path: string;
 </script>
 
-<nav class="flex p-6 w-full">
+<nav class="flex flex-nowrap justify-between p-6 w-full">
   <Logo />
-  <TopMenuLinks />
-  <ThemeToggle bind:dark />
-  <HamburgerMenu bind:open />
+  <TopMenuLinks bind:path />
+  <div class="flex gap-x-4">
+    <ThemeToggle bind:dark />
+    <HamburgerMenu bind:open />
+  </div>
 </nav>

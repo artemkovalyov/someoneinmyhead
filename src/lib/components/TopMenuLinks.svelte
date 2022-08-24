@@ -1,9 +1,8 @@
-<script>
+<script lang="ts">
   import NavLinks from './NavLinks.svelte';
+  export let path: string;
 </script>
 
-<div class="col-span-5">
-  <div class="hidden text-lg sm:inline-block">
-    <NavLinks />
-  </div>
+<div class="sm:flex gap-x-6 hidden text-lg">
+  <NavLinks bind:path />
 </div>

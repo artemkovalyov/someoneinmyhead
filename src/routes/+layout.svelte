@@ -2,9 +2,13 @@
   import Header from '$lib/components/Header.svelte';
   import SideMenu from '$lib/components/SideMenu.svelte';
   import '$lib/styles/app.css';
+  import type { LayoutData } from '.svelte-kit/types/src/routes/$types';
+
+  export let data: LayoutData;
 
   let open: boolean = false;
   let dark: boolean = true;
+  let path: string = data.path;
 </script>
 
 <!-- Import prism theme depending on the dark/light site theme -->
@@ -28,7 +32,7 @@
 <!-- End of theme prism switch -->
 
 <SideMenu bind:open />
-<Header bind:open bind:dark />
+<Header bind:open bind:dark bind:path />
 
 <!-- <div class="flex fixed top-0 left-0 flex-col m-0 w-16 h-screen text-white bg-gray-900 shadow-lg"> -->
 <!--   <div class="sidebar-icon"> -->
