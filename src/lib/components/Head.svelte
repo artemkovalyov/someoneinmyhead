@@ -1,7 +1,7 @@
 <script lang="ts">
-  import getConfig from '$lib/site.config';
+  import siteConfig from '$lib/site.config';
 
-  export let { title = '', description = '', author = '', basePath = '' } = getConfig();
+  export let { title = '', description = '', author = '', basePath = '' } = siteConfig;
   export let type = 'website';
   export let imageLink = '';
   export let publishedTime = '';
@@ -9,19 +9,26 @@
   export let expirationTime = '';
   export let tags: string[] = [];
   export let section = '';
-
-  console.log(publishedTime);
-  console.log(expirationTime);
+  export let dark: boolean;
 </script>
 
 <svelte:head>
   <title>{title}</title>
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-material-dark.min.css"
-    type="text/css"
-    media="screen"
-  />
+  {#if dark}
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-material-dark.min.css"
+      type="text/css"
+      media="screen"
+    />
+  {:else}
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-material-light.min.css"
+      type="text/css"
+      media="screen"
+    />
+  {/if}
   <meta data-key="description" name="description" content={description} />
   <meta name="description" content={description} />
   <meta name="author" content={author} />
@@ -56,9 +63,9 @@
     {/if}
   {/if}
 
-  <link rel="icon" href="/favicon.ico" />
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <!-- <link rel="icon" href="/favicon.ico" />
+       <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+       <link rel="apple-touch-icon" href="/apple-touch-icon.png" /> -->
 
   <!-- <link rel="stylesheet" href="css/styles.css?v=1.0" /> -->
 </svelte:head>

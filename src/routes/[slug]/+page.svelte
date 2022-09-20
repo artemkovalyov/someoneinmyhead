@@ -1,12 +1,8 @@
 <script lang="ts">
-  // import type {PageData} from './$types'
   import Head from '$lib/components/Head.svelte';
-  import type { Post } from '$lib/posts';
-
   export let data;
-  export let post: Post = data.post;
 
-  console.log(data);
+  $: post = data.post;
 
   const meta = {
     type: 'article',
@@ -23,4 +19,7 @@
 
 <Head {...meta} />
 
-<svelte:component this={post.content} />
+<!-- <div class="text-xl text-red-500">{$page.params.slug}</div> -->
+<main class="prose-sm md:prose-base lg:prose-lg xl:prose-xl 2xl:prose-2xl">
+  <svelte:component this={post.content} />
+</main>

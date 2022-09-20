@@ -1,40 +1,47 @@
-interface Config {
-  title: string;
-  description: string;
-  theme?: Object;
-  basePath?: string;
-  postsPerPage: number;
-  author: string;
-  navbar: Array<Navbar>;
-}
-
-interface Navbar {
+export type NavItem = {
   label: string;
-  href?: string;
   path?: string;
-}
-
-export default (): Config => {
-  return {
-    title: 'Someone In My Head',
-    description: 'My Blog description, yay!',
-    basePath: 'http://localhost:3000',
-    postsPerPage: 7,
-    author: 'Artem Kovalov',
-    // Main top menu links
-    navbar: [
-      {
-        label: 'Google',
-        href: 'http://google.com'
-      },
-      {
-        label: 'About',
-        path: 'about'
-      },
-      {
-        label: 'Author',
-        path: 'author'
-      }
-    ]
-  };
+  href?: string;
 };
+
+const siteConfig = {
+  title: 'Someone In My Head',
+  description: 'My Blog description, yay!',
+  basePath: 'http://127.0.0.1:5174',
+  postsPerPage: 7,
+  author: 'Artem Kovalov',
+  // Main top menu links
+  navItems: [
+    {
+      label: 'Google',
+      href: 'http://google.com'
+    },
+    {
+      label: 'About',
+      path: 'about'
+    },
+    {
+      label: 'Author',
+      path: 'author'
+    },
+    {
+      label: 'ABC',
+      path: 'abc'
+    },
+    {
+      label: 'ART',
+      path: 'art'
+    },
+    {
+      label: 'CDA',
+      path: 'cda'
+    }
+  ]
+};
+
+export const getNavItems = (): Array<NavItem> =>
+  siteConfig.navItems.map((item) =>
+    item.href !== undefined ? item : { ...item, href: `${siteConfig.basePath}/${item.path}` }
+  );
+
+export default siteConfig;

@@ -1,5 +1,5 @@
 // directly import all the blog posts from the file system thanks to Vite's feature: https://vitejs.dev/guide/features.html#glob-import
-const postModules = import.meta.globEager('../posts/**/*.md');
+const postModules = import.meta.glob('../posts/**/*.md', { eager: true });
 
 export interface Post {
   path: string;
@@ -26,13 +26,11 @@ const posts: Array<Post> = Object.entries(postModules).map(
     // post structure
     ({
       path, // path to the markdown post file
-      slug: path.split('/').pop().split('.')[0],
-      content: post.default, // actual markdown to reneder
-      ...post.metadata
+      slug: path!.split('/').pop().split('.')[0],
+      content: post?.default, // actual markdown to reneder
+      ...post?.metadata
     })
 );
-
-console.log(posts);
 
 // return a post by it's slug, if there're doplicated we'll get the one found first
 const getPostBySlug = (slug: String): Post => posts.filter((post: Post) => post.slug === slug)[0];

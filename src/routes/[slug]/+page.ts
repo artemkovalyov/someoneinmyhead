@@ -1,9 +1,10 @@
-import type { PageData, RouteParams } from './$types';
+import type { PageLoad, RouteParams } from './$types';
 import { getPostBySlug } from '$lib/posts';
 
-export const load = ({ params, url }: { params: RouteParams; url: URL }): PageData => {
+export const load: PageLoad = ({ url, params, routeId }) => {
+  console.log(params.slug);
   const post = getPostBySlug(params.slug);
-  console.log(params);
+  console.log(routeId);
   if (post === undefined) {
     return {
       status: 404,

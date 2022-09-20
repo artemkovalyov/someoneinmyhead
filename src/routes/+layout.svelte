@@ -1,36 +1,16 @@
 <script lang="ts">
+  import Head from '$lib/components/Head.svelte';
+  import { page } from '$app/stores';
   import Header from '$lib/components/Header.svelte';
   import SideMenu from '$lib/components/SideMenu.svelte';
   import '$lib/styles/app.css';
-  import type { LayoutData } from '.svelte-kit/types/src/routes/$types';
 
-  export let data: LayoutData;
-
-  let open: boolean = false;
-  let dark: boolean = true;
-  let path: string = data.path;
+  let open = false;
+  let dark = true;
+  let path = $page.url.pathname;
 </script>
 
-<!-- Import prism theme depending on the dark/light site theme -->
-<svelte:head>
-  {#if dark}
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-material-dark.min.css"
-      type="text/css"
-      media="screen"
-    />
-  {:else}
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-material-light.min.css"
-      type="text/css"
-      media="screen"
-    />
-  {/if}
-</svelte:head>
-<!-- End of theme prism switch -->
-
+<Head bind:dark />
 <SideMenu bind:open />
 <Header bind:open bind:dark bind:path />
 
