@@ -13,28 +13,12 @@ const siteConfig = {
   // Main top menu links
   navItems: [
     {
-      label: 'Google',
-      href: 'http://google.com'
-    },
-    {
       label: 'About',
       path: 'about'
     },
     {
       label: 'Author',
       path: 'author'
-    },
-    {
-      label: 'ABC',
-      path: 'abc'
-    },
-    {
-      label: 'ART',
-      path: 'art'
-    },
-    {
-      label: 'CDA',
-      path: 'cda'
     }
   ]
 };

@@ -17,9 +17,8 @@
   };
 </script>
 
-<Head {...meta} />
+<!-- <Head {...meta} /> -->
 
-<!-- <div class="text-xl text-red-500">{$page.params.slug}</div> -->
-<main class="prose-sm md:prose-base lg:prose-lg xl:prose-xl 2xl:prose-2xl">
+<main class="prose lg:prose-xl xl:prose-2xl">
   <svelte:component this={post.content} />
 </main>

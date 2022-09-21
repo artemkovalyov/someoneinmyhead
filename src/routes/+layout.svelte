@@ -33,6 +33,4 @@
 <!--   </div> -->
 <!-- </div> -->
 
-<!-- <main class="text-gray-600 bg-white dark:text-gray-400 dark:bg-gray-900"> -->
 <slot />
-<!-- </main> -->
