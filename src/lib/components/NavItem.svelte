@@ -1,18 +1,15 @@
 <script lang="ts">
   import type { NavItem } from '$lib/site.config';
-  import { page } from '$app/stores';
 
   export let path: string;
   export let nav: NavItem;
-  // let route = $page.url.pathname;
   $: current = path === `/${nav.path}`;
-  // console.log(path);
-  // console.log(nav.path);
-  // console.log(current);
-  // console.log(route);
 </script>
 
-<!-- <a sveltekit:reload href={nav.href || `${nav.path}/`} class:current class="menulink"> -->
+<!-- Use this for full page reload on every navigation -->
+<!-- <a sveltekit:reload href={nav.href || `${nav.path}`} class:current class="menulink"> -->
+
+<!-- This will not reload the page but use client side navigation to update only changed components  -->
 <a href={nav.href || `${nav.path}`} class:current class="menulink">
   {nav.label} + {current}
 </a>
