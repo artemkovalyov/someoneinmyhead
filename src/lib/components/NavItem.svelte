@@ -4,6 +4,7 @@
   export let path: string;
   export let nav: NavItem;
   $: current = path === `/${nav.path}`;
+  console.log(path);
 </script>
 
 <!-- Use this for full page reload on every navigation -->

@@ -7,7 +7,7 @@
 
   let open = false;
   let dark = true;
-  let path = $page.url.pathname;
+  $: path = $page.url.pathname; // should be reactive for client side routing
 </script>
 
 <!-- pass dark to figure out the code highlight theme -->
