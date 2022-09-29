@@ -9,7 +9,7 @@
   export let path: string;
 </script>
 
-<nav class="flex flex-nowrap p-6 w-full">
+<nav class="flex flex-nowrap p-6 w-full justify-between">
   <Logo />
   <TopMenuLinks bind:path />
   <div class="flex gap-x-5 justify-end">
