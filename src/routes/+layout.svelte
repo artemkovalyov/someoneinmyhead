@@ -10,8 +10,11 @@
   let path = $page.url.pathname;
 </script>
 
+<!-- pass dark to figure out the code highlight theme -->
 <Head bind:dark />
+
 <SideMenu bind:open />
+
 <Header bind:open bind:dark bind:path />
 
 <!-- <div class="flex fixed top-0 left-0 flex-col m-0 w-16 h-screen text-white bg-gray-900 shadow-lg"> -->

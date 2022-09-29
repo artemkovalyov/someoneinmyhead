@@ -1,5 +1,5 @@
 <script lang="ts">
-  export let dark: boolean = true;
+  export let dark: boolean;
   let toggleTheme = () => {
     dark = !dark;
     if (dark) window.document.documentElement.classList.add('dark');

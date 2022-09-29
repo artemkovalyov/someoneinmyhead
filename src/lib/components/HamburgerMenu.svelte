@@ -1,8 +1,8 @@
 <script lang="ts">
-  export let open: boolean = false;
+  export let open: boolean;
 </script>
 
-<div class="flex items-center lg:hidden">
+<div class="flex items-center">
   <button on:click={() => (open = !open)} aria-pressed={open} tabindex={open ? 0 : -1}>
     <svg
       class="z-20 transform duration-300 ease-in-out {open ? 'scale-[0.9]' : ''}"
