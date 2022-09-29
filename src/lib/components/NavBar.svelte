@@ -9,10 +9,10 @@
   export let path: string;
 </script>
 
-<nav class="flex flex-nowrap justify-between p-6 w-full">
+<nav class="flex flex-nowrap p-6 w-full">
   <Logo />
   <TopMenuLinks bind:path />
-  <div class="flex gap-x-4">
+  <div class="flex gap-x-5 justify-end">
     <ThemeToggle bind:dark />
     <HamburgerMenu bind:open />
   </div>

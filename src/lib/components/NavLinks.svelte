@@ -6,5 +6,7 @@
 </script>
 
 {#each navItems as nav}
-  <NavItem {path} {nav} />
+  <span class="text-4xl">
+    <NavItem {path} {nav} />
+  </span>
 {/each}

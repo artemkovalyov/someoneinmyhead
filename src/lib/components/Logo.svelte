@@ -2,8 +2,12 @@
   import siteConfig from '$lib/site.config';
 </script>
 
-<div class="flex text-primary-core items-center">
+<div class="flex text-primary-core items-center min-w-max">
   <a href={siteConfig.basePath}>
-    <span class="text-2xl font-semibold tracking-tight lg:text-4xl">Someone In My Head</span>
+    <div class="text-7xl uppercase tracking-tight inline-block relative">som</div>
+    <div class="text-2xl uppercase inline-block relative">
+      <div>eone in</div>
+      <div>y head</div>
+    </div>
   </a>
 </div>

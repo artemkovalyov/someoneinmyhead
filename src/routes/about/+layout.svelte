@@ -1,3 +1,3 @@
-<main class="prose lg:prose-xl xl:prose-2xl dark:prose-invert">
+<main class="prose lg:prose-lg xl:prose-xl dark:prose-invert mx-7">
   <slot />
 </main>
