@@ -7,7 +7,7 @@ export type NavItem = {
 const siteConfig = {
   title: 'Someone In My Head',
   description: 'My Blog description, yay!',
-  basePath: 'http://127.0.0.1:5174',
+  basePath: 'http://127.0.0.1:5173',
   postsPerPage: 7,
   author: 'Artem Kovalov',
   // Main top menu links

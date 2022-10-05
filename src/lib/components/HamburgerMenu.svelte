@@ -11,29 +11,16 @@
     >
       <line
         id="top"
-        class="stroke-primary-dark stroke-2 transform transition duration-500 ease-in-out {open
-          ? 'translate-x-[6px] rotate-45'
-          : ''}"
+        class="line {open ? 'translate-x-[6px] rotate-45' : ''}"
         x1="0"
         y1="2"
         x2="32"
         y2="2"
       />
-      <line
-        id="middle"
-        class="stroke-primary-dark stroke-2 transform transition duration-500 ease-in-out {open
-          ? 'opacity-0'
-          : ''}"
-        x1="0"
-        y1="12"
-        x2="32"
-        y2="12"
-      />
+      <line id="middle" class="line {open ? 'opacity-0' : ''}" x1="0" y1="12" x2="32" y2="12" />
       <line
         id="bottom"
-        class="stroke-primary-dark stroke-2 transform transition duration-500 ease-in-out {open
-          ? '-translate-x-[12px] translate-y-[9px] -rotate-45'
-          : ''}"
+        class="line {open ? '-translate-x-[12px] translate-y-[9px] -rotate-45' : ''}"
         x1="0"
         y1="22"
         x2="32"
@@ -42,3 +29,9 @@
     </svg>
   </button>
 </div>
+
+<style>
+  .line {
+    @apply stroke-primary-dark stroke-2 transform transition duration-500 ease-in-out;
+  }
+</style>

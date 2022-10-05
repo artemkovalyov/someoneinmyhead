@@ -1,3 +1,7 @@
-<main class="prose lg:prose-lg xl:prose-xl dark:prose-invert mx-7 max-w-none">
+<script>
+  import ArticleContainer from '$lib/components/ArticleContainer.svelte';
+</script>
+
+<ArticleContainer>
   <slot />
-</main>
+</ArticleContainer>
