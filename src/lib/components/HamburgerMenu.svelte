@@ -11,7 +11,7 @@
     >
       <line
         id="top"
-        class="stroke-emphasis-high stroke-2 transform transition duration-500 ease-in-out {open
+        class="stroke-primary-dark stroke-2 transform transition duration-500 ease-in-out {open
           ? 'translate-x-[6px] rotate-45'
           : ''}"
         x1="0"
@@ -21,7 +21,7 @@
       />
       <line
         id="middle"
-        class="stroke-emphasis-high stroke-2 transform transition duration-500 ease-in-out {open
+        class="stroke-primary-dark stroke-2 transform transition duration-500 ease-in-out {open
           ? 'opacity-0'
           : ''}"
         x1="0"
@@ -31,7 +31,7 @@
       />
       <line
         id="bottom"
-        class="stroke-emphasis-high stroke-2 transform transition duration-500 ease-in-out {open
+        class="stroke-primary-dark stroke-2 transform transition duration-500 ease-in-out {open
           ? '-translate-x-[12px] translate-y-[9px] -rotate-45'
           : ''}"
         x1="0"

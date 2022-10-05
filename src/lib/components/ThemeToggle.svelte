@@ -7,12 +7,7 @@
   };
 </script>
 
-<button
-  id="theme-toggle"
-  type="button"
-  class="text-base text-emphasis-black rounded-lg dark:text-emphasis-high hover:text-primary-core dark:hover:text-primary-core"
-  on:click={toggleTheme}
->
+<button id="theme-toggle" type="button" class="text-base text-primary-dark" on:click={toggleTheme}>
   {#if dark}
     <svg
       id="theme-toggle-dark-icon"
