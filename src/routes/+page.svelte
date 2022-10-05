@@ -6,7 +6,10 @@
 </script>
 
 <MainGrid>
-  <div class=" h-24 bg-elevation-16">ABC</div>
+  {#each getPostsSortedByDate() as Post}
+    <div class=" h-24 bg-elevation-16">ABC</div>
+  {/each}
+
   <div class="bg-elevation-15">ABC</div>
   <div class="bg-elevation-14">ACD</div>
   <div class="bg-elevation-12">aldskjf</div>
