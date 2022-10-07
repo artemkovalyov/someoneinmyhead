@@ -1,3 +1,5 @@
-<main class="mx-7 grid grid-cols-[repeat(auto-fill,_minmax(min(27rem,_100%),_1fr))] gap-7">
+<main
+  class="secondary mx-7 grid grid-cols-[repeat(auto-fill,_minmax(min(27rem,_100%),_1fr))] gap-7"
+>
   <slot />
 </main>

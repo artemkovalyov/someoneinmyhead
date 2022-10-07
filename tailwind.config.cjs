@@ -1,5 +1,3 @@
-const colors = require('material-ui-colors');
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./src/**/*.{html,js,svelte,ts}'],
@@ -7,8 +5,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        ...colors,
-        elevation: {
+        'elevation-gray': {
           5: '#1e1e1e',
           7: '#222222',
           8: '#242424',
@@ -19,7 +16,6 @@ module.exports = {
           15: '#363636',
           16: '#383838'
         },
-
         primary: {
           core: '#fb8c00',
           light: '#ffbd45',
@@ -35,7 +31,8 @@ module.exports = {
           medium: '#a6a6a6',
           disabled: '#757575'
         },
-        error: '#cf6679'
+        error: '#cf6679',
+        art: 'var(--md-sys-color-error)'
       }
     }
   },

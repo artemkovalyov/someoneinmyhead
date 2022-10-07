@@ -18,5 +18,9 @@
   <div class="bg-elevation-8">asdlkjf</div>
   <div class="bg-elevation-7">a;lsdkfj</div>
   <div class="bg-elevation-5">yay</div>
-  <div class="bg-white opacity-[38%]">ABC</div>
+  <div class="h-24 bg-[#ffb785] opacity-[5%]">ABC</div>
+  <div class="h-24 bg-[#ffb785] opacity-[8%]">ABC</div>
+  <div class="h-24 bg-[#ffb785] opacity-[11%]">ABC</div>
+  <div class="h-24 bg-[#ffb785] opacity-[12%]">ABC</div>
+  <div class="h-24 bg-[#ffb785] opacity-[14%]">ABC</div>
 </MainGrid>

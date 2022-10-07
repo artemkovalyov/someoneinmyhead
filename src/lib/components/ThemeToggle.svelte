@@ -2,8 +2,13 @@
   export let dark: boolean;
   let toggleTheme = () => {
     dark = !dark;
-    if (dark) window.document.documentElement.classList.add('dark');
-    else window.document.documentElement.classList.remove('dark');
+    if (dark) {
+      window.document.documentElement.classList.remove('light');
+      window.document.documentElement.classList.add('dark');
+    } else {
+      window.document.documentElement.classList.remove('dark');
+      window.document.documentElement.classList.add('light');
+    }
   };
 </script>
 
