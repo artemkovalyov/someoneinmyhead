@@ -32,6 +32,6 @@
 
 <style>
   .line {
-    @apply stroke-primary-dark stroke-2 transform transition duration-500 ease-in-out;
+    @apply stroke-primary stroke-2 transform transition duration-500 ease-in-out;
   }
 </style>

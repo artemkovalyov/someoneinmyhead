@@ -12,7 +12,7 @@
   };
 </script>
 
-<button id="theme-toggle" type="button" class="text-base text-primary-dark" on:click={toggleTheme}>
+<button id="theme-toggle" type="button" class="text-base text-primary" on:click={toggleTheme}>
   {#if dark}
     <svg
       id="theme-toggle-dark-icon"
