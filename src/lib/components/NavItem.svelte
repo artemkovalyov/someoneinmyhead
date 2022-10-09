@@ -17,7 +17,14 @@
 
 <style>
   .menulink {
-    @apply mt-1 px-2 pb-1 relative  dark:text-primary before:border-primary before:absolute before:content-[''] before:border-r-2 before:border-t-2  before:w-0 before:h-0 before:top-0 before:left-0 before:invisible after:border-primary after:absolute after:content-[''] after:border-b-2 after:border-l-2 after:w-0 after:h-0 after:bottom-0 after:right-0 after:invisible;
+    @apply mt-1 px-2 pb-1 relative;
+  }
+
+  .menulink::before {
+    @apply border-primary absolute content-[''] border-r-2 border-t-2 w-0 h-0 top-0 left-0 invisible;
+  }
+  .menulink::after {
+    @apply border-primary absolute content-[''] border-b-2 border-l-2 w-0 h-0 bottom-0 right-0 invisible;
   }
 
   .menulink:hover::before {
