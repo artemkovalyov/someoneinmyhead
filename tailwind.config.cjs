@@ -18,6 +18,7 @@ module.exports = {
         },
         // Material design colors scheme
         // The tokns automatically change for Light and Dark scheme
+        // Check /src/lib/styles
         primary: 'var(--md-sys-color-primary)',
         'on-primary': 'var(--md-sys-color-on-primary)',
         'primary-container': 'var(--md-sys-color-primary-container)',
