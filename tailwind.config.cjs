@@ -5,17 +5,17 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'elevation-gray': {
-          5: '#1e1e1e',
-          7: '#222222',
-          8: '#242424',
-          9: '#272727',
-          11: '#2c2c2c',
-          12: '#2e2e2e',
-          14: '#333333',
-          15: '#363636',
-          16: '#383838'
-        },
+        // 'gray': {
+        //   5: '#1e1e1e',
+        //   7: '#222222',
+        //   8: '#242424',
+        //   9: '#272727',
+        //   11: '#2c2c2c',
+        //   12: '#2e2e2e',
+        //   14: '#333333',
+        //   15: '#363636',
+        //   16: '#383838'
+        // },
         // Material design colors scheme
         // The tokns automatically change for Light and Dark scheme
         // Check /src/lib/styles
@@ -42,6 +42,7 @@ module.exports = {
         'surface-variant': 'var(--md-sys-color-surface-variant)',
         'on-surface-variant': 'var(--md-sys-color-on-surface-variant)',
         outline: 'var(--md-sys-color-outline)',
+        'outline-variant': 'var(--md-sys-color-outline-variant)',
         'inverse-surface': 'var(--md-sys-color-inverse-surface)',
         'on-inverse-surface': 'var(--md-sys-color-on-inverse-surface)',
         'inverse-surface': 'var(--md-sys-color-inverse-surface)',
@@ -51,6 +52,15 @@ module.exports = {
         shadow: 'var(--md-sys-color-shadow)',
         'surface-tint': 'var(--md-sys-color-surface-tint)',
         'surface-tint-color': 'var(--md-sys-color-surface-tint-color)',
+        elevation: {
+          1: 'var(--md-sys-color-elevation1)',
+          2: 'var(--md-sys-color-elevation2)',
+          3: 'var(--md-sys-color-elevation3)',
+          4: 'var(--md-sys-color-elevation4)',
+          5: 'var(--md-sys-color-elevation5)'
+        },
+
+        // Tonal palette from the Material Design Theme
         'primary-palette': {
           /* primary */
           0: 'var(--md-ref-palette-primary0)', // --md-ref-palette-primary0: #000000;

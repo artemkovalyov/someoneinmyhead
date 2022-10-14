@@ -22,10 +22,16 @@
   --md-sys-color-surface-variant: var(--md-sys-color-surface-variant-dark);
   --md-sys-color-on-surface-variant: var(--md-sys-color-on-surface-variant-dark);
   --md-sys-color-outline: var(--md-sys-color-outline-dark);
+  --md-sys-color-outline-variant: var(--md-sys-color-outline-variant-dark);
   --md-sys-color-inverse-on-surface: var(--md-sys-color-inverse-on-surface-dark);
   --md-sys-color-inverse-surface: var(--md-sys-color-inverse-surface-dark);
   --md-sys-color-inverse-primary: var(--md-sys-color-inverse-primary-dark);
   --md-sys-color-shadow: var(--md-sys-color-shadow-dark);
   --md-sys-color-surface-tint: var(--md-sys-color-surface-tint-dark);
   --md-sys-color-surface-tint-color: var(--md-sys-color-surface-tint-color-dark);
+  --md-sys-color-elevation1: var(--md-sys-color-elevation1-dark);
+  --md-sys-color-elevation2: var(--md-sys-color-elevation2-dark);
+  --md-sys-color-elevation3: var(--md-sys-color-elevation3-dark);
+  --md-sys-color-elevation4: var(--md-sys-color-elevation4-dark);
+  --md-sys-color-elevation5: var(--md-sys-color-elevation5-dark);
 }

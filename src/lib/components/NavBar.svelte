@@ -9,7 +9,9 @@
   export let path: string;
 </script>
 
-<nav class="flex flex-nowrap p-7 w-full justify-between">
+<nav
+  class="flex flex-nowrap bg-elevation-1 px-7 py-3 w-full justify-between border-b-2 border-outline-variant"
+>
   <Logo />
   <TopMenuLinks bind:path />
   <div class="flex gap-x-5 justify-end">
