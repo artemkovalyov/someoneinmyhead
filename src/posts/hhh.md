@@ -1,10 +1,10 @@
 ---
-slug: abc
+slug: hhh
 title: test
 description:  Description will go to meta
-image:  path to image
+image:  https://placeimg.com/962/558/nature
 author:  Artem Kovalov
-isPublished:  false
+published:  true
 publishedTime:  2022-06-15T17:22:57+02:00
 modifiedTime:  2022-06-15T17:22:57+02:00
 expirationTime:  2022-06-15T17:22:57+02:00

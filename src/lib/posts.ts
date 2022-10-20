@@ -1,11 +1,36 @@
+import siteConfig from './site.config';
+
+export interface postModuleType {
+  default: any;
+  metadata: any;
+}
 // directly import all the blog posts from the file system thanks to Vite's feature: https://vitejs.dev/guide/features.html#glob-import
-const postModules = import.meta.glob('../posts/**/*.md', { eager: true });
+const postModules: Record<string, postModuleType> = import.meta.glob('../posts/**/*.md', {
+  eager: true
+});
+
+// Uncoment this if you need a raw content of Markdown blog files
+const rawPosts = import.meta.glob('../posts/**/*.md', { as: 'raw', eager: true });
+const rawContentMap = new Map(
+  Object.entries(rawPosts).map(([path, content]) => {
+    const text = content.replace(/---[\s\S]*---\n+/g, '');
+    return [
+      path,
+      {
+        rawPostContet: text,
+        readingTime: Math.round(text.length / 300)
+      }
+    ];
+  })
+);
 
 export interface Post {
   path: string;
-  content: Object;
+  component: any;
+  rawPostContent: string;
   author: string;
   description: string;
+  excerpt: string;
   image: string;
   publishedTime: string;
   modifiedTime: string;
@@ -15,21 +40,28 @@ export interface Post {
   seriesId: string;
   section: string; // Open Graph section
   slug: string;
+  link: string;
   tags: Array<string>;
   title: string;
+  readingTime: number;
+  alt: string;
   uuid: string;
 }
 
 // process imported posts data and map into an Array of post objects with semantical structure
 const posts: Array<Post> = Object.entries(postModules).map(
-  ([path, post]): Post =>
+  ([path, post]: [string, postModuleType]): Post => {
     // post structure
-    ({
+    const slug = path?.split('/')?.pop()?.split('.')[0];
+    return {
       path, // path to the markdown post file
-      slug: path!.split('/').pop().split('.')[0],
-      content: post?.default, // actual markdown to reneder
+      slug,
+      link: siteConfig.basePath + slug,
+      component: post.default,
+      ...rawContentMap.get(path),
       ...post?.metadata
-    })
+    };
+  }
 );
 
 // return a post by it's slug, if there're doplicated we'll get the one found first

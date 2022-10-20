@@ -7,7 +7,7 @@ export type NavItem = {
 const siteConfig = {
   title: 'Someone In My Head',
   description: 'My Blog description, yay!',
-  basePath: 'http://127.0.0.1:5173',
+  basePath: 'http://127.0.0.1:5173/',
   postsPerPage: 7,
   author: 'Artem Kovalov',
   // Main top menu links
@@ -25,7 +25,7 @@ const siteConfig = {
 
 export const getNavItems = (): Array<NavItem> =>
   siteConfig.navItems.map((item) =>
-    item.href !== undefined ? item : { ...item, href: `${siteConfig.basePath}/${item.path}` }
+    item.href !== undefined ? item : { ...item, href: `${siteConfig.basePath}${item.path}` }
   );
 
 export default siteConfig;

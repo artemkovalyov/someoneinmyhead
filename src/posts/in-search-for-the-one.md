@@ -2,9 +2,10 @@
 slug: in-search-for-the-one
 title: In search for the one
 description:  Description will go to meta
-image:  path to image
+excerpt: Will go to blog-card
+image:  ''
 author:  Artem Kovalov
-isPublished:  false
+published:  true
 publishedTime:  2022-06-13T13:37:42+02:00
 modifiedTime:  2022-06-13T13:37:42+02:00
 expirationTime:  2022-06-13T13:37:42+02:00

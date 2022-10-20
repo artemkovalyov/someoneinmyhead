@@ -1,42 +1,48 @@
 <script lang="ts">
+  import type { Post } from '$lib/posts';
+
   import Pill from './Pill.svelte';
-  export let title = 'Very Nice Demo Title';
-  export let image = 'https://placeimg.com/962/558/nature';
-  export let alt = 'Imgage description';
-  export let excerpt =
-    'Some quick example text to build on the card title and make up the bulk of the card content. Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla';
-  export let link = 'https://someoneinmybed.com/';
-  export let tags = ['My Tag 1', 'My Tag 2'];
+
+  export let tagsPerCard = 3;
+  export let post: Post;
 </script>
 
-<article class="flex flex-col">
-  <a href={link} class="mb-7 mx-auto">
-    <img class="block bg-elevation-1 max-w-full" src={image} {alt} />
-  </a>
-  <header class="flex flex-col mb-3">
-    <div class="flex justify-between text-sm mb-2">
-      <!-- TAGS -->
-      <div class="flex gap-2">
-        {#if tags.length > 0}
-          {#each tags as tag}
-            <Pill>{tag}</Pill>
-          {/each}
-        {/if}
-      </div>
-      <!-- FEATURED -->
-      <div class="flex gap-2">
-        <span class="text-secondary py-1 px-2">Author: Artem Kovalov</span>
-      </div>
-    </div>
-    <a href={link}>
-      <h2 class="text-3xl font-bold ">{title}</h2>
+<article class="flex flex-col justify-between">
+  <div class="flex flex-col">
+    <a href={post.link} class="w-full mb-7 mx-auto">
+      {#if post.image === ''}
+        <div class="w-full aspect-video bg-elevation-5" />
+      {:else}
+        <img class="max-w-full" src={post.image} alt={post.alt || 'Blog Post by: ' + post.author} />
+      {/if}
     </a>
-  </header>
-  <div class="text-xl mb-2">
-    {excerpt}
+    <header class="flex flex-col mb-3">
+      <div class="flex justify-between text-sm mb-2">
+        <!-- TAGS -->
+        <div class="flex gap-2">
+          {#if post.tags}
+            {#each post.tags.slice(0, tagsPerCard) as tag}
+              <Pill>{tag}</Pill>
+            {/each}
+          {/if}
+        </div>
+        <!-- FEATURED -->
+        <div class="flex gap-2">
+          <span class="text-secondary py-1 px-2">Author: Artem Kovalov</span>
+        </div>
+      </div>
+      <a href={post.link}>
+        <h2 class="text-3xl font-bold ">{post.title}</h2>
+      </a>
+    </header>
+    <section class="text-xl mb-2">
+      {post.excerpt}
+    </section>
   </div>
   <footer class="flex justify-between text-sm text-secondary">
-    <time datetime="2021-03-18">Mar 18, 2021</time>
-    <span>3 min read</span>
+    <time datetime={new Date(post.publishedTime).toISOString()}
+      >{new Date(post.publishedTime).toDateString().slice(4)}</time
+    >
+    <span> {post.readingTime} min read</span>
   </footer>
 </article>

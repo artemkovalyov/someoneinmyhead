@@ -16,6 +16,7 @@ export interface Post {
   content: Object;
   author: string;
   description: string;
+        excerpt:
   image: string;
   publishedTime: string;
   modifiedTime: string;

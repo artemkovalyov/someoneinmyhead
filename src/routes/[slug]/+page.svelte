@@ -1,7 +1,6 @@
 <script lang="ts">
   import Head from '$lib/components/Head.svelte';
   export let data;
-
   $: post = data.post;
 
   const meta = {
@@ -19,6 +18,4 @@
 
 <!-- <Head {...meta} /> -->
 
-<main class="prose lg:prose-xl xl:prose-2xl">
-  <svelte:component this={post.content} />
-</main>
+<svelte:component this={post.component} />

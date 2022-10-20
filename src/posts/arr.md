@@ -2,9 +2,10 @@
 slug: arr
 title: test
 description:  Description will go to meta
-image:  path to image
+excerpt: It is an important part of my blog
+image:  ''
 author:  Artem Kovalov
-isPublished:  false
+published:  true
 publishedTime:  2022-06-15T17:22:57+02:00
 modifiedTime:  2022-06-15T17:22:57+02:00
 expirationTime:  2022-06-15T17:22:57+02:00

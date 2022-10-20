@@ -4,7 +4,7 @@ title: I'm afraid to become like them
 description: What to do when your core values clash with the environment
 image:
 author:  Artem Kovalov
-isPublished:  false
+published:  true
 publishedTime:  2022-06-11T10:38:32+02:00
 modifiedTime:  2022-06-11T10:38:32+02:00
 expirationTime:  2022-06-11T10:38:32+02:00
