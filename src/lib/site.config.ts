@@ -10,6 +10,7 @@ const siteConfig = {
   basePath: 'http://127.0.0.1:5173/',
   postsPerPage: 7,
   author: 'Artem Kovalov',
+  readingTimeFactor: 300,
   // Main top menu links
   navItems: [
     {

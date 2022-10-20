@@ -18,7 +18,7 @@ const rawContentMap = new Map(
       path,
       {
         rawPostContet: text,
-        readingTime: Math.round(text.length / 300)
+        readingTime: Math.round(text.length / siteConfig.readingTimeFactor)
       }
     ];
   })

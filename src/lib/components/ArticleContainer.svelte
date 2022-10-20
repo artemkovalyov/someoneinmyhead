@@ -1,7 +1,7 @@
 <main
-  class="prose prose-headings:font-medium lg:prose-lg xl:prose-xl dark:prose-invert mx-7 max-w-none "
+  class="mx-7 mt-7 prose prose-headings:font-semibold lg:prose-lg xl:prose-xl dark:prose-invert max-w-none "
 >
-  <article class="p-7">
+  <article>
     <slot />
   </article>
 </main>
