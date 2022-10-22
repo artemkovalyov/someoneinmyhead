@@ -14,20 +14,31 @@
 
 <svelte:head>
   <title>{title}</title>
+  <!-- https://ogp.me/#type_article -->
   <meta name="description" content={description} />
   <meta name="author" content={author} />
-  <meta name="twitter:title" content={title} />
-  <meta property="og:title" content={title} />
-  <!-- https://ogp.me/#type_article -->
+  <meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <meta property="og:site_name" content={siteConfig.title} />
   <meta property="og:type" content={type} />
-  <meta property="og:url" content={basePath} />
+  <!-- website -->
+  <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
+  <meta property="og:url" content={basePath} />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:url" content={basePath} />
+  <meta name="twitter:site" content="" />
 
   {#if imageLink !== ''}
     <meta property="og:image" content={imageLink} />
-    <meta property="og:image" content={imageLink} />
+    <meta property="og:image:width" content="2000" />
+    <meta property="og:image:height" content="1400" />
+    <meta name="twitter:image" content={imageLink} />
   {/if}
 
+  <meta property="article:publisher" content={author} />
   {#if type === 'article'}
     <meta property="article:author" content={author} />
     {#if publishedTime}
