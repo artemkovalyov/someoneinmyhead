@@ -1,3 +1,5 @@
-import { readable } from 'svelte/store';
+import { readable, writable } from 'svelte/store';
+import siteConfig from './site.config';
 
-export default {};
+export const theme = writable('dark');
+export const config = readable(siteConfig);

@@ -1,4 +1,4 @@
-import type { PageLoad, RouteParams } from './$types';
+import type { PageLoad } from './$types';
 import { getPostBySlug } from '$lib/posts';
 
 export const load: PageLoad = ({ url, params }) => {

@@ -1,9 +1,10 @@
 <script lang="ts">
   import type { Post } from '$lib/posts';
+  import { siteConfig } from '$lib/site.config';
 
   import Pill from './Pill.svelte';
 
-  export let tagsPerCard = 3;
+  export let tagsPerCard = siteConfig.tagsPerCard;
   export let post: Post;
 </script>
 

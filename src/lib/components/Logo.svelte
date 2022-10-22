@@ -1,5 +1,5 @@
 <script lang="ts">
-  import siteConfig from '$lib/site.config';
+  import { siteConfig } from '$lib/site.config';
 </script>
 
 <div class="flex text-primary-palette-50 items-center min-w-max">

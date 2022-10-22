@@ -1,5 +1,5 @@
 <script lang="ts">
-  import siteConfig from '$lib/site.config';
+  import { siteConfig } from '$lib/site.config';
 
   export let { title = '', description = '', author = '', basePath = '' } = siteConfig;
   export let type = 'website';
