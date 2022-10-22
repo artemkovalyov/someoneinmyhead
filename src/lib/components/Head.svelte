@@ -14,22 +14,6 @@
 
 <svelte:head>
   <title>{title}</title>
-  {#if dark}
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-material-dark.min.css"
-      type="text/css"
-      media="screen"
-    />
-  {:else}
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-material-light.min.css"
-      type="text/css"
-      media="screen"
-    />
-  {/if}
-  <meta data-key="description" name="description" content={description} />
   <meta name="description" content={description} />
   <meta name="author" content={author} />
   <meta name="twitter:title" content={title} />
@@ -61,6 +45,22 @@
     {#if section !== ''}
       <meta property="article:section" content={section} />
     {/if}
+  {/if}
+
+  {#if dark}
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-material-dark.min.css"
+      type="text/css"
+      media="screen"
+    />
+  {:else}
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-material-light.min.css"
+      type="text/css"
+      media="screen"
+    />
   {/if}
 
   <!-- <link rel="icon" href="/favicon.ico" />
