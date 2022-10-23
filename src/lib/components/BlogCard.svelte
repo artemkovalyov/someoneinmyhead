@@ -32,7 +32,7 @@
           <span class="text-secondary py-1 px-2">Author: Artem Kovalov</span>
         </div>
       </div>
-      <a href={post.link}>
+      <a data-sveltekit-reload href={post.slug}>
         <h2 class="text-3xl font-bold ">{post.title}</h2>
       </a>
     </header>

@@ -11,7 +11,7 @@
 <!-- <a sveltekit:reload href={nav.href || `${nav.path}`} class:current class="menulink"> -->
 
 <!-- This will not reload the page but use client side navigation to update only changed components  -->
-<a href={nav.href || `${nav.path}`} class:current class="menulink">
+<a data-sveltekit-reload href={nav.href || `${nav.path}`} class:current class="menulink">
   {nav.label}
 </a>
 
