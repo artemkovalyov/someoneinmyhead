@@ -10,7 +10,7 @@
 
 <article class="flex flex-col justify-between">
   <div class="flex flex-col">
-    <a href={post.link} class="w-full mb-7 mx-auto">
+    <a href={post.slug} class="w-full mb-7 mx-auto">
       {#if post.image === ''}
         <div class="w-full aspect-video bg-elevation-5" />
       {:else}
