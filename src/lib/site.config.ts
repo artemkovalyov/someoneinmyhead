@@ -12,9 +12,9 @@ export const siteConfig = {
   tagsPerCard: 3,
   author: 'Artem Kovalov',
   readingTimeFactor: 300
-  // Main top menu links
 };
 
+// Main top menu links
 export const navItems = [
   {
     label: 'About',
@@ -23,6 +23,10 @@ export const navItems = [
   {
     label: 'Author',
     path: 'author'
+  },
+  {
+    label: 'Projects',
+    path: 'projects'
   }
 ];
 

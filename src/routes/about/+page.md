@@ -6,7 +6,7 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for t
 
 ## Smaller
 
-Wow wow wow
+<kbd class="key not-prose">Wow</kbd> wow wow
 
 ```ts
 const postModules = import.meta.globEager('../posts/**/*.md');
@@ -45,3 +45,9 @@ const posts: Array<Post> = Object.entries(postModules).map(
 
 
 ```
+
+<style>
+ .key {
+    color: red;
+ }
+</style>
