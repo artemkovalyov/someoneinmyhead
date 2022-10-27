@@ -16,7 +16,6 @@
   /*   } */
 
   kbd {
-    /* @apply px-2 py-1.5 text-sm font-semibold border rounded-lg border-outline bg-surface-variant text-on-surface-variant; */
-    color: red;
+    @apply px-2 py-1.5 text-xs font-semibold border rounded-lg border-outline bg-surface-variant text-on-surface-variant;
   }
 }
