@@ -1,3 +1,4 @@
+import Prism from 'prismjs';
 import { mdsvex } from 'mdsvex';
 import mdsvexConfig from './mdsvex.config.js';
 import adapter from '@sveltejs/adapter-auto';

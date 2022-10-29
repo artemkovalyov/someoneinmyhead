@@ -3,6 +3,7 @@
 
 @import 'tailwindcss/base';
 @import 'theme.css';
+@import 'prism-highlight.css';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
@@ -16,6 +17,6 @@
   /*   } */
 
   kbd {
-    @apply px-2 py-1.5 text-xs font-semibold border rounded-lg border-outline bg-surface-variant text-on-surface-variant;
+    @apply px-2 py-1.5 text-xs align-middle font-semibold border rounded-lg border-outline bg-surface-variant text-on-surface-variant;
   }
 }
