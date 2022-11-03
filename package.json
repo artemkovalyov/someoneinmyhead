@@ -28,7 +28,7 @@
     "eslint-plugin-svelte3": "^4.0.0",
     "i": "^0.3.7",
     "mdsvex": "^0.10.6",
-    "npm": "^8.18.0",
+    "npm": "^8.19.2",
     "postcss": "^8.4.16",
     "postcss-import": "^15.0.0",
     "prettier": "^2.6.2",
@@ -41,5 +41,20 @@
     "typescript": "^4.7.4",
     "vite": "^3.0.4"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "hastscript": "^7.1.0",
+    "install": "^0.13.0",
+    "mdsvex-relative-images": "^1.0.3",
+    "rehype-autolink-headings": "^6.1.1",
+    "rehype-external-links": "^2.0.1",
+    "rehype-slug": "^5.0.1",
+    "remark-directive": "^2.0.1",
+    "remark-frontmatter": "^4.0.1",
+    "remark-gfm": "^3.0.1",
+    "remark-hint": "^1.0.10",
+    "remark-parse": "^10.0.1",
+    "unist-builder": "^3.0.0",
+    "unist-util-visit": "^4.1.1"
+  }
 }

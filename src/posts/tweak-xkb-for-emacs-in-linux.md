@@ -25,6 +25,7 @@ uuid: ccff7f23-096e-406c-afd2-8287711e5404
     import Pill from '$lib/components/Pill.svelte';
 </script>
 
-<p class="not-prose">
-After reading this article you should be able to remap your meta keys also known as modifier keys and make them distinguishable for your desktop environment and applications. Most of the Linux distributions ship a default [XKB](https://en.wikipedia.org/wiki/X_keyboard_extension) configuration that leaves you with only the most popular modifiers like <kbd>Alt</kbd> + <kbd>Enter</kbd>, <kbd>Super</kbd>, <kbd>Ctrl</kbd>, and <kbd>Shift</kbd>. They are usually mapped to respective keys on your keyboard. Super is most frequently mapped to Win for most laptops. aldfjasfa
-a dlfkjasdf lasjf lasjf aslkjdf laksjf lkasjflk asjdlkfjaslk jaslkdjf alsd;j faslkdj fals;jf lkasjf lkasdj askljfaslkj fasdlkj</p>
+After reading this article you should be able to remap your meta keys also known as modifier keys and make them distinguishable for your desktop environment and applications. Most of the Linux distributions ship a default [XKB](https://en.wikipedia.org/wiki/X_keyboard_extension) configuration that leaves you with only the most popular modifiers like <kbd>Alt</kbd> + <kbd>Enter</kbd>, <kbd>Super</kbd>, <kbd>Ctrl</kbd>, and <kbd>Shift</kbd>. They are usually mapped to respective keys on your keyboard. Super is most frequently mapped to Win for most laptops.
+
+
+You can usually tweak your key configuration via the system settings of your desktop environment. Leave it as simple as that if it works for you. On the flip side, it never lets you configure keys granular enough and most importantly fine-tune the modifiers. To Emacs users like me, modifiers are of utmost importance.

@@ -1,6 +1,3 @@
-/* @import url('prism-material-dark.css'); */
-/* @import url('prism-material-light.css'); */
-
 @import 'tailwindcss/base';
 @import 'theme.css';
 @import 'prism-highlight.css';
@@ -16,7 +13,34 @@
   /*     @apply absolute w-auto p-2 m-2 min-w-max left-14 rounded-md shadow-md text-white bg-green-900 text-xs font-bold transition-all duration-100 origin-left scale-0; */
   /*   } */
 
+  /* Make it easier to denote keyboard keys in blogs */
   kbd {
     @apply px-2 py-1.5 text-xs align-middle font-semibold border rounded-lg border-outline bg-surface-variant text-on-surface-variant;
   }
+}
+
+:where(h1, h2, h3, h4, h5, h6) .icon-link {
+  position: relative;
+}
+
+:where(h1, h2, h3, h4, h5, h6):hover .icon-link::before {
+  opacity: 1;
+}
+
+:where(h1, h2, h3, h4, h5, h6):hover .icon-link::before:hover {
+  text-decoration: underline;
+}
+
+:where(h1, h2, h3, h4, h5, h6) .icon-link::before {
+  content: '#';
+  position: absolute;
+  left: -1.2ch;
+  top: 0;
+  line-height: 1;
+  opacity: 0;
+  text-decoration: underline;
+}
+
+.warning {
+  @apply bg-error-container text-on-error-container;
 }
