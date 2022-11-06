@@ -7,6 +7,7 @@ import relativeImages from 'mdsvex-relative-images';
 import remarkGfm from 'remark-gfm';
 import rehypeExternalLinks from 'rehype-external-links';
 import remarkAdmonitions from './plugins/remark/sections.js';
+import remarkFrontmatter from 'remark-frontmatter';
 
 const config = defineConfig({
   extensions: ['.svelte.md', '.md', '.svx'],
@@ -15,7 +16,14 @@ const config = defineConfig({
     dashes: 'oldschool'
   },
 
-  remarkPlugins: [remarkParse, remarkDirective, remarkAdmonitions, relativeImages, remarkGfm],
+  remarkPlugins: [
+    remarkParse,
+    remarkFrontmatter,
+    remarkDirective,
+    remarkAdmonitions,
+    relativeImages,
+    remarkGfm
+  ],
   rehypePlugins: [
     rehypeSlug,
     rehypeAutolinkHeadings,

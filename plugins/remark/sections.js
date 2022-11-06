@@ -2,29 +2,40 @@
 
 import { visit } from 'unist-util-visit';
 import { h } from 'hastscript';
-import { u } from 'unist-builder';
+
+/**
+ * This plugin tanslates Markdown extension like below into HTML.
+ *
+ * :::some-name{.someclass title="your-title" #your-id element=html-element}
+ *
+ * Markdown content of any kind
+ *
+ * :::
+ *
+ *  <html-element class="someclass" title="your-title" id="your-id" element="html-element">
+ *     <div class="someclass">your-title</div>
+ *      <p>Markdown content of any kind</p>
+ *  </html-element>
+ *
+ *
+ */
 
 /** @type {import('unified').Plugin<[], import('mdast').Root>} */
 export default function remarkAdmonitions() {
   return (tree) => {
-    visit(tree, (node) => {
-      if (
-        node.type === 'textDirective' ||
-        node.type === 'leafDirective' ||
-        node.type === 'containerDirective'
-      ) {
-        if (node.name !== 'note') return;
-        const data = node.data || (node.data = {});
-        const tagName = node.type === 'textDirective' ? 'span' : 'div';
-        data.hName = 'section';
-        data.hProperties = h(tagName, node.attributes).properties;
-        node.children.unshift({
-          type: 'art',
-          children: [{ type: 'text', value: 'abcalsdjflsjkdflas' }],
-          data: { hName: 'div', hProperties: { className: 'art' } }
-        });
-        console.log(node.children);
-      }
+    visit(tree, 'containerDirective', (node) => {
+      // if (node.name !== 'note') return;
+      const data = node.data || (node.data = {});
+      const hast = h(node.attributes.element || 'div', node.attributes);
+      const title = node.attributes.title || node.name;
+      data.hName = hast.tagName;
+      data.hProperties = hast.properties;
+      node.children.unshift({
+        type: 'AdmonitionTitle',
+        children: [{ type: 'text', value: `${title}` }],
+        data: { hName: 'div', hProperties: { className: `${node.attributes.class}` } }
+      });
+      console.log(node.attributes);
     });
   };
 }
