@@ -17,30 +17,34 @@
   kbd {
     @apply px-2 py-1.5 text-xs align-middle font-semibold border rounded-lg border-outline bg-surface-variant text-on-surface-variant;
   }
+
+  .danger {
+    @apply bg-error-container text-on-error-container;
+  }
+
+  .tip {
+    @apply bg-secondary-container text-on-secondary-container;
+  }
+
+  .note {
+    @apply bg-tertiary-container text-on-tertiary-container;
+  }
 }
 
+/* AutoLink for every header with '#' */
 :where(h1, h2, h3, h4, h5, h6) .icon-link {
-  position: relative;
+  @apply relative;
 }
 
 :where(h1, h2, h3, h4, h5, h6):hover .icon-link::before {
-  opacity: 1;
+  @apply opacity-100;
 }
 
 :where(h1, h2, h3, h4, h5, h6):hover .icon-link::before:hover {
-  text-decoration: underline;
+  @apply underline;
 }
 
 :where(h1, h2, h3, h4, h5, h6) .icon-link::before {
-  content: '#';
-  position: absolute;
-  left: -1.2ch;
-  top: 0;
-  line-height: 1;
-  opacity: 0;
-  text-decoration: underline;
+  @apply absolute content-['#'] text-primary underline opacity-0 top-0 left-[-1.2ch] leading-none;
 }
-
-.warning {
-  @apply bg-error-container text-on-error-container;
-}
+/* AutoLink for every header with '#' */

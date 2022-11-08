@@ -2,7 +2,13 @@
 
 # How to use xxx
 
-:::some-name{.someclass title="your-title" #your-id element=html-element}
+:::note{.tip title="your-title" #your-id}
+
+Markdown content of any kind
+
+:::
+
+:::note{.note title="your-title" #your-id}
 
 Markdown content of any kind
 
