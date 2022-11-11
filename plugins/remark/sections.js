@@ -33,7 +33,7 @@ export default function remarkAdmonitions() {
       node.children.unshift({
         type: 'AdmonitionTitle',
         children: [{ type: 'text', value: `${title}` }],
-        data: { hName: 'div', hProperties: { className: `${node.attributes.class}` } }
+        data: { hName: 'div', hProperties: { className: `admonition-title` } }
       });
       console.log(node.attributes);
     });

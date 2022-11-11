@@ -4,32 +4,42 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-@layer components {
-  /*   .sidebar-icon { */
-  /*     @apply relative flex items-center justify-center h-12 w-12 my-2 mx-auto shadow-lg bg-gray-800 text-green-500 hover:bg-green-600 hover:text-white rounded-3xl hover:rounded-xl */
-  /*     transition-all duration-300 ease-linear cursor-pointer; */
-  /*   } */
-  /*   .sidebar-tooltip { */
-  /*     @apply absolute w-auto p-2 m-2 min-w-max left-14 rounded-md shadow-md text-white bg-green-900 text-xs font-bold transition-all duration-100 origin-left scale-0; */
-  /*   } */
-
-  /* Make it easier to denote keyboard keys in blogs */
-  kbd {
-    @apply px-2 py-1.5 text-xs align-middle font-semibold border rounded-lg border-outline bg-surface-variant text-on-surface-variant;
-  }
-
-  .danger {
-    @apply bg-error-container text-on-error-container;
-  }
-
-  .tip {
-    @apply bg-secondary-container text-on-secondary-container;
-  }
-
-  .note {
-    @apply bg-tertiary-container text-on-tertiary-container;
-  }
+/* Make it easier to denote keyboard keys in blogs */
+kbd {
+  @apply px-2 py-1.5 text-xs align-middle font-semibold border rounded-lg border-outline bg-surface-variant text-on-surface-variant;
 }
+
+/* Admonitions */
+
+.danger {
+  @apply bg-error text-on-error rounded-lg px-5 border-l-8 border-error-container;
+}
+
+.warning {
+  @apply bg-primary text-on-primary rounded-lg px-5 border-l-8 border-primary-palette-60;
+}
+
+.note {
+  @apply bg-secondary text-on-secondary rounded-lg px-5 border-l-8 border-secondary-palette-60;
+}
+
+.tip {
+  @apply bg-tertiary text-on-tertiary rounded-lg px-5 border-l-8 border-tertiary-palette-60;
+}
+
+.info {
+  @apply bg-surface-variant text-on-surface-variant rounded-lg px-5 border-l-8 border-surface-tint-color;
+}
+
+/* Admonitions */
+
+.admonition-title {
+  @apply uppercase font-bold;
+}
+
+/* .admonition p { */
+/*   @apply my-0; */
+/* } */
 
 /* AutoLink for every header with '#' */
 :where(h1, h2, h3, h4, h5, h6) .icon-link {
