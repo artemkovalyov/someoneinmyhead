@@ -12,34 +12,34 @@ kbd {
 /* Admonitions */
 
 .danger {
-  @apply bg-error text-on-error rounded-lg px-5 border-l-8 border-error-container;
+  @apply bg-error-container rounded-lg px-5 border-l-8 border-error prose-headings:!my-0 prose-p:!my-0;
 }
 
 .warning {
-  @apply bg-primary text-on-primary rounded-lg px-5 border-l-8 border-primary-palette-60;
+  @apply bg-primary-container rounded-lg px-5 border-l-8 border-primary-palette-60;
 }
 
 .note {
-  @apply bg-secondary text-on-secondary rounded-lg px-5 border-l-8 border-secondary-palette-60;
+  @apply bg-secondary-container rounded-lg px-5 border-l-8 border-secondary-palette-60;
 }
 
 .tip {
-  @apply bg-tertiary text-on-tertiary rounded-lg px-5 border-l-8 border-tertiary-palette-60;
+  @apply bg-tertiary-container rounded-lg px-5 border-l-8 border-tertiary-palette-60;
 }
 
 .info {
   @apply bg-surface-variant text-on-surface-variant rounded-lg px-5 border-l-8 border-surface-tint-color;
 }
 
-/* Admonitions */
-
-.admonition-title {
-  @apply uppercase font-bold;
+.admonition {
+  @apply prose-headings:!my-0 prose-p:!my-0;
 }
 
-/* .admonition p { */
-/*   @apply my-0; */
-/* } */
+.admonition-title {
+  @apply uppercase font-bold text-lg text-black dark:text-white;
+}
+
+/* Admonitions */
 
 /* AutoLink for every header with '#' */
 :where(h1, h2, h3, h4, h5, h6) .icon-link {

@@ -9,7 +9,6 @@
   export let expirationTime = '';
   export let tags: string[] = [];
   export let section = '';
-  export let dark: boolean;
 </script>
 
 <svelte:head>
@@ -57,26 +56,6 @@
       <meta property="article:section" content={section} />
     {/if}
   {/if}
-
-  <!--
-
-  {#if dark}
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-material-dark.min.css"
-      type="text/css"
-      media="screen"
-    />
-  {:else}
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-material-light.min.css"
-      type="text/css"
-      media="screen"
-    />
-  {/if}
-
-  -->
   <!-- <link rel="icon" href="/favicon.ico" />
        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
        <link rel="apple-touch-icon" href="/apple-touch-icon.png" /> -->

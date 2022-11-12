@@ -2,34 +2,34 @@
 
 # How to use xxx
 
-:::note{.tip.admonition title="your-title" #your-id}
+:::note{.tip.admonition.not-prose title="your-title" #your-id}
 
 Markdown content of any kind
 
 :::
 
-:::note{.info.admonition title="your-title" #your-id}
+:::note{.info.admonition.not-prose title="your-title" #your-id}
 
 Markdown content of any kind
 
 :::
 
-:::note{.note.admonition title="your-title" #your-id}
+:::note{.note.admonition.not-prose title="your-title" #your-id}
 
 Markdown content of any kind
 
 :::
 
-:::note{.warning.admonition title="your-title" #your-id}
+:::note{.warning.admonition.not-prose title="your-title" #your-id}
 
 Markdown content of any kind
 
 :::
 
 
-::::note{.danger.admonition.not-prose title="abc" #icd}
+::::note{.danger.admonition title="abc" #icd}
 
-## abc
+### abc
 
 if you chose xxx, you should also use yyy somewhere…
 
