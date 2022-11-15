@@ -29,3 +29,5 @@ After reading this article you should be able to remap your meta keys also known
 
 
 You can usually tweak your key configuration via the system settings of your desktop environment. Leave it as simple as that if it works for you. On the flip side, it never lets you configure keys granular enough and most importantly fine-tune the modifiers. To Emacs users like me, modifiers are of utmost importance.
+
+# Party

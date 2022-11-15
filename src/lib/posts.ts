@@ -9,11 +9,11 @@ const postModules: Record<string, postModuleType> = import.meta.glob('../posts/*
   eager: true
 });
 
-// Uncoment this if you need a raw content of Markdown blog files
+// Uncomment this if you need a raw content of Markdown blog files
 const rawPosts = import.meta.glob('../posts/**/*.md', { as: 'raw', eager: true });
 const rawContentMap = new Map(
   Object.entries(rawPosts).map(([path, content]) => {
-    const text = content.replace(/---[\s\S]*---\n+/g, '');
+    const text = content.replace(/---[\s\S]*---\n+/g, ''); // remove the frontmatter
     return [
       path,
       {
@@ -26,6 +26,7 @@ const rawContentMap = new Map(
 
 export interface Post {
   path: string;
+  dir: string;
   component: any;
   rawPostContent: string;
   author: string;
@@ -52,14 +53,17 @@ export interface Post {
 const posts: Array<Post> = Object.entries(postModules).map(
   ([path, post]: [string, postModuleType]): Post => {
     // post structure
-    const slug = path?.split('/')?.pop()?.split('.')[0];
+    const match = path.match(/(?:\.+\/)+([\s\S]+\/)([\s\S]+)(?:\.)/);
+    console.log(match);
+    const dir = match[1];
+    const slug = match[2];
     return {
-      path, // path to the markdown post file
-      slug,
-      link: siteConfig.basePath + slug,
+      dir, // a directory of the post relative to the root of of the project, usual '/src'. It is used to load additional resources
+      slug, // if there's no slug in the metadata, file name will become a slug
+      path, // relative path to the markdown post file
       component: post.default,
       ...rawContentMap.get(path),
-      ...post?.metadata
+      ...post?.metadata // values like slug will be overridden from Metadata if present
     };
   }
 );

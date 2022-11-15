@@ -11,7 +11,8 @@ export const siteConfig = {
   postsPerPage: 7,
   tagsPerCard: 3,
   author: 'Artem Kovalov',
-  readingTimeFactor: 300
+  readingTimeFactor: 300,
+  rootDir: '/src'
 };
 
 // Main top menu links

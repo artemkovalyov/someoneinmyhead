@@ -9,6 +9,7 @@ export const load: PageLoad = ({ url, params }) => {
       error: new Error(`Not found: ${url.pathname}`)
     };
   }
+  console.log(post);
   return {
     post
   };

@@ -35,7 +35,6 @@ export default function remarkAdmonitions() {
         children: [{ type: 'text', value: `${title}` }],
         data: { hName: 'div', hProperties: { className: `admonition-title` } }
       });
-      console.log(node.attributes);
     });
   };
 }
