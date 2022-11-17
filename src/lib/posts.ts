@@ -25,6 +25,7 @@ const rawContentMap = new Map(
 );
 
 export interface Post {
+  slug: string; // slug is an ID of the post, it's resolved from a metadata in a frontmatter. Otherwise the file name is used.
   path: string;
   dir: string;
   component: any;
@@ -40,7 +41,6 @@ export interface Post {
   series: string;
   seriesId: string;
   section: string; // Open Graph section
-  slug: string;
   link: string;
   tags: Array<string>;
   title: string;
@@ -54,7 +54,6 @@ const posts: Array<Post> = Object.entries(postModules).map(
   ([path, post]: [string, postModuleType]): Post => {
     // post structure
     const match = path.match(/(?:\.+\/)+([\s\S]+\/)([\s\S]+)(?:\.)/);
-    console.log(match);
     const dir = match[1];
     const slug = match[2];
     return {
@@ -68,8 +67,8 @@ const posts: Array<Post> = Object.entries(postModules).map(
   }
 );
 
-// return a post by it's slug, if there're doplicated we'll get the one found first
-const getPostBySlug = (slug: String): Post => posts.filter((post: Post) => post.slug === slug)[0];
+// return a post by it's slug, if there're duplicated we'll get the one found first
+const getPostBySlug = (slug: String): Post => posts.sfilter((post: Post) => post.slug === slug)[0];
 // const getPostBySlug = (slug: String): Post => posts[0];
 
 // return a post by it's slug
