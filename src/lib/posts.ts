@@ -68,7 +68,7 @@ const posts: Array<Post> = Object.entries(postModules).map(
 );
 
 // return a post by it's slug, if there're duplicated we'll get the one found first
-const getPostBySlug = (slug: String): Post => posts.sfilter((post: Post) => post.slug === slug)[0];
+const getPostBySlug = (slug: String): Post => posts.filter((post: Post) => post.slug === slug)[0];
 // const getPostBySlug = (slug: String): Post => posts[0];
 
 // return a post by it's slug
