@@ -2,7 +2,7 @@
 slug: blog-engine-scope-for-a-week
 title: Blog engine scope
 description: I decided to approach my never finished blog engine in 1 week with fixed scope to make the end visible.
-image:  ''
+image:  https://picsum.photos/1280/720
 author:  Artem Kovalov
 published:  true
 publishedTime:  2022-06-13T13:20:03+02:00

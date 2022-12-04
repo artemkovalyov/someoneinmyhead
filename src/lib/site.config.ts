@@ -12,7 +12,7 @@ export const siteConfig = {
   tagsPerCard: 3,
   author: 'Artem Kovalov',
   readingTimeFactor: 300,
-  rootDir: '/src'
+  rootDir: '/src/'
 };
 
 // Main top menu links

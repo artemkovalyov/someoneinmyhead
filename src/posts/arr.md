@@ -3,7 +3,7 @@ slug: arr
 title: test
 description:  Description will go to meta
 excerpt: It is an important part of my blog
-image:  ''
+image:  https://picsum.photos/1280/720
 author:  Artem Kovalov
 published:  true
 publishedTime:  2022-06-15T17:22:57+02:00

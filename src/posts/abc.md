@@ -3,7 +3,7 @@ slug: abc
 title: test
 description:  Description will go to meta
 excerpt: Very important except
-image:  ''
+image:  https://picsum.photos/1280/720
 alt: ''
 author:  Artem Kovalov
 published:  true

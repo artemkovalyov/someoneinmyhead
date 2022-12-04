@@ -3,7 +3,7 @@ slug: in-search-for-the-one
 title: In search for the one
 description:  Description will go to meta
 excerpt: Will go to blog-card
-image:  ''
+image:  https://picsum.photos/1280/720
 author:  Artem Kovalov
 published:  true
 publishedTime:  2022-06-13T13:37:42+02:00

@@ -3,4 +3,10 @@
   $: post = data.post;
 </script>
 
-<svelte:component this={post.component} />
+<!-- <svelte:component this={post.component} /> -->
+
+<svelte:head>
+  {@html post.component.head}
+</svelte:head>
+
+{@html post.component.html}

@@ -2,7 +2,6 @@
   import type { Post } from '$lib/posts';
   import { siteConfig } from '$lib/site.config';
   import Pill from './Pill.svelte';
-
   export let tagsPerCard = siteConfig.tagsPerCard;
   export let post: Post;
   const imgUrl = new URL('../../posts/keyboard.jpg', import.meta.url).href;
@@ -11,15 +10,11 @@
 <article class="flex flex-col justify-between">
   <div class="flex flex-col">
     <a href={post.slug} class="w-full mb-7 mx-auto">
+      <!-- <a data-sveltekit-reload href={post.slug} class="w-full mb-7 mx-auto"> -->
       {#if post.image === ''}
         <div class="w-full aspect-video bg-elevation-5" />
       {:else}
-        <!-- <img class="max-w-full" src={post.image} alt={post.alt || 'Blog Post by: ' + post.author} /> -->
-        <img
-          class="max-w-full"
-          src={siteConfig.rootDir + '/' + post.dir + post.image}
-          alt={post.alt || 'Blog Post by: ' + post.author}
-        />
+        <img class="max-w-full" src={post.image} alt={post.alt || 'Blog Post by: ' + post.author} />
       {/if}
     </a>
     <header class="flex flex-col mb-3">
@@ -37,7 +32,8 @@
           <span class="text-secondary py-1 px-2">Author: Artem Kovalov</span>
         </div>
       </div>
-      <a data-sveltekit-reload href={post.slug}>
+      <a href={post.slug}>
+        <!-- <a data-sveltekit-reload href={post.slug}> -->
         <h2 class="text-3xl font-bold ">{post.title}</h2>
       </a>
     </header>

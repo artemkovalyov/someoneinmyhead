@@ -1,13 +1,14 @@
 import { defineMDSveXConfig as defineConfig } from 'mdsvex';
-import remarkDirective from 'remark-directive';
-import remarkParse from 'remark-parse';
-import rehypeSlug from 'rehype-slug';
-import rehypeAutolinkHeadings from 'rehype-autolink-headings';
-import relativeImages from 'mdsvex-relative-images';
-import remarkGfm from 'remark-gfm';
 import rehypeExternalLinks from 'rehype-external-links';
-import remarkAdmonitions from './plugins/remark/sections.js';
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+import rehypeSlug from 'rehype-slug';
+import remarkDirective from 'remark-directive';
+import remarkGfm from 'remark-gfm';
+import remarkParse from 'remark-parse';
+import remarkStringify from 'remark-stringify';
 import remarkFrontmatter from 'remark-frontmatter';
+import remarkAdmonitions from './plugins/remark/sections.js';
+import readingTime from './plugins/remark/reading-time.js';
 
 const config = defineConfig({
   extensions: ['.svelte.md', '.md', '.svx'],
@@ -18,10 +19,11 @@ const config = defineConfig({
 
   remarkPlugins: [
     remarkParse,
+    readingTime,
+    remarkStringify,
     remarkFrontmatter,
     remarkDirective,
     remarkAdmonitions,
-    relativeImages,
     remarkGfm
   ],
   rehypePlugins: [

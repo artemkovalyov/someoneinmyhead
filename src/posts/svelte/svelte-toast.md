@@ -3,9 +3,9 @@ slug: svelte-toast-library
 title: Svelte Toast Library
 description: Great Svelte Libraries
 excerpt: Great Svelte Libraries
-image: example.png
+image: https://picsum.photos/1280/720
 author: Artem Kovalov
-published: false
+published: true
 publishedTime: 2022-12-01T22:53:50+01:00
 modifiedTime: 2022-12-01T22:53:50+01:00
 expirationTime: 2022-12-01T22:53:50+01:00

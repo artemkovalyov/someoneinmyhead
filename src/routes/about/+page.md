@@ -66,7 +66,7 @@ export interface Post {
   content: Object;
   author: string;
   description: string;
-        excerpt:
+  excerpt: string;
   image: string;
   publishedTime: string;
   modifiedTime: string;
@@ -92,8 +92,6 @@ const posts: Array<Post> = Object.entries(postModules).map(
       ...post.metadata
     })
 );
-
-
 ```
 
 # GFM

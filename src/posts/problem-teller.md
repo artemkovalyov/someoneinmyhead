@@ -2,22 +2,21 @@
 slug: problem-vs-solution-teller
 title: Problem Teller
 description: Showing a problem is much easier than a solution
-excerpt:  used
-image:  example.png
-author:  Artem Kovalov
-published:  false
-publishedTime:  2022-11-07T09:26:29+01:00
-modifiedTime:  2022-11-07T09:26:29+01:00
-expirationTime:  2022-11-07T09:26:29+01:00
-series:  used to group material in series
-section:  top level section for meta, i.e. Technology
+excerpt: used
+image: https://picsum.photos/1280/720
+author: Artem Kovalov
+published: false
+publishedTime: 2022-11-07T09:26:29+01:00
+modifiedTime: 2022-11-07T09:26:29+01:00
+expirationTime: 2022-11-07T09:26:29+01:00
+series: used to group material in series
+section: top level section for meta, i.e. Technology
 tags:
-- One
-- Two
-- Three
+  - One
+  - Two
+  - Three
 uuid: b1a70853-60f9-4f76-88f9-6cf015dcf833
 ---
-
 
 Since my early days in university I've seen how you can gain visibility by bringing the problems in.
 If you were to understand the material and need no help - you're invisible to the teacher.

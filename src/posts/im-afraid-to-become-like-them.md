@@ -2,25 +2,25 @@
 slug: im-afraid-to-become-like-them
 title: I'm afraid to become like them
 description: What to do when your core values clash with the environment
-image:
-author:  Artem Kovalov
-published:  true
-publishedTime:  2022-06-11T10:38:32+02:00
-modifiedTime:  2022-06-11T10:38:32+02:00
-expirationTime:  2022-06-11T10:38:32+02:00
-series:  values
-seriesId:  values
+image: https://picsum.photos/1280/720
+author: Artem Kovalov
+published: true
+publishedTime: 2022-06-11T10:38:32+02:00
+modifiedTime: 2022-06-11T10:38:32+02:00
+expirationTime: 2022-06-11T10:38:32+02:00
+series: values
+seriesId: values
 section: values
 tags:
-- values
-- core values
-- conflict
-- discomfort
-- life style
-- priciples
-- life principles
-- integrity
-- fundamentals
+  - values
+  - core values
+  - conflict
+  - discomfort
+  - life style
+  - priciples
+  - life principles
+  - integrity
+  - fundamentals
 uuid: 33cdc549-3ca3-4dba-9a64-9f4c16a7558d
 ---
 
@@ -48,7 +48,7 @@ mihi florem accepisse, ultra bacchaeque.
 
 > Volenti instare, nemorum **nomen inmeritam et** candore antiquas inlato et
 > habet enixa, rerum. Arvis sed foramine foret. Sub inde sine se denegat, me
-> Nelea. Patientia *titulos*. *Esset* acta usque, lacusque.
+> Nelea. Patientia _titulos_. _Esset_ acta usque, lacusque.
 
 ## Dies illi et longos cum quam ita
 
@@ -61,7 +61,7 @@ florentemque subest cerata retiaque.
 ## Erant manifesta si et unum virgo procul
 
 Thescelus terras Nereus aeratas utrimque ferrum, Haemoniae ut vestras subito.
-*Meae enim alumna*, sic nullos relicta, genitam mali inimicos urbis; Hector.
+_Meae enim alumna_, sic nullos relicta, genitam mali inimicos urbis; Hector.
 Sparsuras erat ardent metalla, enodisque, amanti quod: tum, non.
 
 ## Instanti tela erit ausae corpora tantumne et
@@ -73,7 +73,7 @@ nec.
 
 Quidem cupidoque Pyraethi nullo sit ubi vocabam tibia equorum. De non talaribus
 [et](http://praecipitem-novem.com/marem.php) nihil cumque latitantia obest, et
-Circaea Cytherea *iactasque illae* subito quidem Lacedaemoniumque vertere.
+Circaea Cytherea _iactasque illae_ subito quidem Lacedaemoniumque vertere.
 
 Celeberrima illam, bella praemonitus simulacra, evolvere seque. Haec iubet sed
 septima!
@@ -85,7 +85,6 @@ What's interesting is that I didn't immediately identified this as a true source
 Even bounding society norms
 
 :::
-
 
 I love freedom of choice and can't stand exetrtion of uncoditional, non-negotiable, and in some way absolute power over me.
 
@@ -105,12 +104,6 @@ We can thrive and florish both when conditions are great and still be good enoug
 All that is rather easy at certain levels of cognition where you don't question the environment, you just take it as is and adapt. This is how anymals do it, humans just took it to another grade.
 That's where our cultures emerge from to make this survival easier.
 
-
-
-
-
 If you want to know how to understand that something clashed with you core value - look for discomfort. Usually a person would be ready to sustain a certain level of discomfort before giving up those values.
-
-
 
 On multiple occasions

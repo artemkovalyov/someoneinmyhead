@@ -5,12 +5,13 @@
   import SideMenu from '$lib/components/SideMenu.svelte';
   import '$lib/styles/app.css';
 
+  export const data = {}; // data property from layout is available in all the child layouts and pages that use this layout
   let open = false;
   let dark = true;
   $: path = $page.url.pathname; // should be reactive for client side routing
 </script>
 
-<Head />
+<!-- <Head /> -->
 
 <SideMenu bind:open />
 

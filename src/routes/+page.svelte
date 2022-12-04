@@ -1,11 +1,12 @@
 <script lang="ts">
   import BlogCard from '$lib/components/BlogCard.svelte';
   import MainGrid from '$lib/components/MainGrid.svelte';
-  import { getPostsSortedByDate } from '$lib/posts';
+  export let data;
+  // console.log(data);
 </script>
 
 <MainGrid>
-  {#each getPostsSortedByDate() as post}
+  {#each data.posts as post}
     {#if post.published}
       <BlogCard {post} />
     {/if}
