@@ -45,6 +45,6 @@
     <time datetime={new Date(post.publishedTime).toISOString()}
       >{new Date(post.publishedTime).toDateString().slice(4)}</time
     >
-    <span> {post.readingTime} min read</span>
+    <span> {Math.ceil(post.readingTime)} min read</span>
   </footer>
 </article>

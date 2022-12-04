@@ -4,25 +4,26 @@ export interface postModuleType {
   default: any;
   metadata: any;
 }
+
 // directly import all the blog posts from the file system thanks to Vite's feature: https://vitejs.dev/guide/features.html#glob-import
 const postModules: Record<string, postModuleType> = import.meta.glob('../../posts/**/*.md', {
   eager: true
 });
 
 // Uncomment this if you need a raw content of Markdown blog files
-const rawPosts = import.meta.glob('../posts/**/*.md', { as: 'raw', eager: true });
-const rawContentMap = new Map(
-  Object.entries(rawPosts).map(([path, content]) => {
-    const text = content.replace(/---[\s\S]*---\n+/g, ''); // remove the frontmatter
-    return [
-      path,
-      {
-        rawPostContet: text,
-        readingTime: Math.round(text.length / siteConfig.readingTimeFactor)
-      }
-    ];
-  })
-);
+// const rawPosts = import.meta.glob('../posts/**/*.md', { as: 'raw', eager: true });
+// const rawContentMap = new Map(
+//   Object.entries(rawPosts).map(([path, content]) => {
+//     const text = content.replace(/---[\s\S]*---\n+/g, ''); // remove the frontmatter
+//     return [
+//       path,
+//       {
+//         rawPostContet: text,
+//         readingTime: Math.round(text.length / siteConfig.readingTimeFactor)
+//       }
+//     ];
+//   })
+// );
 
 export interface Post {
   slug: string; // slug is an ID of the post, it's resolved from a metadata in a frontmatter. Otherwise the file name is used.
@@ -30,7 +31,6 @@ export interface Post {
   dir: string;
   absolutePath: string;
   component: any;
-  rawPostContent: string;
   author: string;
   description: string;
   excerpt: string;
@@ -70,7 +70,7 @@ const posts: Array<Post> = Object.entries(postModules).map(
       slug, // if there's no slug in the metadata, file name will become a slug
       path, // relative path to the markdown post file
       component: post.default.render(),
-      ...rawContentMap.get(path), // get a content of the post to estimate reading time
+      // ...rawContentMap.get(path), // get a content of the post to estimate reading time
       ...post?.metadata, // values like slug will be overridden from Metadata if present
       image
     };
