@@ -6,6 +6,6 @@
 
 {#each navItems as nav}
   <span class="text-4xl">
-    <NavItem {path} {nav} />
+    <NavItem bind:path {nav} />
   </span>
 {/each}

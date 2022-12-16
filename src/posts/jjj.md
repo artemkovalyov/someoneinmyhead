@@ -1,20 +1,20 @@
 ---
 slug: jjj
 title: test
-description:  Description will go to meta
-excerpt:  Description will go to meta
-image:  https://picsum.photos/1280/720
-author:  Artem Kovalov
-published:  true
-publishedTime:  2022-06-15T17:22:57+02:00
-modifiedTime:  2022-06-15T17:22:57+02:00
-expirationTime:  2022-06-15T17:22:57+02:00
-series:  Series name
-seriesId:  Series ID
-section:  section name for Open Graph
+description: Description will go to meta
+excerpt: Description will go to meta
+image: https://picsum.photos/1280/720
+author: Artem Kovalov
+published: true
+publishedTime: 2022-06-15T17:22:57+02:00
+modifiedTime: 2022-06-15T17:22:57+02:00
+expirationTime: 2022-06-15T17:22:57+02:00
+series: Series name
+seriesId: Series ID
+section: section name for Open Graph
 tags:
-- a
-- b
+  - a
+  - b
 uuid: 5bf12ed8-4149-4b00-9c2d-175db01df93b
 ---
 
@@ -42,7 +42,7 @@ mihi florem accepisse, ultra bacchaeque.
 
 > Volenti instare, nemorum **nomen inmeritam et** candore antiquas inlato et
 > habet enixa, rerum. Arvis sed foramine foret. Sub inde sine se denegat, me
-> Nelea. Patientia *titulos*. *Esset* acta usque, lacusque.
+> Nelea. Patientia _titulos_. _Esset_ acta usque, lacusque.
 
 ## Dies illi et longos cum quam ita
 
@@ -55,7 +55,7 @@ florentemque subest cerata retiaque.
 ## Erant manifesta si et unum virgo procul
 
 Thescelus terras Nereus aeratas utrimque ferrum, Haemoniae ut vestras subito.
-*Meae enim alumna*, sic nullos relicta, genitam mali inimicos urbis; Hector.
+_Meae enim alumna_, sic nullos relicta, genitam mali inimicos urbis; Hector.
 Sparsuras erat ardent metalla, enodisque, amanti quod: tum, non.
 
 ## Instanti tela erit ausae corpora tantumne et
@@ -67,7 +67,7 @@ nec.
 
 Quidem cupidoque Pyraethi nullo sit ubi vocabam tibia equorum. De non talaribus
 [et](http://praecipitem-novem.com/marem.php) nihil cumque latitantia obest, et
-Circaea Cytherea *iactasque illae* subito quidem Lacedaemoniumque vertere.
+Circaea Cytherea _iactasque illae_ subito quidem Lacedaemoniumque vertere.
 
 Celeberrima illam, bella praemonitus simulacra, evolvere seque. Haec iubet sed
 septima!

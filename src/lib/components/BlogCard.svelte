@@ -4,7 +4,6 @@
   import Pill from './Pill.svelte';
   export let tagsPerCard = siteConfig.tagsPerCard;
   export let post: Post;
-  const imgUrl = new URL('../../posts/keyboard.jpg', import.meta.url).href;
 </script>
 
 <article class="flex flex-col justify-between">
@@ -14,6 +13,7 @@
       {#if post.image === ''}
         <div class="w-full aspect-video bg-elevation-5" />
       {:else}
+        <!-- <img class="max-w-full" src={post.image} alt={post.alt || 'Blog Post by: ' + post.author} /> -->
         <img class="max-w-full" src={post.image} alt={post.alt || 'Blog Post by: ' + post.author} />
       {/if}
     </a>

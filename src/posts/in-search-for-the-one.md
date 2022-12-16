@@ -1,20 +1,20 @@
 ---
 slug: in-search-for-the-one
 title: In search for the one
-description:  Description will go to meta
+description: Description will go to meta
 excerpt: Will go to blog-card
-image:  https://picsum.photos/1280/720
-author:  Artem Kovalov
-published:  true
-publishedTime:  2022-06-13T13:37:42+02:00
-modifiedTime:  2022-06-13T13:37:42+02:00
-expirationTime:  2022-06-13T13:37:42+02:00
-series:  Series name
-seriesId:  Series ID
-section:  section name for Open Graph
+image: https://picsum.photos/1280/720
+author: Artem Kovalov
+published: true
+publishedTime: 2022-06-13T13:37:42+02:00
+modifiedTime: 2022-06-13T13:37:42+02:00
+expirationTime: 2022-06-13T13:37:42+02:00
+series: Series name
+seriesId: Series ID
+section: section name for Open Graph
 tags:
-- a
-- b
+  - a
+  - b
 uuid: f6b5d6f4-1c2a-4a26-9e7f-3c9796f12ef3
 ---
 
@@ -42,7 +42,7 @@ mihi florem accepisse, ultra bacchaeque.
 
 > Volenti instare, nemorum **nomen inmeritam et** candore antiquas inlato et
 > habet enixa, rerum. Arvis sed foramine foret. Sub inde sine se denegat, me
-> Nelea. Patientia *titulos*. *Esset* acta usque, lacusque.
+> Nelea. Patientia _titulos_. _Esset_ acta usque, lacusque.
 
 ## Dies illi et longos cum quam ita
 
@@ -55,7 +55,7 @@ florentemque subest cerata retiaque.
 ## Erant manifesta si et unum virgo procul
 
 Thescelus terras Nereus aeratas utrimque ferrum, Haemoniae ut vestras subito.
-*Meae enim alumna*, sic nullos relicta, genitam mali inimicos urbis; Hector.
+_Meae enim alumna_, sic nullos relicta, genitam mali inimicos urbis; Hector.
 Sparsuras erat ardent metalla, enodisque, amanti quod: tum, non.
 
 ## Instanti tela erit ausae corpora tantumne et
@@ -67,7 +67,7 @@ nec.
 
 Quidem cupidoque Pyraethi nullo sit ubi vocabam tibia equorum. De non talaribus
 [et](http://praecipitem-novem.com/marem.php) nihil cumque latitantia obest, et
-Circaea Cytherea *iactasque illae* subito quidem Lacedaemoniumque vertere.
+Circaea Cytherea _iactasque illae_ subito quidem Lacedaemoniumque vertere.
 
 Celeberrima illam, bella praemonitus simulacra, evolvere seque. Haec iubet sed
 septima!
@@ -85,7 +85,6 @@ The dogma started to chack quite early, I've been dating with my first and only 
 I confessed to her right in the wagon of Kyivan subway a couple of day later - so strong was the feeling.
 
 Than it was a chaos and turmoil of being in love here in there. Maintaining secrecy, having to lie, etc.
-
 
 ## Later I met my wife
 

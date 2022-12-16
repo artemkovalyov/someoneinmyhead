@@ -64,7 +64,7 @@ const posts: Array<Post> = Object.entries(postModules).map(
         ? '/src' + new URL(post.metadata.image, 'file:/' + dir).pathname
         : post.metadata.image;
     }
-    console.log(post.metadata);
+    // console.log(post.metadata);
     return {
       dir, // a directory of the post relative to the root of of the project, usual '/src'. It is used to load additional resources
       slug, // if there's no slug in the metadata, file name will become a slug

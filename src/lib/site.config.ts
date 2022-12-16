@@ -19,16 +19,16 @@ export const siteConfig = {
 export const navItems = [
   {
     label: 'About',
-    path: 'about'
+    path: 'about/'
   },
   {
     label: 'Author',
-    path: 'author'
-  },
-  {
-    label: 'Projects',
-    path: 'projects'
+    path: 'author/'
   }
+  // {
+  //   label: 'Projects',
+  //   path: 'projects'
+  // }
 ];
 
 export const getNavItems = (): Array<NavItem> =>

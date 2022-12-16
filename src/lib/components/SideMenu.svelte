@@ -8,7 +8,7 @@
     : '-left-full'}"
 >
   <nav class="p-12 text-xl">
-    <a class="block" href="#about">About</a>
-    <a class="block" href="#contact">Contact</a>
+    <!-- <a class="block" href="about/">About</a> -->
+    <!-- <a class="block" href="author/">Author</a> -->
   </nav>
 </aside>

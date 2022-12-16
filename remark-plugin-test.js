@@ -18,5 +18,5 @@ async function main() {
     })
     .process(await read('./src/posts/emacs/xkb/tweak-xkb-for-emacs-in-linux.md'));
 
-  console.log(String(file));
+  // console.log(String(file));
 }
