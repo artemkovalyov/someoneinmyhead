@@ -1,9 +1,11 @@
 <script lang="ts">
-  import type { Post } from '$lib/posts';
   import { siteConfig } from '$lib/site.config';
   import Pill from './Pill.svelte';
+  import img from '$lib/assets/keyboard.jpg';
+  import type { Post } from '$lib/server/posts';
   export let tagsPerCard = siteConfig.tagsPerCard;
   export let post: Post;
+  export let image;
 </script>
 
 <article class="flex flex-col justify-between">
@@ -13,8 +15,16 @@
       {#if post.image === ''}
         <div class="w-full aspect-video bg-elevation-5" />
       {:else}
-        <!-- <img class="max-w-full" src={post.image} alt={post.alt || 'Blog Post by: ' + post.author} /> -->
-        <img class="max-w-full" src={post.image} alt={post.alt || 'Blog Post by: ' + post.author} />
+        <!-- <img
+             class="max-w-full"
+             src="/src/posts/emacs/xkb/dots.jpg"
+             alt={post.alt || 'Blog Post by: ' + post.author}
+             /> -->
+        <img
+          class="max-w-full"
+          src={image.path[1].default}
+          alt={post.alt || 'Blog Post by: ' + post.author}
+        />
       {/if}
     </a>
     <header class="flex flex-col mb-3">

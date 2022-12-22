@@ -54,8 +54,8 @@ export interface Post {
 // process imported posts data and map into an Array of post objects with semantic structure
 const posts: Array<Post> = Object.entries(postModules).map(
   ([path, post]: [string, postModuleType]): Post => {
-    const match = path.match(/(?:\.+\/)+([\s\S]+\/)([\s\S]+)(?:\.)/); // skips relative path until a named dir found ../../../
-    // const match = path.match(/([\s\S]+\/)([\s\S]+)(?:\.)/);
+    // const match = path.match(/(?:\.+\/)+([\s\S]+\/)([\s\S]+)(?:\.)/); // skips relative path until a named dir found ../../../
+    const match = path.match(/([\s\S]+\/)([\s\S]+)(?:\.)/);
     const dir = siteConfig.rootDir + match[1]; // think of the case when root is not an /src folder
     const slug = match[2]; // make filename a slug, it's later overwritten by a slug for the forntmatter if that is provided
     let image = 'https://picsum.photos/1280/720'; // placeholder image if none was provided
