@@ -1,5 +1,5 @@
 ---
-slug: arr
+slug: arty-party
 title: test
 description: Description will go to meta
 excerpt: It is an important part of my blog

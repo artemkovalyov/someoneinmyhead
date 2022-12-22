@@ -1,7 +1,7 @@
-import { getPostBySlug } from '$lib/server/posts';
+import { getPostBySlug } from '$lib/posts';
+import type { PageLoad } from '../$types';
 
-/** @type {import('./$types').PageServerLoad} */
-export async function load({ url, params }) {
+export const load = (({ url, params }) => {
   const post = getPostBySlug(params.slug);
   if (post === undefined) {
     return {
@@ -9,8 +9,7 @@ export async function load({ url, params }) {
       error: new Error(`Not found: ${url.pathname}`)
     };
   }
-  // console.log(post);
   return {
     post
   };
-}
+}) satisfies PageLoad;

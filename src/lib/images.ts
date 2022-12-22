@@ -1,13 +1,10 @@
-const files = import.meta.glob('/src/posts/**/*.jpg', {
+const files = import.meta.glob('/src/posts/**/*.{jpg,jpeg,png,gif,pdf}', {
   eager: true
 });
 
-const images = Object.entries(files).map((path, image) => {
-  return {
-    path,
-    image
-  };
-});
+console.log(files);
+
+const images = new Map(Object.entries(files));
 
 const getImages = () => images;
 
