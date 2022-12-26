@@ -5,7 +5,7 @@
   $: post = data.post;
 </script>
 
-<svelte:component this={post.default} />
+<svelte:component this={post?.default} />
 
 <!-- Another way to display a component if it comes rendered -->
 <!-- <svelte:head>

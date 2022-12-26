@@ -9,6 +9,7 @@
   let open = false;
   let dark = true;
   $: path = $page.url.pathname; // should be reactive for client side routing
+  $: slug = $page.params.slug;
 </script>
 
 <!-- <Head /> -->

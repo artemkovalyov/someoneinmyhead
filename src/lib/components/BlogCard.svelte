@@ -1,32 +1,33 @@
 <script lang="ts">
+  import { getImageByPath } from '$lib/images';
+
+  import type { Post } from '$lib/posts';
   import { siteConfig } from '$lib/site.config';
   import Pill from './Pill.svelte';
-  import type { Metadata } from '$lib/posts';
   export let tagsPerCard = siteConfig.tagsPerCard;
-  export let metadata: Metadata;
-  export let image;
+  export let post: Post;
+  const image =
+    post.image?.charAt(0) == '.'
+      ? getImageByPath(new URL(post?.image, `file://dummy${post.dir}`).pathname).default
+      : post.image;
 </script>
 
 <article class="flex flex-col justify-between">
   <div class="flex flex-col">
-    <a href={metadata.slug} class="w-full mb-7 mx-auto">
-      <!-- <a data-sveltekit-reload href={metadata.slug} class="w-full mb-7 mx-auto"> -->
-      {#if metadata.image === ''}
+    <a href={post.slug} class="w-full mb-7 mx-auto">
+      <!-- <a data-sveltekit-reload href={post.slug} class="w-full mb-7 mx-auto"> use this if you need a full page reload https://kit.svelte.dev/docs/link-options -->
+      {#if post.image === ''}
         <div class="w-full aspect-video bg-elevation-5" />
       {:else}
-        <img
-          class="max-w-full"
-          src={image.default}
-          alt={metadata.alt || 'Blog Post by: ' + metadata.author}
-        />
+        <img class="max-w-full" src={image} alt={post.alt || 'Blog Post by: ' + post.author} />
       {/if}
     </a>
     <header class="flex flex-col mb-3">
       <div class="flex justify-between text-sm mb-2">
         <!-- TAGS -->
         <div class="flex gap-2">
-          {#if metadata.tags}
-            {#each metadata.tags.slice(0, tagsPerCard) as tag}
+          {#if post.tags}
+            {#each post.tags.slice(0, tagsPerCard) as tag}
               <Pill>{tag}</Pill>
             {/each}
           {/if}
@@ -36,19 +37,19 @@
           <span class="text-secondary py-1 px-2">Author: Artem Kovalov</span>
         </div>
       </div>
-      <a href={metadata.slug}>
-        <!-- <a data-sveltekit-reload href={metadata.slug}> -->
-        <h2 class="text-3xl font-bold ">{metadata.title}</h2>
+      <a href={post.slug}>
+        <!-- <a data-sveltekit-reload href={postMetadata.slug}> -->
+        <h2 class="text-3xl font-bold ">{post.title}</h2>
       </a>
     </header>
     <section class="text-xl mb-2">
-      {metadata.excerpt}
+      {post.excerpt}
     </section>
   </div>
   <footer class="flex justify-between text-sm text-secondary">
-    <time datetime={new Date(metadata.publishedTime).toISOString()}
-      >{new Date(metadata.publishedTime).toDateString().slice(4)}</time
+    <time datetime={new Date(post.publishedTime).toISOString()}
+      >{new Date(post.publishedTime).toDateString().slice(4)}</time
     >
-    <span> {Math.ceil(metadata.readingTime)} min read</span>
+    <span> {Math.ceil(parseFloat(post.readingTime))} min read</span>
   </footer>
 </article>

@@ -1,7 +1,7 @@
-import { getImages } from '$lib/images';
+// import { getImages } from '$lib/images';
+// import type { PageLoad } from './$types';
 
-export function load() {
-  return {
-    images: getImages()
-  };
-}
+// export const load = () =>
+//   ({
+//     images: getImages()
+//   } satisfies PageLoad);

@@ -1,5 +1,5 @@
 import { getPostBySlug } from '$lib/posts';
-import type { PageLoad } from '../$types';
+import type { PageLoad } from './$types';
 
 export const load = (({ url, params }) => {
   const post = getPostBySlug(params.slug);
