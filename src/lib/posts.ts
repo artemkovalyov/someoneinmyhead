@@ -37,10 +37,12 @@ export interface Post {
 // process imported posts data and map into an Array of key/value pairs matching slug to a post
 const postsList = Object.entries(postModules)
   .map(([path, post]: [string, PostModule]): Post => {
-    // const match = path.match(/(?:\.+\/)+([\s\S]+\/)([\s\S]+)(?:\.)/); // skips relative path until a named dir found ../../../
     const match = path.match(/([\s\S]+\/)([\s\S]+)(?:\.)/);
-    const dir = match![1]; // make filename a slug, it's later overwritten by a slug for the frontmatter if that is provided
-    const slug = match![2]; // make filename a slug, it's later overwritten by a slug for the frontmatter if that is provided
+    // make filename a slug, it's later overwritten by a slug for the frontmatter if that is provided
+    const dir = match![1];
+    // make filename a slug, it's later overwritten by a slug for the frontmatter if that is provided
+    const slug = match![2];
+    // make tags lower case for ease of using array.includes as a filter
     post.metadata.tags = post.metadata.tags.map((tag) => tag.toLowerCase());
     return {
       slug,
@@ -50,13 +52,16 @@ const postsList = Object.entries(postModules)
       ...post.metadata
     }; // if there's no slug in the metadata, file name will become a slug
   })
+  // sort posts by time ascending
   .sort((x, y) => new Date(y.publishedTime).valueOf() - new Date(x.publishedTime).valueOf());
 
+// for a quick fetch of posts when navigating
 const postsMap = new Map(postsList.map((post) => [post.slug, post]));
 
 const getPostBySlug = (slug: string): Post | undefined => postsMap.get(slug);
-
+// full posts list
 const getPostsList = () => postsList;
+// get only published posts to simplify templates
 const getPublishedPostsList = () => postsList.filter((post) => post.published);
 const getPostsMap = () => postsMap;
 
