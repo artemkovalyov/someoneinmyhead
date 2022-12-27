@@ -1,6 +1,5 @@
 <script lang="ts">
   import { getImageByPath } from '$lib/images';
-
   import type { Post } from '$lib/posts';
   import { siteConfig } from '$lib/site.config';
   import Pill from './Pill.svelte';
@@ -28,7 +27,7 @@
         <div class="flex gap-2">
           {#if post.tags}
             {#each post.tags.slice(0, tagsPerCard) as tag}
-              <Pill>{tag}</Pill>
+              <a href="/tag/{tag}"><Pill>{tag}</Pill></a>
             {/each}
           {/if}
         </div>

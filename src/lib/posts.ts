@@ -41,6 +41,7 @@ const postsList = Object.entries(postModules)
     const match = path.match(/([\s\S]+\/)([\s\S]+)(?:\.)/);
     const dir = match![1]; // make filename a slug, it's later overwritten by a slug for the frontmatter if that is provided
     const slug = match![2]; // make filename a slug, it's later overwritten by a slug for the frontmatter if that is provided
+    post.metadata.tags = post.metadata.tags.map((tag) => tag.toLowerCase());
     return {
       slug,
       path,
@@ -51,13 +52,12 @@ const postsList = Object.entries(postModules)
   })
   .sort((x, y) => new Date(y.publishedTime).valueOf() - new Date(x.publishedTime).valueOf());
 
-console.log(postsList);
-
 const postsMap = new Map(postsList.map((post) => [post.slug, post]));
 
 const getPostBySlug = (slug: string): Post | undefined => postsMap.get(slug);
 
 const getPostsList = () => postsList;
+const getPublishedPostsList = () => postsList.filter((post) => post.published);
 const getPostsMap = () => postsMap;
 
-export { getPostsList, getPostsMap, getPostBySlug };
+export { getPostsList, getPostsMap, getPostBySlug, getPublishedPostsList };

@@ -1,12 +1,12 @@
 import type { PageLoad } from './$types';
-import { getPostsList, getPostsMap } from '$lib/posts';
-import { getImages, getImagesMap } from '$lib/images';
+import { getImagesMap } from '$lib/images';
+import { getPublishedPostsList } from '$lib/posts';
 
 export const prerender = true;
 export const trailingSlash = 'always';
 
 export const load: PageLoad = () => ({
-  postsList: getPostsList(),
+  postsList: getPublishedPostsList(),
   imagesMap: getImagesMap()
   // postsMap: getPostsMap()
 });

@@ -3,8 +3,6 @@
   export let path: string;
   const href = path.slice(1, path.length);
   export let nav: NavItem;
-  console.log(href);
-  console.log(nav.href);
   $: current = href === nav.path;
 </script>
 
