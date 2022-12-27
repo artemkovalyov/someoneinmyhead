@@ -7,8 +7,10 @@
   export let post: Post;
   const image =
     post.image?.charAt(0) == '.'
-      ? getImageByPath(new URL(post?.image, `file://dummy${post.dir}`).pathname).default
-      : post.image;
+      ? // slightly abusing URL API to avoid writing own relative path calculation
+        getImageByPath(new URL(post?.image, `file://dummy${post.dir}`).pathname).default
+      : // leave the link "as is" because it is an external link
+        post.image;
 </script>
 
 <article class="flex flex-col justify-between">
