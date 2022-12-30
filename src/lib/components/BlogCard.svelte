@@ -15,7 +15,7 @@
 
 <article class="flex flex-col justify-between">
   <div class="flex flex-col">
-    <a href={post.slug} class="w-full mb-7 mx-auto">
+    <a href="/{post.slug}" class="w-full mb-7 mx-auto">
       <!-- <a data-sveltekit-reload href={post.slug} class="w-full mb-7 mx-auto"> use this if you need a full page reload https://kit.svelte.dev/docs/link-options -->
       {#if post.image === ''}
         <div class="w-full aspect-video bg-elevation-5" />
@@ -38,7 +38,7 @@
           <span class="text-secondary py-1 px-2">Author: Artem Kovalov</span>
         </div>
       </div>
-      <a href={post.slug}>
+      <a href="/{post.slug}">
         <!-- <a data-sveltekit-reload href={postMetadata.slug}> -->
         <h2 class="text-3xl font-bold ">{post.title}</h2>
       </a>

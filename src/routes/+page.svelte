@@ -1,12 +1,12 @@
 <script lang="ts">
   import type { PageData } from './$types';
   import BlogCard from '$lib/components/BlogCard.svelte';
-  import MainGrid from '$lib/components/MainGrid.svelte';
+  import GridSection from '$lib/components/GridSection.svelte';
   export let data: PageData;
 </script>
 
-<MainGrid>
+<GridSection>
   {#each data.postsList as post}
     <BlogCard {post} />
   {/each}
-</MainGrid>
+</GridSection>
