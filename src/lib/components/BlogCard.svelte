@@ -29,7 +29,7 @@
         <div class="flex gap-2">
           {#if post.tags}
             {#each post.tags.slice(0, tagsPerCard) as tag}
-              <a href="/tag/{tag}"><Pill>{tag}</Pill></a>
+              <a href="/tag/{tag}"><Pill text={tag} /></a>
             {/each}
           {/if}
         </div>

@@ -1,20 +1,18 @@
-<!-- Renders a Pill. If you pass Link prop it becomes a Pill wih a link. -->
 <script lang="ts">
-  export let link = '';
+  import { page } from '$app/stores';
+  export let text = '';
 </script>
 
-{#if link === ''}
+{#if $page.params.tag === text}
   <span
-    class="py-1 px-2 bg-surface-variant text-on-surface-variant border border-outline rounded-full"
+    class="pt-1 pb-1.5 px-2 bg-primary text-on-primary border border-outline rounded-lg hover:bg-primary-palette-70 transition-all duration-500 ease-in-out "
   >
-    <slot />
+    {text}
   </span>
 {:else}
-  <a href={link}>
-    <span
-      class="py-1 px-2 bg-surface-variant text-on-surface-variant border border-outline rounded-full"
-    >
-      <slot />
-    </span>
-  </a>
+  <span
+    class="pt-1 pb-1.5 px-2 bg-surface-variant text-on-surface-variant border border-outline rounded-lg hover:bg-elevation-5 transition-all duration-500 ease-in-out"
+  >
+    {text}
+  </span>
 {/if}

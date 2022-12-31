@@ -43,18 +43,11 @@ kbd {
 
 /* AutoLink for every header with '#' */
 :where(h1, h2, h3, h4, h5, h6) .icon-link {
-  @apply relative;
+  @apply relative before:absolute before:content-['#'] before:text-primary before:top-0 before:left-[-1.2ch] before:leading-none before:opacity-0 before:transition-all before:duration-300 before:ease-in before:hover:underline;
 }
 
 :where(h1, h2, h3, h4, h5, h6):hover .icon-link::before {
   @apply opacity-100;
 }
 
-:where(h1, h2, h3, h4, h5, h6):hover .icon-link::before:hover {
-  @apply underline;
-}
-
-:where(h1, h2, h3, h4, h5, h6) .icon-link::before {
-  @apply absolute content-['#'] text-primary underline opacity-0 top-0 left-[-1.2ch] leading-none;
-}
 /* AutoLink for every header with '#' */
