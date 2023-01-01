@@ -5,13 +5,13 @@
 
 {#if $page.params.tag === text}
   <span
-    class="pt-1 pb-1.5 px-2 bg-primary text-on-primary border border-outline rounded-lg hover:bg-primary-palette-70 transition-all duration-500 ease-in-out "
+    class="pt-1 pb-1.5 px-2 bg-secondary text-on-secondary rounded-lg hover:bg-secondary-container hover:text-on-secondary-container transition-all duration-500 ease-in-out "
   >
     {text}
   </span>
 {:else}
   <span
-    class="pt-1 pb-1.5 px-2 bg-surface-variant text-on-surface-variant border border-outline rounded-lg hover:bg-elevation-5 transition-all duration-500 ease-in-out"
+    class="pt-1 pb-1.5 px-2 bg-elevation-3 text-on-surface rounded-lg hover:bg-outline-variant transition-all duration-500 ease-in-out"
   >
     {text}
   </span>

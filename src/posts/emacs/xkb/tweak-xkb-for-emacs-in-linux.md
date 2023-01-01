@@ -27,8 +27,177 @@ import Head from '$lib/components/Head.svelte';
 
 <Head {title} />
 
-After reading this article you should be able to remap your meta keys also known as modifier keys and make them distinguishable for your desktop environment and applications. Most of the Linux distributions ship a default [XKB](https://en.wikipedia.org/wiki/X_keyboard_extension) configuration that leaves you with only the most popular modifiers like <kbd>Alt</kbd> + <kbd>Enter</kbd>, <kbd>Super</kbd>, <kbd>Ctrl</kbd>, and <kbd>Shift</kbd>. They are usually mapped to respective keys on your keyboard. Super is most frequently mapped to Win for most laptops.
+# {title}
+
+After reading this article you should be able to remap your meta keys also known as modifier keys and make them distinguishable for your desktop environment and applications. Most of the Linux distributions ship a default [XKB](https://en.wikipedia.org/wiki/X_keyboard_extension) configuration that leaves you with only the most popular modifiers like <kbd>Alt</kbd> + <kbd>Enter</kbd>, <kbd>Super</kbd>, <kbd>Ctrl</kbd>, and <kbd>Shift</kbd>. They are usually mapped to respective keys on your keyboard. <kbd>Super</kbd> is most frequently mapped to <kbd>Win</kbd> for most laptops.
 
 You can usually tweak your key configuration via the system settings of your desktop environment. Leave it as simple as that if it works for you. On the flip side, it never lets you configure keys granular enough and most importantly fine-tune the modifiers. To Emacs users like me, modifiers are of utmost importance.
 
-# Arty!
+## The Configuration I Want to Achieve
+
+I use <kbd>Ctrl</kbd>, <kbd>Alt</kbd>, <kbd>Meta</kbd>, <kbd>Super</kbd>, and <kbd>Hyper</kbd> modifiers in my key combinations. Do you think that's nuts? Anyway, to achieve that setup, I needed all the modifiers to be assigned to different physical keys. Luckily we have plenty of keys to re-assign. My desired setup looks like the following:
+
+| Modifier key       | Button                                      | Modifier level | Comment                                                     |
+| :----------------- | :------------------------------------------ | :------------- | :---------------------------------------------------------- |
+| <kbd>Shift</kbd>   | <kbd>Shift</kbd>                            | shift          | I keep it as is                                             |
+| None               | None                                        | lock           | I don't use it                                              |
+| <kbd>Control</kbd> | <kbd>Left Control</kbd>                     | control        | Keep it as is                                               |
+| <kbd>Alt</kbd>     | <kbd>Left Alt</kbd>                         | mod1           | Better keep Alt as mod1                                     |
+| <kbd>Meta</kbd>    | <kbd>Left Win</kbd>                         | mod2           | Emacs loves it. I want it on Win                            |
+| <kbd>Hyper</kbd>   | <kbd>Caps Lock</kbd>                        | mod3           | I assigned it to Caps Lock                                  |
+| <kbd>Super</kbd>   | <kbd>Right Alt</kbd>                        | mod4           | I want it on Left Alt                                       |
+| Level 3            | <kbd>Shift</kbd> + <kbd>Right Control</kbd> | mod5           | Useful with national keyboards with 3rd level keys engraved |
+
+## How My Starting Point Looks Like?
+
+For that let's run `xmodmap` in the terminal.
+
+```bash
+○ → xmodmap
+xmodmap:  up to 4 keys per modifier, (keycodes in parentheses):
+
+shift       Shift_L (0x32),  Shift_R (0x3e)
+lock        Caps_Lock (0x42)
+control     Control_L (0x25),  Control_R (0x69)
+mod1        Alt_L (0x40),  Alt_R (0x6c),  Meta_L (0xcd)
+mod2        Num_Lock (0x4d)
+mod3
+mod4        Super_L (0x85),  Super_R (0x86),  Super_L (0xce),  Hyper_L (0xcf)
+mod5        ISO_Level3_Shift (0x5c),  Mode_switch (0xcb)
+```
+
+The results are rather terrible.
+
+- <kbd>Alt</kbd> and <kbd>Meta</kbd> share `mod1`
+- `mod2` is taken by <kbd>Num Lock</kbd>
+- `mod3` is empty
+- <kbd>Super</kbd> and <kbd>Hyper</kbd> shared `mod4`
+
+## Let's See How We Can Fix It
+
+To my opinion `XKB` has the most intricate and tangled API I've ever worked with. That's caused by an intrinsic complexity of the domain and lots of inherited legacy. However, my personal believe is - setting up your keyboard shouldn't be a rocket science. Sadly, it's even a bit worse than that but let's get to business instead of complaining.
+
+### Step 1: figure out existing XKB configuration
+
+In Linux it live in `/usr/share/X11/xkb/`
+
+```bash
+/usr/share/X11/xkb/
+├── compat
+├── geometry
+├── keycodes
+├── rules
+├── symbols
+└── types
+```
+
+We are mostly interested in `symbols`, and `rules` folders. The `symbols` folder contains all the layout configurations and modular configuration snippets for the most frequently used keys. You can study configuration files found in a `symbols` folder to get an inspiration and an intuition about ways to write your own configuration. The `rules` folder lists sets of rules which can be used to obtain an exact XKB configuration.
+
+To check your specific configuration run `setxkbmap -print -verbose 10`
+
+```bash
+○ → setxkbmap -print -verbose 10
+Setting verbose level to 10
+locale is C
+Trying to load rules file ./rules/evdev...
+Trying to load rules file /usr/share/X11/xkb/rules/evdev...
+Success.
+Applied rules from evdev:
+rules:      evdev
+model:      pc101
+layout:     us,ru,ua
+options:    pc
+Trying to build keymap using the following components:
+keycodes:   evdev+aliases(qwerty)
+types:      complete
+compat:     complete
+symbols:    pc+us+ru:2+ua:3+inet(evdev)
+geometry:   pc(pc101)
+xkb_keymap {
+xkb_keycodes  { include "evdev+aliases(qwerty)" };
+xkb_types     { include "complete"      };
+xkb_compat    { include "complete"      };
+xkb_symbols   { include "pc+us+ru:2+ua:3+inet(evdev)"   };
+xkb_geometry  { include "pc(pc101)"     };
+};
+```
+
+The `evdev` aka [event device](https://en.wikipedia.org/wiki/Evdev) rules are most commonly used on Linux. You can see that my `symbols` configuration contains `pc+us+ru:2+ua:3+inet(evdev)`. It means that my base configuration is `pc` with `us`, `ru`, and `ua` layouts and `inet(evdev)` option that makes all those vendor and multimedia buttons work on my laptop.
+
+### Step 2: Adjust The Configuration To Make Emacs and Linux Happy
+
+To start with your own configuration we can take `pc` or any other most close to your desired state. Below I will guide you over my configuration, which I creatively named it [art-mods](https://github.com/artemkovalyov/.dot/blob/main/xkb/symbols/art-mods).
+
+```bash
+○ → cat ~/.dot/xkb/symbols/art-mods
+default partial modifier_keys
+xkb_symbols "art-mods" {
+
+modifier_map none {Num_Lock, Meta_L, Meta_R, Alt_L, Alt_R, Super_L, Super_R, Hyper_L, Hyper_R };
+
+key <CAPS> { [ Hyper_L, ISO_Next_Group ] };
+key <RCTL> { [ Multi_key, ISO_Level3_Shift ] };
+key <LWIN> { [ Meta_L ] };
+key <LALT> { [ Alt_L, Alt_L ] };
+key <RALT> { [ Super_R ] };
+
+// Beginning of modifier mappings.
+modifier_map Mod1   { <ALT>,  <LALT> };
+modifier_map Mod2   { <META>, <LWIN> };
+modifier_map Mod3   { <HYPR>, <CAPS> };
+modifier_map Mod4   { <SUPR> };
+};
+```
+
+The first thing is cleaning up all the modifiers to release them and let us re-assign keys to desired modifiers. The modifiers are simply bits raised when the key assigned to that modifier is pressed. You can see those bits in action by running `xkbwatch` and pressing your modifier buttons.
+
+Then we assign virtual keys to desired physical buttons on your keyboard. You can learn the names of keys and buttons the existing configuration file like `pc` in the symbols folder or if it is not there look it up in `/usr/share/X11/xkb/keycodes/evdev`. Here are relevant chunks from my `keycodes/evdev` file.
+
+```bash
+<LALT> = 64;
+<LCTL> = 37;
+<SPCE> = 65;
+<RCTL> = 105;
+<RALT> = 108;
+// Microsoft keyboard extra keys
+<LWIN> = 133;
+<RWIN> = 134;
+<COMP> = 135;
+alias <MENU> = <COMP>;
+
+// Fake keycodes for virtual keys
+<LVL3> =   92;
+<MDSW> =   203;
+<ALT>  =   204;
+<META> =   205;
+<SUPR> =   206;
+<HYPR> =   207;
+```
+
+You can see that I found it useful to leverage virtual keycodes when setting modifier levels. I haven't figured out why it worked better than listing all physical button names. By coincidence, it also looks much cleaner.
+
+:::note{.note.admonition title="Alt key is twisted" #altwin}
+
+You might have noticed that for `Alt` I set a modifier using both virtual `<ALT>` and physical `<LALT>` keycodes. I use KDE and without this modification my <kbd>Alt</kbd> + <kbd>Tab</kbd> combination to cycle through open windows didn't work correctly. This probably relates to the fact that some applications rely not only on the modifier bits but also on eventual **keysym** that would be different for the virtual `Alt` and physical `Alt` button representing it. A formula to identify a **keysym** is `(keycode, group, state) → keysym`. Find more details [here](https://wiki.archlinux.org/title/X_keyboard_extension#Keycode_translation).
+
+:::
+
+You can easily see this by applying your configuration with and without specifying the physical <kbd>Alt</kbd> and checking the `xmodmap` output.
+
+With only virtual `<Alt>` specified in the configuration like this `modifier_map Mod1   { <ALT> };` the `xmodmap` output looks like:
+
+```
+mod1        Alt_L (0xcc)
+```
+
+When adding `<LALT>` to the configuration as shown above, it will also show up on you `xmodmap` output.
+Now you also see Alt_L (0x40) which when converted from #hex is equal to keycode 64 corresponding in our configuration to `<LALT>` = 64;
+
+```
+mod1        Alt_L (0x40),  Alt_L (0xcc)
+```
+
+After adding `<LALT>` to the configuration it fixed my window switching in KDE and made my <kbd>Alt</kbd> key behave normally.
+That doesn't end our surprises though.
+
+### Step 3: Make Emacs Distinguish Alt from Meta (Win)

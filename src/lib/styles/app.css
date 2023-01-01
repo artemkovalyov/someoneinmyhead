@@ -6,37 +6,37 @@
 
 /* Make it easier to denote keyboard keys in blogs */
 kbd {
-  @apply px-2 py-1.5 text-xs align-middle font-semibold border rounded-lg border-outline bg-surface-variant text-on-surface-variant;
+  @apply px-2 py-1.5 text-sm align-middle font-semibold border rounded-lg border-outline bg-surface-variant text-on-surface-variant;
 }
 
 /* Admonitions */
 
 .danger {
-  @apply bg-error-container rounded-lg px-5 border-l-8 border-error prose-headings:!my-0 prose-p:!my-0;
+  @apply bg-error-container border-error;
 }
 
 .warning {
-  @apply bg-primary-container rounded-lg px-5 border-l-8 border-primary-palette-60;
+  @apply bg-primary-container border-primary-palette-60;
 }
 
 .note {
-  @apply bg-secondary-container rounded-lg px-5 border-l-8 border-secondary-palette-60;
+  @apply bg-secondary-container border-secondary-palette-60;
 }
 
 .tip {
-  @apply bg-tertiary-container rounded-lg px-5 border-l-8 border-tertiary-palette-60;
+  @apply bg-tertiary-container border-tertiary-palette-60;
 }
 
 .info {
-  @apply bg-surface-variant text-on-surface-variant rounded-lg px-5 border-l-8 border-surface-tint-color;
+  @apply bg-surface-variant text-on-surface-variant border-surface-tint-color;
 }
 
 .admonition {
-  @apply prose-headings:!my-0 prose-p:!my-0 my-5;
+  @apply prose-headings:!my-0 prose-p:!my-0 rounded-lg px-7 py-5 border-l-8 my-5 text-black dark:text-white;
 }
 
 .admonition-title {
-  @apply uppercase font-bold text-lg text-black dark:text-white;
+  @apply uppercase font-bold mb-5 text-lg xl:text-xl 2xl:text-2xl;
 }
 
 /* Admonitions */
