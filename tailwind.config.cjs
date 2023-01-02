@@ -4,6 +4,23 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
+      typography: {
+        DEFAULT: {
+          css: {
+            code: {
+              'background-color': 'var(--md-sys-color-outline-variant)',
+              padding: '0.2rem 0.5rem 0.1rem 0.5rem',
+              fontWeight: 0
+            },
+            'code::before': {
+              content: ''
+            },
+            'code::after': {
+              content: ''
+            }
+          }
+        }
+      },
       colors: {
         // 'gray': {
         //   5: '#1e1e1e',
@@ -45,8 +62,6 @@ module.exports = {
         'outline-variant': 'var(--md-sys-color-outline-variant)',
         'inverse-surface': 'var(--md-sys-color-inverse-surface)',
         'on-inverse-surface': 'var(--md-sys-color-on-inverse-surface)',
-        'inverse-surface': 'var(--md-sys-color-inverse-surface)',
-        'on-inverse-surface': 'var(--md-sys-color-on-inverse-surface)',
         'inverse-primary': 'var(--md-sys-color-inverse-primary)',
         'on-inverse-primary': 'var(--md-sys-color-on-inverse-primary)',
         shadow: 'var(--md-sys-color-shadow)',
@@ -57,7 +72,9 @@ module.exports = {
           2: 'var(--md-sys-color-elevation2)',
           3: 'var(--md-sys-color-elevation3)',
           4: 'var(--md-sys-color-elevation4)',
-          5: 'var(--md-sys-color-elevation5)'
+          5: 'var(--md-sys-color-elevation5)',
+          6: 'var(--md-sys-color-elevation6)',
+          7: 'var(--md-sys-color-elevation7)'
         },
 
         // Tonal palette from the Material Design Theme

@@ -138,6 +138,8 @@
   --md-sys-color-elevation3-light: rgba(149, 74, 0, 0.11);
   --md-sys-color-elevation4-light: rgba(149, 74, 0, 0.12);
   --md-sys-color-elevation5-light: rgba(149, 74, 0, 0.14);
+  --md-sys-color-elevation6-light: rgba(149, 74, 0, 0.17);
+  --md-sys-color-elevation7-light: rgba(149, 74, 0, 0.19);
   /* dark */
   --md-sys-color-primary-dark: #ffb785;
   --md-sys-color-on-primary-dark: #502500;
@@ -174,6 +176,8 @@
   --md-sys-color-elevation3-dark: rgba(255, 183, 133, 0.11);
   --md-sys-color-elevation4-dark: rgba(255, 183, 133, 0.12);
   --md-sys-color-elevation5-dark: rgba(255, 183, 133, 0.14);
+  --md-sys-color-elevation6-dark: rgba(255, 183, 133, 0.17);
+  --md-sys-color-elevation7-dark: rgba(255, 183, 133, 0.19);
   /* label - small */
   --md-sys-typescale-label-small-font-family-name: Roboto;
   --md-sys-typescale-label-small-font-family-style: Medium;

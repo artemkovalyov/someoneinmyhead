@@ -81,7 +81,7 @@ To my opinion `XKB` has the most intricate and tangled API I've ever worked with
 
 In Linux it live in `/usr/share/X11/xkb/`
 
-```bash
+```treeview
 /usr/share/X11/xkb/
 ├── compat
 ├── geometry
@@ -89,6 +89,13 @@ In Linux it live in `/usr/share/X11/xkb/`
 ├── rules
 ├── symbols
 └── types
+```
+
+```treeview
+static/
+├── favicon.ico
+├── favicon.png
+└── me.jpg
 ```
 
 We are mostly interested in `symbols`, and `rules` folders. The `symbols` folder contains all the layout configurations and modular configuration snippets for the most frequently used keys. You can study configuration files found in a `symbols` folder to get an inspiration and an intuition about ways to write your own configuration. The `rules` folder lists sets of rules which can be used to obtain an exact XKB configuration.
