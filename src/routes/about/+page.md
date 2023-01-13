@@ -8,7 +8,7 @@ And this is a new line
 
 ### I'm a header on a new line
 
-:::note{.tip.admonition.not-prose title="your-title" #your-id}
+:::note{.tip.admonition.not-prose #your-id}
 
 Markdown content of any kind
 
@@ -32,7 +32,7 @@ Markdown content of any kind
 
 :::
 
-::::note{.danger.admonition title="abc" #icd}
+::::note{.danger.admonition #icd}
 
 ### abc
 

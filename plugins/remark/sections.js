@@ -27,13 +27,41 @@ export default function remarkAdmonitions() {
       // if (node.name !== 'note') return;
       const data = node.data || (node.data = {});
       const hast = h(node.attributes.element || 'div', node.attributes);
-      const title = node.attributes.title || node.name;
+      const admonitionType = hast.properties.className[0]; // by convention the first class assigned to admonition defines its type
       data.hName = hast.tagName;
       data.hProperties = hast.properties;
+      const title = node.attributes.title || hast.properties.className[0];
+      const icons = {
+        info: 'info',
+        note: 'error_outline',
+        tip: 'lightbulb',
+        warning: 'report_problem',
+        danger: 'new_releases'
+      };
       node.children.unshift({
         type: 'AdmonitionTitle',
-        children: [{ type: 'text', value: `${title}` }],
-        data: { hName: 'div', hProperties: { className: `admonition-title` } }
+        children: [
+          {
+            type: 'AdmonitionTitleIcon',
+            properties: {},
+            children: [{ type: 'text', value: icons[data.hProperties.className[0]] || 'info' }],
+            data: {
+              hName: 'span',
+              hProperties: { className: `admonition-icon material-icons-outlined` }
+            }
+          },
+          {
+            type: 'AdmonitionTitleText',
+            properties: {},
+            children: [{ type: 'text', value: title || 'info' }],
+            data: {
+              hName: 'span',
+              hProperties: { className: `admonition-text` }
+            }
+          }
+          // { type: 'text', value: `${title}` }
+        ],
+        data: { hName: 'div', hProperties: { className: `admonition-title not-prose` } }
       });
     });
   };

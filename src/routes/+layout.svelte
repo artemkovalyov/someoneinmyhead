@@ -15,6 +15,10 @@
 
 <!-- <Head /> -->
 
+<svelte:head>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+</svelte:head>
+
 <SideMenu bind:open />
 
 <Header bind:open bind:dark bind:path />

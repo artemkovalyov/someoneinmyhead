@@ -39,6 +39,14 @@ kbd {
   @apply uppercase font-bold mb-5 text-lg xl:text-xl 2xl:text-2xl;
 }
 
+.admonition-icon {
+  @apply text-4xl align-middle mr-1;
+}
+
+.admonition-text {
+  @apply align-middle;
+}
+
 /* Admonitions */
 
 /* AutoLink for every header with '#' */

@@ -50,6 +50,13 @@ I use <kbd>Ctrl</kbd>, <kbd>Alt</kbd>, <kbd>Meta</kbd>, <kbd>Super</kbd>, and <k
 
 ## How My Starting Point Looks Like?
 
+---
+
+Check XKB configuration: setxkbmap -print -verbose 10
+https://wiki.archlinux.org/title/Xorg/Keyboard_configuration#Viewing_keyboard_settings
+
+---
+
 For that let's run `xmodmap` in the terminal.
 
 ```bash
@@ -181,11 +188,11 @@ alias <MENU> = <COMP>;
 <HYPR> =   207;
 ```
 
-You can see that I found it useful to leverage virtual keycodes when setting modifier levels. I haven't figured out why it worked better than listing all physical button names. By coincidence, it also looks much cleaner.
+You can see that I found it useful to leverage virtual `keycodes` when setting modifier levels. I haven't figured out why it worked better than listing all physical button names. By coincidence, it also looks much cleaner.
 
 :::note{.note.admonition title="Alt key is twisted" #altwin}
 
-You might have noticed that for `Alt` I set a modifier using both virtual `<ALT>` and physical `<LALT>` keycodes. I use KDE and without this modification my <kbd>Alt</kbd> + <kbd>Tab</kbd> combination to cycle through open windows didn't work correctly. This probably relates to the fact that some applications rely not only on the modifier bits but also on eventual **keysym** that would be different for the virtual `Alt` and physical `Alt` button representing it. A formula to identify a **keysym** is `(keycode, group, state) → keysym`. Find more details [here](https://wiki.archlinux.org/title/X_keyboard_extension#Keycode_translation).
+You might have noticed that for <kbd>Alt</kbd> I set a modifier using both virtual `<ALT>` and physical `<LALT>` `keycodes`. I use KDE as my linux desktop and without this modification <kbd>Alt</kbd> + <kbd>Tab</kbd> combination to cycle through open windows didn't work correctly. This probably relates to the fact that some applications rely not only on the modifier bits but also on eventual **keysym** that would be different for the virtual <kbd>Alt</kbd> and physical <kbd>Alt</kbd> button representing it. A formula to identify a **keysym** is `(keycode, group, state) → keysym`. Find more details [here](https://wiki.archlinux.org/title/X_keyboard_extension#Keycode_translation).
 
 :::
 
@@ -208,3 +215,52 @@ After adding `<LALT>` to the configuration it fixed my window switching in KDE a
 That doesn't end our surprises though.
 
 ### Step 3: Make Emacs Distinguish Alt from Meta (Win)
+
+The <kbd>Meta</kbd> key has a very special meaning in Emacs but it is often missing on modern keylboards. By default Emacs matches <kbd>Meta</kbd> it to <kbd>Alt</kbd>. I remapped my <kbd>Win</kbd> to <kbd>Meta</kbd> and intend to have a good use of a separate <kbd>Alt</kbd> key. Defying all th mapping, Emacs still recognizes my left <kbd>Alt</kbd> as <kbd>Meta</kbd>. I was puzzled and kept hanging on this issue for quite a while before running `xmodmap -pke` and seeing that <kbd>Alt</kbd> and <kbd>Meta</kbd> share the same `keycode`. Check codes **64** and **108** below.
+
+```bash
+○ → xmodmap -pke | grep Alt
+keycode  64 = Alt_L Meta_L Alt_L Meta_L Alt_L Meta_L
+keycode 108 = Alt_R Meta_R Alt_R Meta_R ISO_Level3_Shift
+keycode 204 = NoSymbol Alt_L NoSymbol Alt_L NoSymbol Alt_L
+```
+
+Because of that Emacs can't distinguish them and keeps using <kbd>Alt</kbd> as <kbd>Meta</kbd>.
+
+I dug everywhere to check for aliases or explicit assignments that would cause <kbd>Alt</kbd> and <kbd>Meta</kbd> share the same `keycode`. The eventual discovered that so called `level2` of a key, which you achieve when pressing <kbd>Shift</kbd> before the key, makes it show up on the same `keycode` as the `level1` and pollute it in a way. It looks something like this in the configuration file `key <LALT> { [ Alt_L, Meta_L ] };`. This says that if you press <kbd>Shift</kbd> + <kbd>Left Alt</kbd> it will produce `Meta_L` but the `keycode` will stay **64** which matches `<LALT>`. Running `xmodmap` without parameters will not reveal that which makes things even more intricate.
+
+What deceived me is trying to keep my configuration clean and minimal. I tried to make least possible intrusion into the configuration files and initially defined `<LALT>` as `<LALT> { [ Alt_L ] };`. By doing this I skipped `level2` state configuration for <kbd>Left Alt</kbd> or in other words the way <kbd>Left Alt</kbd> behave when <kbd>Shift</kbd> is pressed and allowed default configuration from `pc` to kick in. Here is the snipped from `/usr/share/X11/xkb/symbols/altwin` file that spoiled my configuration:
+
+```bash
+partial modifier_keys
+xkb_symbols "meta_alt" {
+key <LALT> { [ Alt_L, Meta_L ] };
+key <RALT> { type[Group1] = "TWO_LEVEL",
+symbols[Group1] = [ Alt_R, Meta_R ] };
+modifier_map Mod1 { Alt_L, Alt_R, Meta_L, Meta_R };
+};
+```
+
+After changing definition of `<LALT>` to `key <LALT> { [ Alt_L, Alt_L ] };` things got back to normal. The output of `xmodmap -pke | grep Alt` now looks unambiguous with only <kbd>Alt</kbd> on `keycode` 64. Don't ask me about that `keycode` 204 because it didn't any troubles.
+
+```bash
+○ → xmodmap -pke | grep Alt
+keycode  64 = Alt_L Alt_L Alt_L Alt_L Alt_L Alt_L
+keycode 204 = NoSymbol Alt_L NoSymbol Alt_L NoSymbol Alt_L
+```
+
+### Step 4: Test Your XKB Configuration
+
+setxkbmap -print -verbose 10
+
+`setxkbmap -option "terminate:ctrl_alt_bksp"`
+
+setxkbmap -model pc104 -layout us -option ""
+
+### Step 5: Adding Your Modifiers Configuration to XKB Rules
+
+After getting your configuration tested
+
+### Persist Your XKB Configuration
+
+### Configure Your Desktop Environment with New XKB Configuration
