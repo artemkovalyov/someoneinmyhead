@@ -9,7 +9,6 @@ import remarkStringify from 'remark-stringify';
 import remarkFrontmatter from 'remark-frontmatter';
 import remarkAdmonitions from './plugins/remark/sections.js';
 import readingTime from './plugins/remark/reading-time.js';
-import remarkRelativeImageLink from './plugins/remark/md-img.js';
 
 const config = defineConfig({
   extensions: ['.svelte.md', '.md', '.svx'],
@@ -23,7 +22,6 @@ const config = defineConfig({
     readingTime,
     remarkStringify,
     remarkFrontmatter,
-    remarkRelativeImageLink,
     remarkDirective,
     remarkAdmonitions,
     remarkGfm
