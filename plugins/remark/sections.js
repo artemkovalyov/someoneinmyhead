@@ -44,7 +44,7 @@ export default function remarkAdmonitions() {
           {
             type: 'AdmonitionTitleIcon',
             properties: {},
-            children: [{ type: 'text', value: icons[data.hProperties.className[0]] || 'info' }],
+            children: [{ type: 'text', value: icons[admonitionType] || 'info' }],
             data: {
               hName: 'span',
               hProperties: { className: `admonition-icon material-icons-outlined` }

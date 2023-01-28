@@ -8,5 +8,4 @@ export const trailingSlash = 'always';
 export const load: PageLoad = () => ({
   postsList: getPublishedPostsList(),
   imagesMap: getImagesMap()
-  // postsMap: getPostsMap()
 });

@@ -3,6 +3,7 @@ import mdsvexConfig from './mdsvex.config.js';
 // import adapter from '@sveltejs/adapter-auto';
 import adapter from '@sveltejs/adapter-static';
 import preprocess from 'svelte-preprocess';
+import importAssets from 'svelte-preprocess-import-assets';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -14,7 +15,8 @@ const config = {
     mdsvex(mdsvexConfig),
     preprocess({
       postcss: true
-    })
+    }),
+    importAssets()
   ],
 
   kit: {

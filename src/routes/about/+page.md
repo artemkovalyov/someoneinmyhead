@@ -4,6 +4,8 @@ I'm on the newline
 Me as well
 And this is a new line
 
+![arty](/src/routes/about/pattern.jpg)
+
 # How to use XXX
 
 ### I'm a header on a new line
