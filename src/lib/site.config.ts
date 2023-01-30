@@ -10,7 +10,7 @@ export const siteConfig = {
   basePath: 'http://127.0.0.1:5173/',
   postsPerPage: 7,
   tagsPerCard: 3,
-  author: 'Artem Kovalov',
+  author: 'The Stig',
   readingTimeFactor: 300
 };
 
@@ -31,6 +31,6 @@ export const navItems = [
 ];
 
 export const getNavItems = (): Array<NavItem> =>
-  navItems.map((item) =>
+  navItems.map((item: NavItem) =>
     item.href !== undefined ? item : { ...item, href: `${siteConfig.basePath}${item.path}` }
   );

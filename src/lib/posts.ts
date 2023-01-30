@@ -1,4 +1,4 @@
-let image = 'https://picsum.photos/1280/720'; // placeholder image if none was provided
+import type { SvelteComponent } from 'svelte';
 
 // directly import all the blog posts from the file system thanks to Vite's feature: https://vitejs.dev/guide/features.html#glob-import
 const postModules = import.meta.glob('/src/posts/**/*.md', {
@@ -6,7 +6,7 @@ const postModules = import.meta.glob('/src/posts/**/*.md', {
 }) as Record<string, PostModule>;
 
 export interface PostModule {
-  default: Object;
+  default: typeof SvelteComponent;
   metadata: Post;
 }
 
@@ -15,7 +15,7 @@ export interface Post {
   path?: string;
   dir?: string;
   image?: string;
-  default?: Object;
+  default?: typeof SvelteComponent;
   title: string;
   author: string;
   description: string;
