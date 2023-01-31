@@ -1,5 +1,4 @@
 <script lang="ts">
-  import Head from '$lib/components/Head.svelte';
   import { page } from '$app/stores';
   import Header from '$lib/components/Header.svelte';
   import SideMenu from '$lib/components/SideMenu.svelte';

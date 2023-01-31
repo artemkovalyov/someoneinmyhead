@@ -6,7 +6,7 @@
   $: post = data.post;
 </script>
 
-<Head title={post?.title} description={post?.description} author={post?.author} />
+<!-- <Head title={post?.title} description={post?.description} author={post?.author} /> -->
 
 <svelte:component this={post?.default} />
 
