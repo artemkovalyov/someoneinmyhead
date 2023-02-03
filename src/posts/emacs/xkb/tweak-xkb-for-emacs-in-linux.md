@@ -23,9 +23,10 @@ uuid: ccff7f23-096e-406c-afd2-8287711e5404
 
 <script>
     import Head from '$lib/components/Head.svelte';
+    import imageLink from './keyboard.jpg';
 </script>
 
-<Head {title} {description} {author} {image} {published} {publishedTime} {modifiedTime} {expirationTime} {tags} {section} type={"article"} />
+<Head {title} {description} {author} {image} {published} {publishedTime} {modifiedTime} {expirationTime} {tags} {section} type={"article"} {imageLink}/>
 
 ![Emacs KBD](./dots.jpg)
 ![woo hoo](../../../routes/about/flowers.jpg)

@@ -1,12 +1,9 @@
 <script lang="ts">
-  import Head from '$lib/components/Head.svelte';
   import type { PageData } from './$types';
 
   export let data: PageData;
   $: post = data.post;
 </script>
-
-<!-- <Head title={post?.title} description={post?.description} author={post?.author} /> -->
 
 <svelte:component this={post?.default} />
 
