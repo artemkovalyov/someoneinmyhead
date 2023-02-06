@@ -11,7 +11,6 @@ author: Artem Kovalov
 published: true
 publishedTime: 2022-10-26T16:00:30+02:00
 modifiedTime: 2022-10-26T16:00:30+02:00
-expirationTime: 2022-10-26T16:00:30+02:00
 series: emacs
 section: Technology
 tags:
@@ -26,7 +25,7 @@ uuid: ccff7f23-096e-406c-afd2-8287711e5404
     import imageLink from './keyboard.jpg';
 </script>
 
-<Head {title} {description} {author} {image} {published} {publishedTime} {modifiedTime} {expirationTime} {tags} {section} type={"article"} {imageLink}/>
+<Head {title} {description} {author} {image} {published} {publishedTime} {modifiedTime} {tags} {section} type={"article"} {imageLink}/>
 
 ![Emacs KBD](./dots.jpg)
 ![woo hoo](../../../routes/about/flowers.jpg)
