@@ -25,12 +25,17 @@ uuid: ccff7f23-096e-406c-afd2-8287711e5404
     import imageLink from './keyboard.jpg';
 </script>
 
-<Head {title} {description} {author} {image} {published} {publishedTime} {modifiedTime} {tags} {section} type={"article"} {imageLink}/>
+<Head {title} {description} {author} {published} {publishedTime} {modifiedTime} {tags} {section} type={"article"} {imageLink}/>
 
-![Emacs KBD](./dots.jpg)
-![woo hoo](../../../routes/about/flowers.jpg)
+![Make Alt, Super, Ctrl, and Shift behave in Linux](./keyboard.jpg)
 
 # {title}
+
+## Intro
+
+XKB configuration in Linux is a no joke. Standard keyboard settings available with your desktop environment can do as much and they often get conflicting if you need anything beyond the most widespread key assignment. After endorsing Emacs as my editor and discovering I can clearly benefit from letting it recognize most of my Meta keys, I had to dive into guts of XKB to make my desired setup work. This adventure led me to better understanding of how X server manages keyboard configuration. I also solved some other keyboard related annoyances, like reproducible configuration as code and reliable language switching as a side effect of this investigation. I wrote this as a quick reminder to myself because I usually lose memory about all the gears involved in configuring and in some cases debugging my keyboard configuration in between X server updates that wipe my custom settings out.
+
+## What are you going to take home?
 
 After reading this article you should be able to remap your meta keys also known as modifier keys and make them distinguishable for your desktop environment and applications. Most of the Linux distributions ship a default [XKB](https://en.wikipedia.org/wiki/X_keyboard_extension) configuration that leaves you with only the most popular modifiers like <kbd>Alt</kbd> + <kbd>Enter</kbd>, <kbd>Super</kbd>, <kbd>Ctrl</kbd>, and <kbd>Shift</kbd>. They are usually mapped to respective keys on your keyboard. <kbd>Super</kbd> is most frequently mapped to <kbd>Win</kbd> for most laptops.
 
@@ -38,29 +43,23 @@ You can usually tweak your key configuration via the system settings of your des
 
 ## The Configuration I Want to Achieve
 
-I use <kbd>Ctrl</kbd>, <kbd>Alt</kbd>, <kbd>Meta</kbd>, <kbd>Super</kbd>, and <kbd>Hyper</kbd> modifiers in my key combinations. Do you think that's nuts? Anyway, to achieve that setup, I needed all the modifiers to be assigned to different physical keys. Luckily we have plenty of keys to re-assign. My desired setup looks like the following:
+I use <kbd>Ctrl</kbd>, <kbd>Alt</kbd>, <kbd>Meta</kbd>, <kbd>Super</kbd>, and <kbd>Hyper</kbd> modifiers in my key combinations. To achieve this somewhat extravagant setup, I needed all the modifiers to be assigned to different physical keys on my laptop's keyboard. Luckily we have plenty of keys to remap. My desired setup looks like the following:
 
-| Modifier key       | Button                                      | Modifier level | Comment                                                     |
-| :----------------- | :------------------------------------------ | :------------- | :---------------------------------------------------------- |
-| <kbd>Shift</kbd>   | <kbd>Shift</kbd>                            | shift          | I keep it as is                                             |
-| None               | None                                        | lock           | I don't use it                                              |
-| <kbd>Control</kbd> | <kbd>Left Control</kbd>                     | control        | Keep it as is                                               |
-| <kbd>Alt</kbd>     | <kbd>Left Alt</kbd>                         | mod1           | Better keep Alt as mod1                                     |
-| <kbd>Meta</kbd>    | <kbd>Left Win</kbd>                         | mod2           | Emacs loves it. I want it on Win                            |
-| <kbd>Hyper</kbd>   | <kbd>Caps Lock</kbd>                        | mod3           | I assigned it to Caps Lock                                  |
-| <kbd>Super</kbd>   | <kbd>Right Alt</kbd>                        | mod4           | I want it on Left Alt                                       |
-| Level 3            | <kbd>Shift</kbd> + <kbd>Right Control</kbd> | mod5           | Useful with national keyboards with 3rd level keys engraved |
+| Modifier           | Physical key                                | Modifier level | Comment                                                          |
+| :----------------- | :------------------------------------------ | :------------- | :--------------------------------------------------------------- |
+| <kbd>Shift</kbd>   | <kbd>Shift</kbd>                            | shift          | Not changed                                                      |
+| None               | None                                        | lock           | Unassigned                                                       |
+| <kbd>Control</kbd> | <kbd>Left Control</kbd>                     | control        | Assign it to left Control                                        |
+| <kbd>Alt</kbd>     | <kbd>Left Alt</kbd>                         | mod1           | Assign it to left Alt                                            |
+| <kbd>Meta</kbd>    | <kbd>Left Win</kbd>                         | mod2           | Emacs loves it. I assign it on Win                               |
+| <kbd>Hyper</kbd>   | <kbd>Caps Lock</kbd>                        | mod3           | Assigned it to Caps Lock                                         |
+| <kbd>Super</kbd>   | <kbd>Right Alt</kbd>                        | mod4           | Assign it to right Alt                                           |
+| <kbd>Compose</kbd> | <kbd>Right Control</kbd>                    | mod4           | Assign it to right Control. Useful for producing special symbols |
+| Level 3            | <kbd>Shift</kbd> + <kbd>Right Control</kbd> | mod5           | Useful with national keyboards with 3rd level keys engraved      |
 
-## How My Starting Point Looks Like?
+## Let Us See What We Have by Default
 
----
-
-Check XKB configuration: setxkbmap -print -verbose 10
-https://wiki.archlinux.org/title/Xorg/Keyboard_configuration#Viewing_keyboard_settings
-
----
-
-For that let's run `xmodmap` in the terminal.
+For that open terminal and run `xmodmap`. The output below is my starting point that I want to convert into the desired configuration shared above.
 
 ```bash
 ○ → xmodmap
@@ -76,20 +75,20 @@ mod4        Super_L (0x85),  Super_R (0x86),  Super_L (0xce),  Hyper_L (0xcf)
 mod5        ISO_Level3_Shift (0x5c),  Mode_switch (0xcb)
 ```
 
-The results are rather terrible.
+As you can see, the initial keyboard settings are rather terrible.
 
-- <kbd>Alt</kbd> and <kbd>Meta</kbd> share `mod1`
-- `mod2` is taken by <kbd>Num Lock</kbd>
-- `mod3` is empty
-- <kbd>Super</kbd> and <kbd>Hyper</kbd> shared `mod4`
+- <kbd>Alt</kbd> and <kbd>Meta</kbd> both share `mod1` which means my system can't tell difference between this modifiers.
+- `mod2` is taken by <kbd>Num Lock</kbd> which means I need to free it up if I want ot use it.
+- `mod3` is empty which is such a waste in my case
+- <kbd>Super</kbd> and <kbd>Hyper</kbd> crowd the `mod4` while `mod3` is so lonely
 
 ## Let's See How We Can Fix It
 
-To my opinion `XKB` has the most intricate and tangled API I've ever worked with. That's caused by an intrinsic complexity of the domain and lots of inherited legacy. However, my personal believe is - setting up your keyboard shouldn't be a rocket science. Sadly, it's even a bit worse than that but let's get to business instead of complaining.
+In my opinion `XKB` has the most intricate and tangled API I have ever worked with. I think it is caused by an intrinsic complexity of the domain and lots of inherited legacy. There are so many keyboards to support our there together with ensuring compatibility from prehistoric times of computer era. However, my personal believe is - setting up your keyboard should not be a rocket science. Sadly, it still is. This means I have get to business instead of complaining.
 
 ### Step 1: figure out existing XKB configuration
 
-In Linux it live in `/usr/share/X11/xkb/`
+In Linux it lives in `/usr/share/X11/xkb/`
 
 ```treeview
 /usr/share/X11/xkb/
@@ -101,16 +100,9 @@ In Linux it live in `/usr/share/X11/xkb/`
 └── types
 ```
 
-```treeview
-static/
-├── favicon.ico
-├── favicon.png
-└── me.jpg
-```
+The directories that interest us are `symbols`, and `rules`. The `symbols` directory contains all the shipped layout configurations together with modular configuration snippets for the most frequently used key mappings. You can study configuration files found in a `symbols` folder to get an inspiration and an intuition about ways to write your own configuration. The `rules` directory lists sets of rules which can be used to obtain an exact XKB configuration.
 
-We are mostly interested in `symbols`, and `rules` folders. The `symbols` folder contains all the layout configurations and modular configuration snippets for the most frequently used keys. You can study configuration files found in a `symbols` folder to get an inspiration and an intuition about ways to write your own configuration. The `rules` folder lists sets of rules which can be used to obtain an exact XKB configuration.
-
-To check your specific configuration run `setxkbmap -print -verbose 10`
+Run `setxkbmap -print -verbose 10` to check what rules apply in your current setup.
 
 ```bash
 ○ → setxkbmap -print -verbose 10
@@ -122,24 +114,24 @@ Success.
 Applied rules from evdev:
 rules:      evdev
 model:      pc101
-layout:     us,ru,ua
+layout:     us,ua
 options:    pc
 Trying to build keymap using the following components:
 keycodes:   evdev+aliases(qwerty)
 types:      complete
 compat:     complete
-symbols:    pc+us+ru:2+ua:3+inet(evdev)
+symbols:    pc+us+ua:3+inet(evdev)
 geometry:   pc(pc101)
 xkb_keymap {
 xkb_keycodes  { include "evdev+aliases(qwerty)" };
 xkb_types     { include "complete"      };
 xkb_compat    { include "complete"      };
-xkb_symbols   { include "pc+us+ru:2+ua:3+inet(evdev)"   };
+xkb_symbols   { include "pc+us+ua:3+inet(evdev)"   };
 xkb_geometry  { include "pc(pc101)"     };
 };
 ```
 
-The `evdev` aka [event device](https://en.wikipedia.org/wiki/Evdev) rules are most commonly used on Linux. You can see that my `symbols` configuration contains `pc+us+ru:2+ua:3+inet(evdev)`. It means that my base configuration is `pc` with `us`, `ru`, and `ua` layouts and `inet(evdev)` option that makes all those vendor and multimedia buttons work on my laptop.
+The `evdev` aka [event device](https://en.wikipedia.org/wiki/Evdev) rules are most commonly used on Linux. You can see that my `symbols` configuration contains `pc+us+ua:3+inet(evdev)`. It means that my base configuration is `pc` with two layouts `us` and `ua` refined by `inet(evdev)` option that makes all those so called vendor keys and multimedia buttons work on my laptop.
 
 ### Step 2: Adjust The Configuration To Make Emacs and Linux Happy
 
@@ -166,9 +158,9 @@ modifier_map Mod4   { <SUPR> };
 };
 ```
 
-The first thing is cleaning up all the modifiers to release them and let us re-assign keys to desired modifiers. The modifiers are simply bits raised when the key assigned to that modifier is pressed. You can see those bits in action by running `xkbwatch` and pressing your modifier buttons.
+The first thing is cleaning up all the modifier levels to release them and let us remapping keys to desired ones. The modifiers are simply bits raised when the key assigned to that modifier is pressed. You can see those bits in action by running `xkbwatch` and pressing modifier buttons like Alt, Ctrl, Meta.
 
-Then we assign virtual keys to desired physical buttons on your keyboard. You can learn the names of keys and buttons the existing configuration file like `pc` in the symbols folder or if it is not there look it up in `/usr/share/X11/xkb/keycodes/evdev`. Here are relevant chunks from my `keycodes/evdev` file.
+Then we assign virtual keys to desired physical buttons on your keyboard. You can learn the names of keys and buttons from the existing configuration file like `pc` in the symbols folder or if it is not there look it up in `/usr/share/X11/xkb/keycodes/evdev` file. Here are relevant chunks from my `keycodes/evdev` file.
 
 ```bash
 <LALT> = 64;
@@ -191,15 +183,15 @@ alias <MENU> = <COMP>;
 <HYPR> =   207;
 ```
 
-You can see that I found it useful to leverage virtual `keycodes` when setting modifier levels. I haven't figured out why it worked better than listing all physical button names. By coincidence, it also looks much cleaner.
+I found it useful to leverage virtual `keycodes` when setting modifier levels. I have not figured out why it worked better than listing all physical button names. By coincidence, it also looks much cleaner.
 
 :::note{.note.admonition title="Alt key is twisted" #altwin}
 
-You might have noticed that for <kbd>Alt</kbd> I set a modifier using both virtual `<ALT>` and physical `<LALT>` `keycodes`. I use KDE as my linux desktop and without this modification <kbd>Alt</kbd> + <kbd>Tab</kbd> combination to cycle through open windows didn't work correctly. This probably relates to the fact that some applications rely not only on the modifier bits but also on eventual **keysym** that would be different for the virtual <kbd>Alt</kbd> and physical <kbd>Alt</kbd> button representing it. A formula to identify a **keysym** is `(keycode, group, state) → keysym`. Find more details [here](https://wiki.archlinux.org/title/X_keyboard_extension#Keycode_translation).
+You might have noticed that for <kbd>Alt</kbd> I set a modifier using both virtual `<ALT>` and physical `<LALT>` `keycodes`. In my KDE desktop environment cycling over open windows with the default <kbd>Alt</kbd> + <kbd>Tab</kbd> shortcut did not work correctly. This probably relates to the [fact](https://wiki.archlinux.org/title/X_keyboard_extension#Virtual_Modifiers) that some applications rely not only on the modifier bits but also on eventual **keysym** that would be different for the virtual <kbd>Alt</kbd> and physical <kbd>Alt</kbd> button representing it. A formula to identify a **keysym** is `(keycode, group, state) → keysym`. Find more details [here](https://wiki.archlinux.org/title/X_keyboard_extension#Keycode_translation).
 
 :::
 
-You can easily see this by applying your configuration with and without specifying the physical <kbd>Alt</kbd> and checking the `xmodmap` output.
+You can easily see this by applying this configuration with and without specifying the physical <kbd>Alt</kbd> key and checking the `xmodmap` output.
 
 With only virtual `<Alt>` specified in the configuration like this `modifier_map Mod1   { <ALT> };` the `xmodmap` output looks like:
 
@@ -207,19 +199,19 @@ With only virtual `<Alt>` specified in the configuration like this `modifier_map
 mod1        Alt_L (0xcc)
 ```
 
-When adding `<LALT>` to the configuration as shown above, it will also show up on you `xmodmap` output.
-Now you also see Alt_L (0x40) which when converted from #hex is equal to keycode 64 corresponding in our configuration to `<LALT>` = 64;
+When adding `<LALT>` to the configuration as shown above, I get one more keycode for <kdb>Alt</kdb> to show up on my `xmodmap` output.
+If we translate `Alt_L (0x40)` from #hex it is equal to keycode **64** corresponding in our configuration to `<LALT>` = 64;
 
 ```
 mod1        Alt_L (0x40),  Alt_L (0xcc)
 ```
 
-After adding `<LALT>` to the configuration it fixed my window switching in KDE and made my <kbd>Alt</kbd> key behave normally.
-That doesn't end our surprises though.
+By adding `<LALT>` to the configuration I fixed my window switching in KDE and made my <kbd>Alt</kbd> key behave as expected.
+That does not end our surprises though.
 
 ### Step 3: Make Emacs Distinguish Alt from Meta (Win)
 
-The <kbd>Meta</kbd> key has a very special meaning in Emacs but it is often missing on modern keylboards. By default Emacs matches <kbd>Meta</kbd> it to <kbd>Alt</kbd>. I remapped my <kbd>Win</kbd> to <kbd>Meta</kbd> and intend to have a good use of a separate <kbd>Alt</kbd> key. Defying all th mapping, Emacs still recognizes my left <kbd>Alt</kbd> as <kbd>Meta</kbd>. I was puzzled and kept hanging on this issue for quite a while before running `xmodmap -pke` and seeing that <kbd>Alt</kbd> and <kbd>Meta</kbd> share the same `keycode`. Check codes **64** and **108** below.
+The <kbd>Meta</kbd> key has a very special meaning in Emacs but it is often missing on modern keyboards. That is why, by default Emacs matches <kbd>Meta</kbd> to <kbd>Alt</kbd> for compatibility. I was not happy with this and remapped my <kbd>Win</kbd> key to <kbd>Meta</kbd> so that I can use an <kbd>Alt</kbd> key in Emacs as well. After doing the mapping, Emacs kept recognizing my left <kbd>Alt</kbd> as <kbd>Meta</kbd>. I was puzzled and kept hanging on this issue for quite a while before running `xmodmap -pke` and seeing that <kbd>Alt</kbd> and <kbd>Meta</kbd> share the same `keycode`. Check codes **64** and **108** below.
 
 ```bash
 ○ → xmodmap -pke | grep Alt
@@ -228,13 +220,19 @@ keycode 108 = Alt_R Meta_R Alt_R Meta_R ISO_Level3_Shift
 keycode 204 = NoSymbol Alt_L NoSymbol Alt_L NoSymbol Alt_L
 ```
 
-Because of that Emacs can't distinguish them and keeps using <kbd>Alt</kbd> as <kbd>Meta</kbd>.
+Because of this Emacs was still seeing <kbd>Alt</kbd> and <kbd>Meta</kbd> on the same keycode and fell back to using <kbd>Alt</kbd> as <kbd>Meta</kbd>.
 
-I dug everywhere to check for aliases or explicit assignments that would cause <kbd>Alt</kbd> and <kbd>Meta</kbd> share the same `keycode`. The eventual discovered that so called `level2` of a key, which you achieve when pressing <kbd>Shift</kbd> before the key, makes it show up on the same `keycode` as the `level1` and pollute it in a way. It looks something like this in the configuration file `key <LALT> { [ Alt_L, Meta_L ] };`. This says that if you press <kbd>Shift</kbd> + <kbd>Left Alt</kbd> it will produce `Meta_L` but the `keycode` will stay **64** which matches `<LALT>`. Running `xmodmap` without parameters will not reveal that which makes things even more intricate.
-
-What deceived me is trying to keep my configuration clean and minimal. I tried to make least possible intrusion into the configuration files and initially defined `<LALT>` as `<LALT> { [ Alt_L ] };`. By doing this I skipped `level2` state configuration for <kbd>Left Alt</kbd> or in other words the way <kbd>Left Alt</kbd> behave when <kbd>Shift</kbd> is pressed and allowed default configuration from `pc` to kick in. Here is the snipped from `/usr/share/X11/xkb/symbols/altwin` file that spoiled my configuration:
+I dug everywhere to check for aliases or explicit assignments that would cause <kbd>Alt</kbd> and <kbd>Meta</kbd> share the same `keycode`. I eventually discovered that somewhere in default configuration of XKB the `<LALT>` was defined like:
 
 ```bash
+key <LALT> { [ Alt_L, Meta_L ] };
+```
+
+This means that combination of <kbd>Shift</kbd> + <kbd>Left Alt</kbd> will produce `Meta_L` similarly to having <kbd>Shift</kbd> + <kbd>a</kbd> producing `A`. In both of those cases `keysym` and `keycode` stay the same which is **64** for `<LALT>` and produce at the end the output we see above. The fact that `xmodmap` without parameters will not reveal this `keycode` sharing makes things even more intricate.
+
+All this happened because I was trying to keep my configuration clean and minimal with least possible changes of the configuration files. Initially I defined `<LALT>` as `<LALT> { [ Alt_L ] };`. By doing this I skipped `level2` state configuration for <kbd>Left Alt</kbd> or in other words the way <kbd>Left Alt</kbd> behave when <kbd>Shift</kbd> is pressed and allowed default configuration to take over. Here is the snipped from `/usr/share/X11/xkb/symbols/altwin` file that eventually caused this confusion for Emacs:
+
+```bash {1}
 partial modifier_keys
 xkb_symbols "meta_alt" {
 key <LALT> { [ Alt_L, Meta_L ] };
@@ -244,7 +242,7 @@ modifier_map Mod1 { Alt_L, Alt_R, Meta_L, Meta_R };
 };
 ```
 
-After changing definition of `<LALT>` to `key <LALT> { [ Alt_L, Alt_L ] };` things got back to normal. The output of `xmodmap -pke | grep Alt` now looks unambiguous with only <kbd>Alt</kbd> on `keycode` 64. Don't ask me about that `keycode` 204 because it didn't any troubles.
+After changing definition of `<LALT>` to `key <LALT> { [ Alt_L, Alt_L ] };` things got back to normal. The output of `xmodmap -pke | grep Alt` now looks unambiguous with only <kbd>Alt</kbd> on `keycode` **64**. Don't ask me about that `keycode` **204**, it comes from virtual `<ALT>` and luckily does not spell any troubles.
 
 ```bash
 ○ → xmodmap -pke | grep Alt
@@ -252,18 +250,139 @@ keycode  64 = Alt_L Alt_L Alt_L Alt_L Alt_L Alt_L
 keycode 204 = NoSymbol Alt_L NoSymbol Alt_L NoSymbol Alt_L
 ```
 
-### Step 4: Test Your XKB Configuration
-
-setxkbmap -print -verbose 10
-
-`setxkbmap -option "terminate:ctrl_alt_bksp"`
-
-setxkbmap -model pc104 -layout us -option ""
+After having this changes applied I was able to successfully use my Emacs with both <kbd>Meta</kbd> and <kbd>Alt</kbd> keys distinguishable and available for the bindings.
 
 ### Step 5: Adding Your Modifiers Configuration to XKB Rules
 
-After getting your configuration tested
+After you created and saved your configuration in the `/usr/share/X11/xkb/symbols` directory you have to make your environment aware of it. In the slang of XKB your configuration is called **options**. To make those options available in my environment I had to modify the following files in `/usr/share/X11/xkb/rules`.
+
+```bash
+
+○ → /usr/share/X11/xkb/rules
+.
+├── evdev
+├── evdev.lst
+└── evdev.xml
+
+```
+
+I named my configuration `art-mods` and I will use it as an example in this step. You can give your configuration any arbitrary name and use it instead. In `evdev` file search for `options` and add your options on top so that it looks like:
+
+```
+
+! option	=	symbols
+  art-mods		=	+art-mods
+
+```
+
+The changes to `evdev.lst` are quite similar:
+
+```
+
+! option
+  art-mods	       Modifiers to update Super, Hyper and Meta to Artem's preferences
+
+```
+
+In the `evdev.xml` you have to search for `<optionList>` and add the following section to it alongside the other options in the first group:
+
+```xml
+
+<option>
+  <configItem>
+    <name>art-mods</name>
+      <description>Set Super, Hyper and Meta to Artem's preferences</description>
+  </configItem>
+</option>
+
+```
+
+You can automate it with a stream editor like `sed` or just keep the files with your configuration somewhere outside of `/usr/share/X11/xkb/rules` to make sure they are not overwritten by X server update.
+
+### Step 4: Test Your XKB Configuration
+
+After you have edited the files in `rules` directory it is time to apply and test your configuration. I used `stexkbmap` to make a hot replacement of XKB options without need to log out and log in again for X server settings to be applied. To apply my options I had to run:
+
+```bash
+
+setxkbmap  -option art-mods
+
+```
+
+To see your options applied run `setxkbmap -print -verbose 10`and see for you options mentioned in the output.
+
+```
+
+○ → setxkbmap -print -verbose 10
+Setting verbose level to 10
+locale is C
+Trying to load rules file ./rules/evdev...
+Success.
+Applied rules from evdev:
+rules:      evdev
+model:      pc104
+layout:     us
+options:    art-mods
+Trying to build keymap using the following components:
+keycodes:   evdev+aliases(qwerty)
+types:      complete
+compat:     complete
+symbols:    pc+us+inet(evdev)+art-mods
+geometry:   pc(pc104)
+xkb_keymap {
+xkb_keycodes  { include "evdev+aliases(qwerty)" };
+xkb_types     { include "complete"      };
+xkb_compat    { include "complete"      };
+xkb_symbols   { include "pc+us+inet(evdev)+art-mods"    };
+xkb_geometry  { include "pc(pc104)"     };
+};
+
+```
+
+In many cases your options can break things. To clean up and load a very generic configuration to make things working again use something like: `setxkbmap -model pc104 -layout us -option ""`
+It will reset you keyboard to the rescue setup featuring `pc104` as a very common generic model with `us` layout and empty options to discard the changes you just did.
+
+Here is how the output will look on my machine after applying the "rescue" configuration:
+
+```
+
+Setting verbose level to 10
+locale is C
+Trying to load rules file ./rules/evdev...
+Success.
+Applied rules from evdev:
+rules:      evdev
+model:      pc104
+layout:     us
+Trying to build keymap using the following components:
+keycodes:   evdev+aliases(qwerty)
+types:      complete
+compat:     complete
+symbols:    pc+us+inet(evdev)
+geometry:   pc(pc104)
+xkb_keymap {
+xkb_keycodes  { include "evdev+aliases(qwerty)" };
+xkb_types     { include "complete"      };
+xkb_compat    { include "complete"      };
+xkb_symbols   { include "pc+us+inet(evdev)"     };
+xkb_geometry  { include "pc(pc104)"     };
+};
+
+```
+
+My <kbd>Alt</kbd> key immediately stops being recognized in Emacs after this.
 
 ### Persist Your XKB Configuration
 
 ### Configure Your Desktop Environment with New XKB Configuration
+
+---
+
+Check XKB configuration: setxkbmap -print -verbose 10
+https://wiki.archlinux.org/title/Xorg/Keyboard_configuration#Viewing_keyboard_settings
+
+---
+
+```
+
+```
