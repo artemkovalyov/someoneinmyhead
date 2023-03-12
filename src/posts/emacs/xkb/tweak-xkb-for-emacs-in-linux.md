@@ -57,7 +57,7 @@ I use <kbd>Ctrl</kbd>, <kbd>Alt</kbd>, <kbd>Meta</kbd>, <kbd>Super</kbd>, and <k
 | <kbd>Compose</kbd> | <kbd>Right Control</kbd>                    | mod4           | Assign it to right Control. Useful for producing special symbols |
 | Level 3            | <kbd>Shift</kbd> + <kbd>Right Control</kbd> | mod5           | Useful with national keyboards with 3rd level keys engraved      |
 
-## Let Us See What We Have by Default
+## What Do We Have by Default
 
 For that open terminal and run `xmodmap`. The output below is my starting point that I want to convert into the desired configuration shared above.
 
@@ -68,11 +68,11 @@ xmodmap:  up to 4 keys per modifier, (keycodes in parentheses):
 shift       Shift_L (0x32),  Shift_R (0x3e)
 lock        Caps_Lock (0x42)
 control     Control_L (0x25),  Control_R (0x69)
-mod1        Alt_L (0x40),  Alt_R (0x6c),  Meta_L (0xcd)
+mod1        Alt_L (0x40),  Alt_R (0x6c),  Alt_L (0xcc),  Meta_L (0xcd)
 mod2        Num_Lock (0x4d)
 mod3
 mod4        Super_L (0x85),  Super_R (0x86),  Super_L (0xce),  Hyper_L (0xcf)
-mod5        ISO_Level3_Shift (0x5c),  Mode_switch (0xcb)
+mod5        ISO_Level3_Shift (0x5c)
 ```
 
 As you can see, the initial keyboard settings are rather terrible.
@@ -82,9 +82,27 @@ As you can see, the initial keyboard settings are rather terrible.
 - `mod3` is empty which is such a waste in my case
 - <kbd>Super</kbd> and <kbd>Hyper</kbd> crowd the `mod4` while `mod3` is so lonely
 
-## Let's See How We Can Fix It
+For reference, here's how it looks after I apply my own config described in this article:
 
-In my opinion `XKB` has the most intricate and tangled API I have ever worked with. I think it is caused by an intrinsic complexity of the domain and lots of inherited legacy. There are so many keyboards to support our there together with ensuring compatibility from prehistoric times of computer era. However, my personal believe is - setting up your keyboard should not be a rocket science. Sadly, it still is. This means I have get to business instead of complaining.
+```bash
+
+○ → xmodmap
+xmodmap:  up to 3 keys per modifier, (keycodes in parentheses):
+
+shift       Shift_L (0x32),  Shift_R (0x3e)
+lock
+control     Control_L (0x25)
+mod1        Alt_L (0x40),  Alt_L (0xcc)
+mod2        Meta_L (0x85),  Meta_L (0xcd)
+mod3        Hyper_L (0x42),  Hyper_L (0xcf)
+mod4        Super_L (0xce)
+mod5        ISO_Level3_Shift (0x5c)
+
+```
+
+## Let Us See How We Can Fix It
+
+In my opinion `XKB` has the most intricate and tangled API I have ever worked with. The Arch Linux guide on [X keyboard extensions](https://wiki.archlinux.org/title/X_keyboard_extension#top-page) mostly agrees with me, especially so when it comes to [virtual modifiers](https://wiki.archlinux.org/title/X_keyboard_extension#Virtual_Modifiers). I think it is caused by an intrinsic complexity of the domain and lots of inherited legacy. There are so many keyboards to support our there together with ensuring compatibility from prehistoric times of computer era. However, my personal believe is - setting up your keyboard should not be a rocket science. Sadly, it still is. This means I have get to business instead of complaining.
 
 ### Step 1: figure out existing XKB configuration
 
@@ -370,9 +388,17 @@ xkb_geometry  { include "pc(pc104)"     };
 
 ```
 
-My <kbd>Alt</kbd> key immediately stops being recognized in Emacs after this.
+As you might guess, Emacs immediately stops recognizing my <kbd>Alt</kbd> key after applying this rescue configuration.
 
 ### Persist Your XKB Configuration
+
+Now when I have everything as desired it would be nice to avoid loosing this every time X server updates.
+Well, you can not avoid it but minimizing the amount of steps needed to get your system back to your preferred setup is absolutely possible.
+This can be easily scripted but I have never had time to commit to it and simply preserved the files with my configuration changes.
+The file with options which is `/usr/share/X11/xkb/symbols/art-mods` in my case is usually kept after updates unless you completely reinstall the system.
+On the other hand file in `/usr/share/X11/xkb/rules` are always overwritten which makes you system loose awareness of your options.
+In my case I simply copy my variants back from my git versioned directory and it always worked well for me.
+You can then run `setxkbmap -option <you-options>` to apply them in the current session or simply re-login to have them applied on X Server restart.
 
 ### Configure Your Desktop Environment with New XKB Configuration
 
