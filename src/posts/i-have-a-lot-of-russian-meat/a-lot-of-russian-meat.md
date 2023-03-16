@@ -44,7 +44,9 @@ It comes at cost of multiple lives, often taking the best of us
 To destroy imperial lies, and convert russian meat to dust.
 
 We suffer, we cry, we pray, we die, we will never stop to fight
-russian siege of our soil and sky, breaks over ukrainian might
+The siege of our soil and sky (succumbed to) fell short of ukrainian might
+United we stand with all
+W
 
 No one defeats the russian meat
 We always have reserve
