@@ -45,11 +45,13 @@ We dismantle imperial lies, and convert russian meat to dust.
 
 We suffer, we cry, we pray, we die, we will never stop to fight
 We take back own soil and sky with Ukrainian courage and might
-We survive, we endure, we donate, we defy, we put everything on the plate
-We inspire free world to ally, that's what enemy miscalculate.
+We survive, we endure, we revive, we donate, we put everything on the plate
+We inspire free world to unite, that's what enemy miscalculate.
 
-unite every state
-To
+In disgrace and defeat, scrambling back to home base
+russian meat sends a spit in the dictator's face
+having failed the feat with denial and scorn
+russian meat turns to eat those who had it born.
 
 United we stand and supported by those
 Who believe in the
