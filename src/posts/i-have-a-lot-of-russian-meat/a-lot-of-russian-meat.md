@@ -52,18 +52,4 @@ In disgrace and defeat, scrambling back to home base
 They will silently spit in the dictator's face
 Having failed the feat with denial and scorn
 ;;russian meat turns to eat those who had it born.
-
-United we stand and supported by those
-Who believe in the
-
-In disgrace, with the failed feat, russian meat will return to base
-Who has not rotted on the field, going to spit in dictator's face
-russina meat is not of the smartest kine, they can easily go rogue
-russian meat will apparently eat the dictator who
-
-Those who will retreat,
-will mince russian meat that doesn't want to retreat
-It gets home and commit another
-
-No one defeats the russian meat
-We always have reserve
+russian meat will apparently eat thos who had it born.
