@@ -31,28 +31,37 @@ I'm sending lots of russian meat, for enemy to choke.
 You call them soldiers in front lines, I call them - meat for fight.
 They can commit whatever crimes, I claim this to be right.
 They can not choose their own fate, unless it is fate to die.
-I'll shoot them if they run from field, they must not even try.
+I'll shoot all those who escape, they must not even try.
 
 Warfare is a simple gig when you are a major force.
 We take Ukraine in one kick, they meet us with open doors.
 Attack, attack, I give an order. Russian meat in a single strike
 Assaults all the Ukrainian borders, to pleasure one's lilliputian (narrow) mind.
 
-A bloody smile on awry face would not remain (persist for) long
-Ukraine broke a dictators case, the resistance is fiercely strong.
-It comes at cost of multiple lives, often taking the best of us
-To destroy imperial lies, and convert russian meat to dust.
+A bloody smile on the awry face would not remain (persist for) long
+Ukraine broke dictator's case, the resistance is fiercely strong.
+At the cost of multiple lives, often taking the best of us
+We dismantle imperial lies, and convert russian meat to dust.
 
 We suffer, we cry, we pray, we die, we will never stop to fight
-The siege of our soil and sky (succumbed to) fell short of ukrainian might
-United we stand with all
-W
+We take back own soil and sky with Ukrainian courage and might
+We survive, we endure, we donate, we defy, we put everything on the plate
+We inspire free world to ally, that's what enemy miscalculate.
+
+unite every state
+To
+
+United we stand and supported by those
+Who believe in the
+
+In disgrace, with the failed feat, russian meat will return to base
+Who has not rotted on the field, going to spit in dictator's face
+russina meat is not of the smartest kine, they can easily go rogue
+russian meat will apparently eat the dictator who
+
+Those who will retreat,
+will mince russian meat that doesn't want to retreat
+It gets home and commit another
 
 No one defeats the russian meat
 We always have reserve
-
-Ukraine is my whim this time
-I'll pay whatever price
-My meat is covering front line
-
-Their lives don't cost a dime
