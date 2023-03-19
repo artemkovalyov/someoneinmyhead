@@ -49,10 +49,9 @@ We survive, we endure, we revive, we donate, we put everything on the plate
 We inspire free world to unite, that's what enemy miscalculate.
 
 In disgrace and defeat, scrambling back to home base
-russian meat sends a spit in the dictator's face
 They will silently spit in the dictator's face
-having failed the feat with denial and scorn
-russian meat turns to eat those who had it born.
+Having failed the feat with denial and scorn
+;;russian meat turns to eat those who had it born.
 
 United we stand and supported by those
 Who believe in the
