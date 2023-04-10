@@ -52,4 +52,4 @@ In disgrace and defeat, scrambling back to home base
 They will silently spit in the dictator's face
 Having failed the feat with denial and scorn
 ;;russian meat turns to eat those who had it born.
-russian meat will apparently eat thos who had it born.
+russian meat will apparently eat those who had it born.
