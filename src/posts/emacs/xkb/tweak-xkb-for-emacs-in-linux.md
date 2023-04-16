@@ -76,6 +76,7 @@ mod5        ISO_Level3_Shift (0x5c)
 ```
 
 As you can see, the initial keyboard settings are rather terrible.
+kk
 
 - <kbd>Alt</kbd> and <kbd>Meta</kbd> both share `mod1` which means my system can't tell difference between this modifiers.
 - `mod2` is taken by <kbd>Num Lock</kbd> which means I need to free it up if I want ot use it.
@@ -108,7 +109,7 @@ In my opinion `XKB` has the most intricate and tangled API I have ever worked wi
 
 In Linux it lives in `/usr/share/X11/xkb/`
 
-```treeview
+```
 /usr/share/X11/xkb/
 ├── compat
 ├── geometry
@@ -286,7 +287,7 @@ After you created and saved your configuration in the `/usr/share/X11/xkb/symbol
 
 I named my configuration `art-mods` and I will use it as an example in this step. You can give your configuration any arbitrary name and use it instead. In `evdev` file search for `options` and add your options on top so that it looks like:
 
-```
+```properties
 
 ! option	=	symbols
   art-mods		=	+art-mods
@@ -295,7 +296,7 @@ I named my configuration `art-mods` and I will use it as an example in this step
 
 The changes to `evdev.lst` are quite similar:
 
-```
+```properties
 
 ! option
   art-mods	       Modifiers to update Super, Hyper and Meta to Artem's preferences
@@ -329,7 +330,7 @@ setxkbmap  -option art-mods
 
 To see your options applied run `setxkbmap -print -verbose 10`and see for you options mentioned in the output.
 
-```
+```bash
 
 ○ → setxkbmap -print -verbose 10
 Setting verbose level to 10
@@ -362,7 +363,7 @@ It will reset you keyboard to the rescue setup featuring `pc104` as a very commo
 
 Here is how the output will look on my machine after applying the "rescue" configuration:
 
-```
+```bash
 
 Setting verbose level to 10
 locale is C
@@ -407,8 +408,25 @@ You can then run `setxkbmap -option <you-options>` to apply them in the current 
 Check XKB configuration: setxkbmap -print -verbose 10
 https://wiki.archlinux.org/title/Xorg/Keyboard_configuration#Viewing_keyboard_settings
 
----
+## XKBCOMP
 
-```
+xkbcomp $DISPLAY output.xkb
+xkbcomp input.xkb $DISPLAY
 
-```
+lajf
+asdf
+s
+fa
+sd
+f
+q
+q
+q
+qqsqqq
+qqddd
+lsdakjf qq
+
+alskdjfsalj qqqq
+77777777777
+777777788 Change in another file
+777888999
