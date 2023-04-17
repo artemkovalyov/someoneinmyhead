@@ -57,5 +57,28 @@ kbd {
 :where(h1, h2, h3, h4, h5, h6):hover .icon-link::before {
   @apply opacity-100;
 }
-
 /* AutoLink for every header with '#' */
+
+/* :root.dark { */
+/*   .shiki.github-light { */
+/*     display: none; */
+/*   } */
+/* } */
+
+/* :root.light { */
+/*   .shiki.github-dark { */
+/*     display: none; */
+/*   } */
+/* } */
+
+.shiki {
+  background-color: var(--md-sys-color-elevation1) !important;
+}
+
+:root.dark .shiki.github-light {
+  display: none;
+}
+
+:root.light .shiki.github-dark {
+  display: none;
+}

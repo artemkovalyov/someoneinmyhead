@@ -1,4 +1,4 @@
-import { getHighlighter } from 'shiki';
+import shiki from 'shiki';
 
 const defaultTheme = 'github-dark';
 
@@ -10,13 +10,27 @@ function escapeHtml(code) {
 }
 
 async function highlighter(code, lang, meta) {
-  const shikiHighlighter = await getHighlighter({
-    theme: defaultTheme
+  const shikiHighlighter = await shiki.getHighlighter({
+    // theme: defaultTheme
+    // theme: customTheme
+    // theme: `moonlight`,
+    themes: ['github-light', 'github-dark']
+
+    // paths: {
+    //   themes: `${process.cwd()}/plugins/mdsvex`
+    // }
   });
-  const html = shikiHighlighter.codeToHtml(code, {
-    lang
+
+  const htmlLight = shikiHighlighter.codeToHtml(code, {
+    lang,
+    theme: 'github-light'
   });
-  return escapeHtml(html);
+  const htmlDark = shikiHighlighter.codeToHtml(code, {
+    lang,
+    theme: 'github-dark'
+  });
+
+  return escapeHtml(htmlLight).concat(escapeHtml(htmlDark));
 }
 
 export default highlighter;
