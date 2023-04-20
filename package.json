@@ -22,6 +22,7 @@
     "@typescript-eslint/eslint-plugin": "^5.27.0",
     "@typescript-eslint/parser": "^5.27.0",
     "autoprefixer": "^10.4.8",
+    "clipboard": "^2.0.11",
     "eslint": "^8.16.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-svelte3": "^4.0.0",
@@ -58,6 +59,7 @@
     "typescript": "^4.7.4",
     "unist-builder": "^3.0.0",
     "unist-util-visit": "^4.1.1",
+    "uuid": "^9.0.0",
     "vite": "next"
   },
   "type": "module"

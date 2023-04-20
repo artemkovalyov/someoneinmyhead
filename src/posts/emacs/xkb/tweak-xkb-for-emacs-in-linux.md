@@ -25,7 +25,7 @@ uuid: ccff7f23-096e-406c-afd2-8287711e5404
     import imageLink from './keyboard.jpg';
 </script>
 
-<Head {title} {description} {author} {published} {publishedTime} {modifiedTime} {tags} {section} type={"article"} {imageLink}/>
+<Head {title} {description} {author} {publishedTime} {modifiedTime} {tags} {section} type={"article"} {imageLink}/>
 
 ![Make Alt, Super, Ctrl, and Shift behave in Linux](./keyboard.jpg)
 
@@ -53,7 +53,7 @@ I use <kbd>Ctrl</kbd>, <kbd>Alt</kbd>, <kbd>Meta</kbd>, <kbd>Super</kbd>, and <k
 | <kbd>Alt</kbd>     | <kbd>Left Alt</kbd>                         | mod1           | Assign it to left Alt                                            |
 | <kbd>Meta</kbd>    | <kbd>Left Win</kbd>                         | mod2           | Emacs loves it. I assign it on Win                               |
 | <kbd>Hyper</kbd>   | <kbd>Caps Lock</kbd>                        | mod3           | Assigned it to Caps Lock                                         |
-| <kbd>Super</kbd>   | <kbd>Right Alt</kbd>                        | mod4           | Assign it to right Alt                                           |
+| <kbd>Super</kbd>   | <kbd>Right Alt</kbd>                        | mod4           | іAssign it to right Alt                                          |
 | <kbd>Compose</kbd> | <kbd>Right Control</kbd>                    | mod4           | Assign it to right Control. Useful for producing special symbols |
 | Level 3            | <kbd>Shift</kbd> + <kbd>Right Control</kbd> | mod5           | Useful with national keyboards with 3rd level keys engraved      |
 
@@ -61,7 +61,7 @@ I use <kbd>Ctrl</kbd>, <kbd>Alt</kbd>, <kbd>Meta</kbd>, <kbd>Super</kbd>, and <k
 
 For that open terminal and run `xmodmap`. The output below is my starting point that I want to convert into the desired configuration shared above.
 
-```bash
+```bash {3-5}
 ○ → xmodmap
 xmodmap:  up to 4 keys per modifier, (keycodes in parentheses):
 
@@ -251,7 +251,7 @@ This means that combination of <kbd>Shift</kbd> + <kbd>Left Alt</kbd> will produ
 
 All this happened because I was trying to keep my configuration clean and minimal with least possible changes of the configuration files. Initially I defined `<LALT>` as `<LALT> { [ Alt_L ] };`. By doing this I skipped `level2` state configuration for <kbd>Left Alt</kbd> or in other words the way <kbd>Left Alt</kbd> behave when <kbd>Shift</kbd> is pressed and allowed default configuration to take over. Here is the snipped from `/usr/share/X11/xkb/symbols/altwin` file that eventually caused this confusion for Emacs:
 
-```bash {1}
+```bash
 partial modifier_keys
 xkb_symbols "meta_alt" {
 key <LALT> { [ Alt_L, Meta_L ] };

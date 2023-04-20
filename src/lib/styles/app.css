@@ -57,22 +57,13 @@ kbd {
 :where(h1, h2, h3, h4, h5, h6):hover .icon-link::before {
   @apply opacity-100;
 }
-/* AutoLink for every header with '#' */
 
-/* :root.dark { */
-/*   .shiki.github-light { */
-/*     display: none; */
-/*   } */
-/* } */
-
-/* :root.light { */
-/*   .shiki.github-dark { */
-/*     display: none; */
-/*   } */
-/* } */
+/* Shiki highlighted code-block configuration */
 
 .shiki {
-  background-color: var(--md-sys-color-elevation1) !important;
+  @apply !bg-elevation-1 !m-0;
+  /* background-color: var(--md-sys-color-elevation1) !important; */
+  /* margin: 0 !important; */
 }
 
 :root.dark .shiki.github-light {
@@ -81,4 +72,32 @@ kbd {
 
 :root.light .shiki.github-dark {
   display: none;
+}
+
+.btc {
+  display: none;
+}
+
+.copy-code-btn .material-icons-outlined.copy {
+  @apply p-2 text-outline border border-elevation-3 hover:border-elevation-7 col-start-[1] row-start-[1] hover:bg-elevation-3 transition-all;
+}
+
+.copy-code-btn .material-icons-outlined.ok {
+  @apply p-2 text-green-500 border border-elevation-3 hover:border-elevation-7 col-start-[1] row-start-[1] hover:bg-elevation-3 opacity-0 scale-[30%] transition-all;
+}
+
+.copy-code-btn .material-icons-outlined.ok.copied {
+  @apply border border-elevation-3 hover:border-elevation-7 hover:bg-elevation-3 scale-100 opacity-100;
+}
+
+.copy-code-btn .material-icons-outlined.copy.copied {
+  @apply scale-[30%] opacity-0;
+}
+
+.code-block {
+  @apply relative;
+}
+
+.copy-code-btn {
+  @apply absolute top-3 right-3 leading-none grid;
 }

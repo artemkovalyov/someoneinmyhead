@@ -2,8 +2,8 @@
   import { getImageByPath } from '$lib/images';
   import type { Post } from '$lib/posts';
   import { siteConfig } from '$lib/site.config';
-  import Pill from './Pill.svelte';
   export let tagsPerCard = siteConfig.tagsPerCard;
+  import Pill from './Pill.svelte';
   export let post: Post;
   const image =
     post.image?.charAt(0) == '.'
@@ -40,7 +40,7 @@
       </div>
       <a href="/{post.slug}">
         <!-- <a data-sveltekit-reload href={postMetadata.slug}> -->
-        <h2 class="text-3xl font-bold ">{post.title}</h2>
+        <h2 class="text-3xl font-bold">{post.title}</h2>
       </a>
     </header>
     <section class="text-xl mb-2">
