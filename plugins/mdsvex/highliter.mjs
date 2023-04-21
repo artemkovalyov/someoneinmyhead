@@ -1,6 +1,5 @@
 import { getHighlighter } from 'shiki';
 import { escapeSvelte } from 'mdsvex';
-import { v4 as uuidv4 } from 'uuid';
 // function escapeHtml(code) {
 //   return code.replace(
 //     /[{}`"<>&']/g,
@@ -45,20 +44,9 @@ async function highlighter(code, lang, meta) {
     theme: 'github-dark'
   });
 
-  return `<div class='code-block'>
-    <button
-class="copy-code-btn"
-      data-clipboard-text="${escapeHtml(code)}"
-    >
-      <span class="material-icons-outlined copy">
-        content_copy
-      </span>
-      <span class="material-icons-outlined ok">
-        done
-      </span>
-    </button>
+  return `<CodeBlock code={\`${escapeHtml(code)}\`}>
 ${escapeSvelte(`${codeHtmlLight}${codeHtmlDark}`)}
-</div>`;
+</CodeBlock>`;
 }
 
 export default highlighter;

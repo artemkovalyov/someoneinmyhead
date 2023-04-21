@@ -77,27 +77,3 @@ kbd {
 .btc {
   display: none;
 }
-
-.copy-code-btn .material-icons-outlined.copy {
-  @apply p-2 text-outline border border-elevation-3 hover:border-elevation-7 col-start-[1] row-start-[1] hover:bg-elevation-3 transition-all;
-}
-
-.copy-code-btn .material-icons-outlined.ok {
-  @apply p-2 text-green-500 border border-elevation-3 hover:border-elevation-7 col-start-[1] row-start-[1] hover:bg-elevation-3 opacity-0 scale-[30%] transition-all;
-}
-
-.copy-code-btn .material-icons-outlined.ok.copied {
-  @apply border border-elevation-3 hover:border-elevation-7 hover:bg-elevation-3 scale-100 opacity-100;
-}
-
-.copy-code-btn .material-icons-outlined.copy.copied {
-  @apply scale-[30%] opacity-0;
-}
-
-.code-block {
-  @apply relative;
-}
-
-.copy-code-btn {
-  @apply absolute top-3 right-3 leading-none grid;
-}

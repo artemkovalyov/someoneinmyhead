@@ -2,8 +2,8 @@
   import { getImageByPath } from '$lib/images';
   import type { Post } from '$lib/posts';
   import { siteConfig } from '$lib/site.config';
-  export let tagsPerCard = siteConfig.tagsPerCard;
   import Pill from './Pill.svelte';
+  export let tagsPerCard = siteConfig.tagsPerCard;
   export let post: Post;
   const image =
     post.image?.charAt(0) == '.'

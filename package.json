@@ -22,7 +22,7 @@
     "@typescript-eslint/eslint-plugin": "^5.27.0",
     "@typescript-eslint/parser": "^5.27.0",
     "autoprefixer": "^10.4.8",
-    "clipboard": "^2.0.11",
+    "copy-text-to-clipboard": "^3.1.0",
     "eslint": "^8.16.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-svelte3": "^4.0.0",
@@ -51,7 +51,6 @@
     "svelte": "^3.44.0",
     "svelte-check": "^2.7.1",
     "svelte-meta-tags": "^2.6.5",
-    "svelte-preprocess": "^4.10.7",
     "svelte-preprocess-import-assets": "^0.2.5",
     "tailwindcss": "next",
     "to-vfile": "^7.2.3",
@@ -59,7 +58,6 @@
     "typescript": "^4.7.4",
     "unist-builder": "^3.0.0",
     "unist-util-visit": "^4.1.1",
-    "uuid": "^9.0.0",
     "vite": "next"
   },
   "type": "module"
