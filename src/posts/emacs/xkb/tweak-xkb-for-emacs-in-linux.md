@@ -21,7 +21,6 @@ uuid: ccff7f23-096e-406c-afd2-8287711e5404
 ---
 
 <script>
-    import Head from '$lib/components/Head.svelte'
     import imageLink from './keyboard.jpg';
 </script>
 

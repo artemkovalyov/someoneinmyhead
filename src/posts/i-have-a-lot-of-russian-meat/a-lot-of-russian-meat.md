@@ -5,7 +5,7 @@ description: a poem about russian war to siege and conquer Ukraine
 excerpt: used as post extract
 image: example.png
 author: Artem Kovalov
-published: false
+published: true
 publishedTime: 2023-03-12T07:54:05+01:00
 modifiedTime: 2023-03-12T07:54:05+01:00
 expirationTime: 2023-03-12T07:54:05+01:00
@@ -21,7 +21,7 @@ uuid: 6ec587eb-0630-4e6c-81d5-43c1e4fb0564
 I have a lot of russian meat, obedient and silent
 I use it how I see fit, they always reconcile it
 Long time forgotten own voice, they all succumbed to power
-Disgrace is their own choice, I rule (them) from the ivory tower.
+Disgrace is their own choice, I rule them from the ivory tower.
 
 This time Ukraine is my whim, I pay whatever price
 Life is no value in my scheme, I want to roll the dice.
@@ -35,7 +35,7 @@ I'll shoot all those who escape, they must not even try.
 
 Warfare is a simple gig when you are a major force.
 We take Ukraine in one kick, they meet us with open doors.
-Attack, attack, I give an order. Russian meat in a single strike
+Attack, attack, I give an order! Russian meat in a single strike
 Assaults all the Ukrainian borders, to pleasure one's lilliputian (narrow) mind.
 
 A bloody smile on the awry face would not remain (persist for) long
@@ -49,7 +49,18 @@ We survive, we endure, we revive, we donate, we put everything on the plate
 We inspire free world to unite, that's what enemy miscalculate.
 
 In disgrace and defeat, scrambling back to home base
-They will silently spit in the dictator's face
-Having failed the feat with denial and scorn
-;;russian meat turns to eat those who had it born.
-russian meat will apparently eat those who had it born.
+russian meat will retreat having failed its case
+Leaving traces of rape, human pain and scorn
+russian meat turns to eat those who had it born.
+
+;;Having failed the feat with denial and scorn
+;;They will silently spit in the dictator's face
+;;russian meat will apparently eat those who had it born.
+
+They will perish in flames of the civil unrest
+Quickly broken in chunks in galloping pace.
+russian meat spares neither the worst or the best
+Quickly broken in chunks with no ... space
+russian meat simply spits in the dictator's face
+
+We will mourn the heroes laying lives for homeland

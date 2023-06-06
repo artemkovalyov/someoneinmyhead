@@ -38,7 +38,7 @@
   }
 
   .code-block {
-    @apply relative;
+    @apply relative border border-outline;
   }
 
   .copy-code-btn {
