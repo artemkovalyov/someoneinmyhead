@@ -61,9 +61,17 @@ kbd {
 /* Shiki highlighted code-block configuration */
 
 .shiki {
-  @apply !bg-elevation-1 !m-0;
+  @apply !bg-elevation-1 !m-0 px-4;
   /* background-color: var(--md-sys-color-elevation1) !important; */
   /* margin: 0 !important; */
+}
+
+.shiki code {
+  @apply flex flex-col;
+}
+
+.shiki .highlight {
+  @apply bg-elevation-5 -mx-8 px-8;
 }
 
 :root.dark .shiki.github-light {

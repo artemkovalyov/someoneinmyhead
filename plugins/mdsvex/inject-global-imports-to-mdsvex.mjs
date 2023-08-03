@@ -2,7 +2,7 @@ import { join, basename, extname } from 'path';
 
 export const defaults = {
   extensions: ['.svelte.md', '.md', '.svx'],
-  compnentsDir: `$lib`,
+  componentsDir: `$lib`,
   componentsList: []
 };
 /**
@@ -20,7 +20,7 @@ export const defaults = {
  */
 export const mdsvexGlobalComponents = (options = {}) => {
   const { extensions, componentsDir, componentsList } = { ...defaults, ...options };
-  const extensionsRegex = new RegExp('(' + extensions.join('|').replace(/\./g, '\\.') + ')$', 'i');
+  const extensionsRegex = new RegExp(`(${extensions.join('|').replace(/\./g, '\\.')})$`, 'i');
 
   if (!componentsList || !componentsList.length || !Array.isArray(componentsList)) {
     throw new Error(
@@ -36,17 +36,12 @@ export const mdsvexGlobalComponents = (options = {}) => {
       }
       const imports = componentsList
         .map((component) => {
-          let name = '';
-          if (Array.isArray(component)) {
-            alias = entry[0];
-            component = component[1];
-          }
           const ext = extname(component);
           const path = join(componentsDir, component);
-          name = name || basename(component, ext);
-          const isComponentUsed = RegExp(String.raw`<${name}`).test(markup);
-          console.log(isComponentUsed);
-          return `\nimport ${name} from "${path}"`;
+          // This can be leveraged if you want import only used components
+          // const isComponentUsed = RegExp(String.raw`<${name}`).test(markup);
+          // console.log(isComponentUsed);
+          return `\nimport ${basename(component, ext)} from "${path}"`;
         })
         .join('\n');
 

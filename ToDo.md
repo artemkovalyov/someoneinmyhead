@@ -1,3 +1,10 @@
-## Implement this for code-block, etc:
+## Thu Jul 13 22:43:39 2023
 
-https://github.com/pngwn/MDsveX/issues/184
+### Code highlighting
+
+- Make sure code blocks look fine in admonitions
+- Add lines highlights and other features of shiki
+
+### Outline
+
+- Put an outline for the article in a side menu

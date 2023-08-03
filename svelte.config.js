@@ -2,14 +2,10 @@ import { mdsvex } from 'mdsvex';
 import mdsvexConfig from './mdsvex.config.js';
 // import adapter from '@sveltejs/adapter-auto';
 import adapter from '@sveltejs/adapter-static';
-import preprocess from 'svelte-preprocess';
+import sveltePreprocess from 'svelte-preprocess';
 import importAssets from 'svelte-preprocess-import-assets';
 import { mdsvexGlobalComponents } from './plugins/mdsvex/inject-global-imports-to-mdsvex.mjs';
-
-const globalComponents = mdsvexGlobalComponents({
-  componentsDir: `$lib/components`,
-  componentsList: ['CodeBlock.svelte', 'Head.svelte']
-});
+import test from './plugins/mdsvex/test.mjs';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -18,13 +14,21 @@ const config = {
   // Consult https://github.com/sveltejs/svelte-preprocess
   // for more information about preprocessors
   preprocess: [
-    preprocess({
+    // inject certain components to every MD file to be considered by MDSvex when the component is rendered.
+    mdsvexGlobalComponents({
+      componentsDir: `$lib/components`,
+      componentsList: ['CodeBlock.svelte', 'Head.svelte']
+    }),
+    // test, // a test preprocessor to check details of the build
+    sveltePreprocess({
       postcss: true
     }),
-    globalComponents,
     mdsvex(mdsvexConfig),
-    importAssets()
+    importAssets() // imports static assets to accommodate static builds, should be after mdsvex, otherwise encoding of
   ],
+  // vitePlugin: {
+  // prebundleSvelteLibraries: false
+  // },
 
   kit: {
     adapter: adapter({

@@ -58,9 +58,10 @@ russian meat turns to eat those who had it born.
 ;;russian meat will apparently eat those who had it born.
 
 They will perish in flames of the civil unrest
-Quickly broken in chunks in galloping pace.
-russian meat spares neither the worst or the best
-Quickly broken in chunks with no ... space
-russian meat simply spits in the dictator's face
+russian meat spares neither the worst nor the best
+The dictator will fall, they will spit in his face
+The empire breaks up in the galloping pace.
 
-We will mourn the heroes laying lives for homeland
+We mourn, we remember the heroes we lost
+We keep on a
+On a

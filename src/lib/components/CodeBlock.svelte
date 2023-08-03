@@ -21,6 +21,9 @@
 </div>
 
 <style>
+  .code-block {
+    @apply relative border border-outline;
+  }
   .copy-code-btn .material-icons-outlined.copy {
     @apply p-2 text-outline border border-elevation-3 hover:border-elevation-7 col-start-[1] row-start-[1] hover:bg-elevation-3 transition-all;
   }
@@ -35,10 +38,6 @@
 
   .copy-code-btn .material-icons-outlined.copy.copied {
     @apply scale-[30%] opacity-0;
-  }
-
-  .code-block {
-    @apply relative border border-outline;
   }
 
   .copy-code-btn {

@@ -1,5 +1,6 @@
 import { getHighlighter } from 'shiki';
 import { escapeSvelte } from 'mdsvex';
+
 // function escapeHtml(code) {
 //   return code.replace(
 //     /[{}`"<>&']/g,
@@ -31,6 +32,25 @@ function escapeHtml(code) {
 }
 
 async function highlighter(code, lang, meta) {
+  let linesToHighligh = [];
+  const highlightNextLineRegEx = new RegExp(/highlight-next-line/);
+  // const highlightNextLineRegEx = new RegExp(/highlight-start/);
+  // const highlightNextLineRegEx = new RegExp(/highlight-end/);
+  const inHL = false;
+  code
+    .trim()
+    .split('\n')
+    .map((line, index) => {
+      if (highlightNextLineRegEx.test(line)) {
+        linesToHighligh.push(index);
+      }
+      return line;
+    });
+
+  if (meta) {
+    console.log(meta);
+  }
+
   const shikiHighlighter = await getHighlighter({
     themes: ['github-light', 'github-dark']
   });
@@ -39,7 +59,7 @@ async function highlighter(code, lang, meta) {
     lang,
     theme: 'github-light'
   });
-  const codeHtmlDark = shikiHighlighter.codeToHtml(code.trim(), {
+  let codeHtmlDark = shikiHighlighter.codeToHtml(code.trim(), {
     lang,
     theme: 'github-dark'
   });
