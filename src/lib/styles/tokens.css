@@ -107,6 +107,7 @@
   --md-sys-color-on-primary-light: #ffffff;
   --md-sys-color-primary-container-light: #ffdcc6;
   --md-sys-color-on-primary-container-light: #301400;
+  --md-sys-color-on-primary-container-high-contrast-light: #000;
   --md-sys-color-secondary-light: #006591;
   --md-sys-color-on-secondary-light: #ffffff;
   --md-sys-color-secondary-container-light: #c9e6ff;
@@ -145,6 +146,7 @@
   --md-sys-color-on-primary-dark: #502500;
   --md-sys-color-primary-container-dark: #713700;
   --md-sys-color-on-primary-container-dark: #ffdcc6;
+  --md-sys-color-on-primary-container-high-contrast-dark: #fff;
   --md-sys-color-secondary-dark: #89ceff;
   --md-sys-color-on-secondary-dark: #00344d;
   --md-sys-color-secondary-container-dark: #004c6e;

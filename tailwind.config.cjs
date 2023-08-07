@@ -43,6 +43,8 @@ module.exports = {
         'on-primary': 'var(--md-sys-color-on-primary)',
         'primary-container': 'var(--md-sys-color-primary-container)',
         'on-primary-container': 'var(--md-sys-color-on-primary-container)',
+        'on-primary-container-high-contrast':
+          'var(--md-sys-color-on-primary-container-high-contrast)',
         secondary: 'var(--md-sys-color-secondary)',
         'on-secondary': 'var(--md-sys-color-on-secondary)',
         'secondary-container': 'var(--md-sys-color-secondary-container)',

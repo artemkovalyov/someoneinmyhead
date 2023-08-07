@@ -61,7 +61,7 @@ export default function remarkAdmonitions() {
           }
           // { type: 'text', value: `${title}` }
         ],
-        data: { hName: 'div', hProperties: { className: `admonition-title not-prose` } }
+        data: { hName: 'div', hProperties: { className: `admonition-title` } }
       });
     });
   };
