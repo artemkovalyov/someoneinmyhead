@@ -20,7 +20,11 @@
       {#if post.image === ''}
         <div class="w-full aspect-video bg-elevation-5" />
       {:else}
-        <img class="max-w-full" src={image} alt={post.alt || 'Blog Post by: ' + post.author} />
+        <img
+          class="w-full aspect-video"
+          src={image}
+          alt={post.alt || 'Blog Post by: ' + post.author}
+        />
       {/if}
     </a>
     <header class="flex flex-col mb-3">

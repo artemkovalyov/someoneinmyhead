@@ -3,7 +3,7 @@ slug: i-have-a-lot-of-russian-meat
 title: russian Meat
 description: a poem about russian war to siege and conquer Ukraine
 excerpt: used as post extract
-image: example.png
+image: /stars.svg
 author: Artem Kovalov
 published: true
 publishedTime: 2023-03-12T07:54:05+01:00
@@ -18,6 +18,7 @@ tags:
 uuid: 6ec587eb-0630-4e6c-81d5-43c1e4fb0564
 ---
 
+<pre>
 I have a lot of russian meat, obedient and silent
 I use it how I see fit, they always reconcile it
 Long time forgotten own voice, they all succumbed to power
@@ -65,3 +66,4 @@ The empire breaks up in the galloping pace.
 We mourn, we remember the heroes we lost
 We keep on a
 On a
+</pre>

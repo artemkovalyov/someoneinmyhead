@@ -51,7 +51,7 @@ This guide is a quick reminder to myself because I usually lose memory about all
 
 A bit more understanding about remapping of your meta keys also known as modifier keys. This will make them distinguishable for your desktop environment and applications.
 
-:::warning{.warning.admonition title="Do it on your own risk"}
+:::warning{title="Do it on your own risk"}
 
 X server is very easy to break with wrong configuration.
 It might require skills and time to recover your system back to operational state.
@@ -61,7 +61,7 @@ Do backups, go in small increments and be warned of potential implications.
 
 ## What's our starting point?
 
-:::info{.info.admonition title="Default XKB configuration" #default-xkb-configuration}
+:::info{title="Default XKB configuration" #default-xkb-configuration}
 
 Most of the Linux distributions ship a default XKB configuration that leaves you with only the most popular modifiers like <kbd>Alt</kbd>, <kbd>Enter</kbd>, <kbd>Super</kbd>, <kbd>Ctrl</kbd>, and <kbd>Shift</kbd>. They are usually mapped to respective keys on your keyboard. <kbd>Super</kbd> is most frequently mapped to <kbd>Win</kbd> key on the most laptops I've used.
 
@@ -138,7 +138,7 @@ mod5        ISO_Level3_Shift (0x5c)
 In my opinion `XKB` has the most intricate and tangled API I have ever worked with.
 The Arch Linux guide about [X keyboard extensions](https://wiki.archlinux.org/title/X_keyboard_extension#top-page) mostly agrees with me, especially so when it comes to modifiers and [virtual modifiers](https://wiki.archlinux.org/title/X_keyboard_extension#Virtual_Modifiers).
 
-:::note{.note.admonition title="My take on XKB complexity" id="reason-for-complexity"}
+:::note{title="My take on XKB complexity" id="reason-for-complexity"}
 
 In my opinion, it is caused by an intrinsic complexity of handling so many keyboard devices our there in the wild.
 Let's not forget about huge heritage of early days of computer era causing lots of legacy that still has to be supported for compatibility.
@@ -199,7 +199,7 @@ The `evdev` aka [event device](https://en.wikipedia.org/wiki/Evdev) rules are mo
 This means that my base configuration is `pc` with two layouts `us` and `ua` refined by `inet(evdev)` option.
 This option makes all those so called vendor keys and multimedia buttons work.
 
-:::note{.note.admonition title="What are vendor keys"}
+:::note{title="What are vendor keys"}
 
 Vendor keys are usually located on the top bar of your keyboard together with `F-keys`.
 They help you invoke special functions like:
@@ -276,7 +276,7 @@ I have not exactly figured out why it worked better than listing all physical bu
 Allegedly it is because virtual modifiers override my settings by simply being defined.
 Because as long as Virtual modifier `V` is defined and share at least one `keysym` with a real modifier bit `M` it gets associated with the modifier level in question.
 
-:::note{.note.admonition title="Compatibility with you Desktop Environment" #altwin}
+:::note{title="Compatibility with you Desktop Environment" #altwin}
 
 You might have noticed that for <kbd>Alt</kbd> I set a modifier using both virtual `<ALT>` and physical `<LALT>`. In my KDE desktop environment cycling over open windows with the default <kbd>Alt</kbd> + <kbd>Tab</kbd> shortcut did not work correctly by latching on the last window chosen.
 This probably relates to the [fact](https://wiki.archlinux.org/title/X_keyboard_extension#Virtual_Modifiers) that some applications rely not only on the modifier bits but also on eventual **keysym** that would be different for the virtual <kbd>Alt</kbd> and physical <kbd>Alt</kbd> button representing it.
@@ -412,7 +412,7 @@ In the `evdev.xml` you have to search for `<optionList>` and add the following s
 
 ```
 
-:::warning{.warning.admonition title="Mind X Server updates"}
+:::warning{title="Mind X Server updates"}
 
 When X Server updates it will usually overwrite your changes in `rules` directory.
 You can either automate restoration of your configuration with a stream editor like `sed` or just keep the files with your configuration somewhere outside of `/usr/share/X11/xkb/rules` to make sure they are not overwritten.
@@ -461,7 +461,7 @@ xkb_geometry  { include "pc(pc104)"     };
 
 ```
 
-:::danger{.danger.admonition title="XKB is easy to break"}
+:::danger{title="XKB is easy to break"}
 
 Breaking XKB is notoriously simple.
 It could render you keyboard useless.

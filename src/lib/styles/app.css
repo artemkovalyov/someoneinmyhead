@@ -32,7 +32,7 @@ kbd {
 }
 
 .admonition {
-  @apply prose-headings:!my-0 prose-p:!my-0 rounded-lg px-7 py-5 border-l-8 my-5;
+  @apply prose-headings:!my-0 prose-p:!my-0 rounded-lg px-7 py-5 border-l-8 my-5 text-on-primary-container-high-contrast;
 }
 
 .admonition-title {
@@ -51,7 +51,7 @@ kbd {
 
 /* AutoLink for every header with '#' */
 :where(h1, h2, h3, h4, h5, h6) .icon-link {
-  @apply relative before:absolute before:content-['#'] before:text-primary before:top-0 before:left-[-1.2ch] before:leading-none before:opacity-0 before:transition-all before:duration-300 before:ease-in before:hover:underline;
+  @apply relative before:absolute before:content-['#'] before:text-primary before:top-1 before:left-[-1.3ch] before:leading-none before:opacity-0 before:transition-all before:duration-300 before:ease-in before:hover:underline;
 }
 
 :where(h1, h2, h3, h4, h5, h6):hover .icon-link::before {

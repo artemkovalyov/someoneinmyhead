@@ -1,11 +1,11 @@
 ---
 slug: topics-i-want-to-cover
-title: page-title
+title: Blog topics
 description: used in meta tags
 excerpt: used as post extract
-image: example.png
+image: /stars.svg
 author: Artem Kovalov
-published: false
+published: true
 publishedTime: 2023-04-30T15:40:25+02:00
 modifiedTime: 2023-04-30T15:40:25+02:00
 expirationTime: 2023-04-30T15:40:25+02:00

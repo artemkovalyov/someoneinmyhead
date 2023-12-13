@@ -28,14 +28,18 @@
     width: 100%;
     height: 100%;
     visibility: visible;
-    transition: width 0.3s ease-out, height 0.3s ease-out 0.3s;
+    transition:
+      width 0.3s ease-out,
+      height 0.3s ease-out 0.3s;
   }
 
   .menulink:hover::after {
     width: 100%;
     height: 100%;
     visibility: visible;
-    transition: width 0.3s ease-out, height 0.3s ease-out 0.3s;
+    transition:
+      width 0.3s ease-out,
+      height 0.3s ease-out 0.3s;
   }
 
   .current::before,

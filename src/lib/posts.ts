@@ -43,7 +43,8 @@ const postsList = Object.entries(postModules)
     // make filename a slug, it's later overwritten by a slug for the frontmatter if that is provided
     const slug = match![2];
     // make tags lower case for ease of using array.includes as a filter
-    post.metadata.tags = post.metadata.tags.map((tag) => tag.toLowerCase());
+    // console.log(post.metadata);
+    post.metadata.tags = post.metadata?.tags.map((tag) => tag.toLowerCase());
     return {
       slug,
       path,

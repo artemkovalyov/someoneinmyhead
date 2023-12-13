@@ -3,9 +3,54 @@ import mdsvexConfig from './mdsvex.config.js';
 // import adapter from '@sveltejs/adapter-auto';
 import adapter from '@sveltejs/adapter-static';
 import sveltePreprocess from 'svelte-preprocess';
-import importAssets from 'svelte-preprocess-import-assets';
+import { importAssets } from 'svelte-preprocess-import-assets';
 import { mdsvexGlobalComponents } from './plugins/mdsvex/inject-global-imports-to-mdsvex.mjs';
-import test from './plugins/mdsvex/test.mjs';
+// import { vitePreprocess } from '@sveltejs/kit/vite';
+import { unified } from 'unified';
+import remarkParse from 'remark-parse';
+import remarkStringify from 'remark-stringify';
+import remarkDirective from 'remark-directive';
+import { visit } from 'unist-util-visit';
+import remarkGfm from 'remark-gfm';
+import remarkFrontmatter from 'remark-frontmatter';
+import { toHtml } from 'hast-util-to-html';
+import { toHast } from 'mdast-util-to-hast';
+
+const mdExtenstions = ['.svelte.md', '.md', '.svx'];
+const extensionsRegex = new RegExp(`(${mdExtenstions.join('|').replace(/\./g, '\\.')})$`, 'i');
+
+const unifiedPreprocess = {
+  markup: async ({ content, filename }) => {
+    if (!filename.match(extensionsRegex)) {
+      return { code: content };
+    }
+    const unifiedResult = await unified()
+      .use(remarkParse)
+      .use(remarkGfm)
+      .use(remarkDirective)
+      .use(remarkFrontmatter, { type: 'yaml', marker: '-' })
+      .use(() => {
+        return (tree) => {
+          visit(tree, 'containerDirective', (node) => {
+            node.type = 'root';
+            node.value = `<Admonition type="${node.name}" title="${node.attributes.title}" id="${
+              node.attributes.id
+            }">${toHtml(toHast(node, { allowDangerousHtml: true }), {
+              allowDangerousHtml: true,
+              allowDangerousCharachters: true
+            })}</Admonition>`;
+            node.type = 'html';
+          });
+        };
+      })
+      .use(remarkStringify)
+      .process(content);
+    if (filename.includes('emacs')) console.log(unifiedResult.value);
+    return {
+      code: unifiedResult.value
+    };
+  }
+};
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -17,18 +62,17 @@ const config = {
     // inject certain components to every MD file to be considered by MDSvex when the component is rendered.
     mdsvexGlobalComponents({
       componentsDir: `$lib/components`,
-      componentsList: ['CodeBlock.svelte', 'Head.svelte']
+      componentsList: ['CodeBlock.svelte', 'Head.svelte', 'Admonition.svelte']
     }),
-    // test, // a test preprocessor to check details of the build
+    unifiedPreprocess,
+    mdsvex(mdsvexConfig),
+
     sveltePreprocess({
       postcss: true
     }),
-    mdsvex(mdsvexConfig),
+    // vitePreprocess(),
     importAssets() // imports static assets to accommodate static builds, should be after mdsvex, otherwise encoding of
   ],
-  // vitePlugin: {
-  // prebundleSvelteLibraries: false
-  // },
 
   kit: {
     adapter: adapter({
