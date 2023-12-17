@@ -16,25 +16,25 @@ Markdown content of any kind
 
 :::
 
-:::note{.info.admonition.not-prose title="your-title" #your-id}
+:::note{title="your-title" #your-id}
 
 Markdown content of any kind
 
 :::
 
-:::note{.note.admonition.not-prose title="your-title" #your-id}
+:::note{title="your-title" #your-id}
 
 Markdown content of any kind
 
 :::
 
-:::note{.warning.admonition.not-prose title="your-title" #your-id}
+:::note{title="your-title" #your-id}
 
 Markdown content of any kind
 
 :::
 
-::::note{.danger.admonition #icd}
+::::note{ #icd}
 
 ### abc
 

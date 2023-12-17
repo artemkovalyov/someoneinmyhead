@@ -32,20 +32,24 @@ const unifiedPreprocess = {
       .use(() => {
         return (tree) => {
           visit(tree, 'containerDirective', (node) => {
+            // change node's type from containerDirective to root for further serialization to HTML
             node.type = 'root';
-            node.value = `<Admonition type="${node.name}" title="${node.attributes.title}" id="${
-              node.attributes.id
-            }">${toHtml(toHast(node, { allowDangerousHtml: true }), {
+            // render Admonition content from the node using unist utils
+            const admonitionContent = toHtml(toHast(node, { allowDangerousHtml: true }), {
               allowDangerousHtml: true,
               allowDangerousCharachters: true
-            })}</Admonition>`;
+            });
+            //change node's type to HTML to replace the containerDirective with it, all of this is such a hack to still benefit from mdsvex
             node.type = 'html';
+            // Inject a svelte component with the content from the node
+            node.value = `<Admonition type="${node.name}" title="${node.attributes.title}" id="${node.attributes.id}">${admonitionContent}</Admonition>`;
           });
         };
       })
       .use(remarkStringify)
       .process(content);
-    if (filename.includes('emacs')) console.log(unifiedResult.value);
+    // use this to debug a selected article from the blog that causes trouble with Admonitions
+    // if (filename.includes('emacs')) console.log(unifiedResult.value);
     return {
       code: unifiedResult.value
     };

@@ -26,9 +26,9 @@ uuid: ccff7f23-096e-406c-afd2-8287711e5404
 
 <Head {title} {description} {author} {publishedTime} {modifiedTime} {tags} {section} type={"article"} {imageLink}/>
 
-![Make Alt, Super, Ctrl, and Shift behave in Linux](./keyboard.jpg)
-
 # {title}
+
+![Make Alt, Super, Ctrl, and Shift behave in Linux](./keyboard.jpg)
 
 ## Intro
 

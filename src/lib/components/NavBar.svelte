@@ -10,7 +10,7 @@
 </script>
 
 <nav
-  class="flex flex-nowrap bg-elevation-1 px-7 py-3 w-full justify-between border-b-2 border-outline-variant"
+  class="flex flex-nowrap bg-elevation-1 px-3 py-3 w-full sm:px-7 justify-between border-b-2 border-outline-variant"
 >
   <Logo />
   <TopMenuLinks bind:path />
