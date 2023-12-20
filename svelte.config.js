@@ -70,7 +70,6 @@ const config = {
     }),
     unifiedPreprocess,
     mdsvex(mdsvexConfig),
-
     sveltePreprocess({
       postcss: true
     }),

@@ -3,28 +3,28 @@
   import type { Post } from '$lib/posts';
   import { siteConfig } from '$lib/site.config';
   import Pill from './Pill.svelte';
+
   export let tagsPerCard = siteConfig.tagsPerCard;
   export let post: Post;
-  const image =
+  const imageSrc =
     post.image?.charAt(0) == '.'
       ? // slightly abusing URL API to avoid writing own relative path calculation
         getImageByPath(new URL(post?.image, `file://dummy${post.dir}`).pathname).default
       : // leave the link "as is" because it is an external link
-        post.image;
+        post?.image;
+  console.log(imageSrc);
 </script>
 
 <article class="flex flex-col justify-between">
   <div class="flex flex-col">
     <a href="/{post.slug}" class="w-full mb-7 mx-auto">
       <!-- <a data-sveltekit-reload href={post.slug} class="w-full mb-7 mx-auto"> use this if you need a full page reload https://kit.svelte.dev/docs/link-options -->
-      {#if post.image === ''}
+      {#if imageSrc === '' || imageSrc === undefined}
         <div class="w-full aspect-video bg-elevation-5" />
+      {:else if imageSrc?.includes('src')}
+        <enhanced:img src={`"${imageSrc}"`} alt={post.alt || 'Blog Post by: ' + post.author} />
       {:else}
-        <img
-          class="w-full aspect-video"
-          src={image}
-          alt={post.alt || 'Blog Post by: ' + post.author}
-        />
+        <img src={imageSrc} alt={post.alt || 'Blog Post by: ' + post.author} />
       {/if}
     </a>
     <header class="flex flex-col mb-3">
