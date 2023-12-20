@@ -59,14 +59,13 @@
     "typescript": "^5.3.3",
     "unist-builder": "^4.0.0",
     "unist-util-visit": "^5.0.0",
-    "vite": "next"
-  },
-  "type": "module",
-  "dependencies": {
+    "@sveltejs/enhanced-img": "^0.1.7",
+    "vite": "next",
     "hast-util-to-html": "^9.0.0",
     "magic-string": "^0.30.5",
     "mdast-util-to-hast": "^13.0.2",
-    "mdast-util-to-markdown": "^2.1.0",
-    "npm": "^10.2.5"
-  }
+    "mdast-util-to-markdown": "^2.1.0"
+  },
+  "type": "module",
+  "dependencies": {}
 }

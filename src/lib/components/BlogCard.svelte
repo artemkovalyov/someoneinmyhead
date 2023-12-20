@@ -21,8 +21,6 @@
       <!-- <a data-sveltekit-reload href={post.slug} class="w-full mb-7 mx-auto"> use this if you need a full page reload https://kit.svelte.dev/docs/link-options -->
       {#if imageSrc === '' || imageSrc === undefined}
         <div class="w-full aspect-video bg-elevation-5" />
-      {:else if imageSrc?.includes('src')}
-        <enhanced:img src={`"${imageSrc}"`} alt={post.alt || 'Blog Post by: ' + post.author} />
       {:else}
         <img src={imageSrc} alt={post.alt || 'Blog Post by: ' + post.author} />
       {/if}
