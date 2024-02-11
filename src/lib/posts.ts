@@ -58,7 +58,6 @@ const postsList = Object.entries(postModules)
 
 // for a quick fetch of posts when navigating
 const postsMap = new Map(postsList.map((post) => [post.slug, post]));
-
 const getPostBySlug = (slug: string): Post | undefined => postsMap.get(slug);
 // full posts list
 const getPostsList = () => postsList;
