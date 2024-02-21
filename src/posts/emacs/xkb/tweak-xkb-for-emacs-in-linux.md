@@ -94,14 +94,14 @@ I want to convert into the configuration shared above.
 
 ```bash
 ○ → xmodmap
-// highlight-start
+//>~~
 xmodmap:  up to 4 keys per modifier, (keycodes in parentheses):
 
 shift       Shift_L (0x32),  Shift_R (0x3e)
 lock        Caps_Lock (0x42)
-// highlight-end
+//<~~
 control     Control_L (0x25),  Control_R (0x69)
-// highlight-next-line
+//~~
 mod1        Alt_L (0x40),  Alt_R (0x6c),  Alt_L (0xcc),  Meta_L (0xcd)
 mod2        Num_Lock (0x4d)
 mod3
@@ -125,9 +125,11 @@ xmodmap:  up to 2 keys per modifier, (keycodes in parentheses):
 
 shift       Shift_L (0x32),  Shift_R (0x3e)
 lock
+//>++
 control     Control_L (0x25)
 mod1        Alt_L (0x40)
 mod2        Meta_L (0x85)
+//<++
 mod3        Hyper_L (0x42),  ISO_Level5_Shift (0xcb)
 mod4        Super_R (0x6c)
 mod5        ISO_Level3_Shift (0x5c)
