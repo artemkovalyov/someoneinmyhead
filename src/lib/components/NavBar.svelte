@@ -5,7 +5,6 @@
   import TopMenuLinks from './TopMenuLinks.svelte';
 
   export let open: boolean;
-  export let dark: boolean;
   export let path: string;
 </script>
 
@@ -15,7 +14,7 @@
   <Logo />
   <TopMenuLinks bind:path />
   <div class="flex gap-x-5 justify-end">
-    <ThemeToggle bind:dark />
+    <ThemeToggle />
     <HamburgerMenu bind:open />
   </div>
 </nav>

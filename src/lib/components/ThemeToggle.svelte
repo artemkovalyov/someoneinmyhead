@@ -1,18 +1,48 @@
 <script lang="ts">
-  export let dark: boolean;
+  import { onMount } from 'svelte';
+  let dark: boolean;
+  let hidden: boolean = true;
+
+  onMount(() => {
+    // use the existence of the dark class on the html element for the initial value
+    dark = document.documentElement.classList.contains('dark');
+
+    // show UI controls after we know the mode
+    hidden = false;
+  });
+
   let toggleTheme = () => {
-    dark = !dark;
     if (dark) {
-      window.document.documentElement.classList.remove('light');
-      window.document.documentElement.classList.add('dark');
-    } else {
       window.document.documentElement.classList.remove('dark');
-      window.document.documentElement.classList.add('light');
+    } else {
+      window.document.documentElement.classList.add('dark');
     }
+    window.localStorage.theme = dark ? 'light' : 'dark';
+    dark = !dark;
   };
 </script>
 
-<button id="theme-toggle" type="button" class="text-base text-primary" on:click={toggleTheme}>
+<svelte:head>
+  <script>
+    if (
+      window.localStorage.theme === 'dark' ||
+      (window.matchMedia('(prefers-color-scheme: dark)').matches &&
+        !('theme' in window.localStorage))
+    ) {
+      window.document.documentElement.classList.add('dark');
+    } else {
+      window.document.documentElement.classList.remove('dark');
+    }
+  </script>
+</svelte:head>
+
+<button
+  id="theme-toggle"
+  type="button"
+  class="text-base text-primary"
+  class:hidden
+  on:click={toggleTheme}
+>
   {#if dark}
     <svg
       id="theme-toggle-dark-icon"
