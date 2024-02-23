@@ -13,9 +13,9 @@
 
   let toggleTheme = () => {
     if (dark) {
-      window.document.documentElement.classList.remove('dark');
+      document.documentElement.classList.remove('dark');
     } else {
-      window.document.documentElement.classList.add('dark');
+      document.documentElement.classList.add('dark');
     }
     window.localStorage.theme = dark ? 'light' : 'dark';
     dark = !dark;
@@ -25,13 +25,12 @@
 <svelte:head>
   <script>
     if (
-      window.localStorage.theme === 'dark' ||
-      (window.matchMedia('(prefers-color-scheme: dark)').matches &&
-        !('theme' in window.localStorage))
+      localStorage.theme === 'dark' ||
+      (window.matchMedia('(prefers-color-scheme: dark)').matches && !('theme' in localStorage))
     ) {
-      window.document.documentElement.classList.add('dark');
+      document.documentElement.classList.add('dark');
     } else {
-      window.document.documentElement.classList.remove('dark');
+      document.documentElement.classList.remove('dark');
     }
   </script>
 </svelte:head>
