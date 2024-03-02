@@ -4,7 +4,7 @@ import mdsvexConfig from './mdsvex.config.js';
 import adapter from '@sveltejs/adapter-static';
 import sveltePreprocess from 'svelte-preprocess';
 import { importAssets } from 'svelte-preprocess-import-assets';
-import { mdsvexGlobalComponents } from './plugins/mdsvex/inject-global-imports-to-mdsvex.mjs';
+import { mdsvexGlobalComponents } from './plugins/mdsvex/inject-global-imports-to-mdsvex.js';
 // import { vitePreprocess } from '@sveltejs/kit/vite';
 import { unified } from 'unified';
 import remarkParse from 'remark-parse';
