@@ -1,3 +1,6 @@
+<script>
+</script>
+
 # Big ABC!!!
 
 I'm on the newline
@@ -10,31 +13,11 @@ And this is a new line
 
 ### I'm a header on a new line
 
-:::note{.tip.admonition.not-prose #your-id}
+:::info{title="Default XKB configuration" #default-xkb-configuration}
 
-Markdown content of any kind
-
-:::
-
-:::note{title="your-title" #your-id}
-
-Markdown content of any kind
+Most of the Linux distributions ship a default XKB configuration that leaves you with only the most popular modifiers like <kbd>Alt</kbd>, <kbd>Enter</kbd>, <kbd>Super</kbd>, <kbd>Ctrl</kbd>, and <kbd>Shift</kbd>. They are usually mapped to respective keys on your keyboard. <kbd>Super</kbd> is most frequently mapped to <kbd>Win</kbd> key on the most laptops I've used.
 
 :::
-
-:::note{title="your-title" #your-id}
-
-Markdown content of any kind
-
-:::
-
-:::note{title="your-title" #your-id}
-
-Markdown content of any kind
-
-:::
-
-::::note{ #icd}
 
 ### abc
 

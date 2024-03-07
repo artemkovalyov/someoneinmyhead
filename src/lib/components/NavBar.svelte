@@ -3,7 +3,6 @@
   import Logo from './Logo.svelte';
   import ThemeToggle from './ThemeToggle.svelte';
   import TopMenuLinks from './TopMenuLinks.svelte';
-
   export let open: boolean;
   export let path: string;
 </script>
