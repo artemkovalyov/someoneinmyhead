@@ -59,7 +59,7 @@
     "typescript": "^5.3.3",
     "unist-builder": "^4.0.0",
     "unist-util-visit": "^5.0.0",
-    "@sveltejs/enhanced-img": "^0.1.8",
+    "@sveltejs/enhanced-img": "^0.2.1",
     "vite": "next",
     "hast-util-to-html": "^9.0.0",
     "magic-string": "^0.30.7",
