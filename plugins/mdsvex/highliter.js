@@ -115,7 +115,7 @@ async function highlighter(code, lang, meta) {
 
   const shikiHighlighter = await getHighlighter({
     themes: ['github-dark', 'github-light'],
-    langs: ['bash', 'css', 'js', 'ts', 'ansi', 'properties', 'xml', 'yml']
+    langs: ['bash', 'css', 'js', 'ts', 'ansi', 'properties', 'xml', 'yaml', 'yml']
   });
 
   let codeHtml = shikiHighlighter.codeToHtml(cleanCode, {
