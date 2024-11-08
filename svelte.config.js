@@ -2,6 +2,7 @@ import { mdsvex } from 'mdsvex';
 import mdsvexConfig from './mdsvex.config.js';
 // import adapter from '@sveltejs/adapter-auto';
 import adapter from '@sveltejs/adapter-static';
+// import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import sveltePreprocess from 'svelte-preprocess';
 import { importAssets } from 'svelte-preprocess-import-assets';
 import { mdsvexGlobalComponents } from './plugins/mdsvex/inject-global-imports-to-mdsvex.js';
@@ -58,11 +59,9 @@ const unifiedPreprocess = {
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-  extensions: ['.svelte', ...mdsvexConfig.extensions],
-
-  // Consult https://github.com/sveltejs/svelte-preprocess
-  // for more information about preprocessors
+  extensions: ['.svelte', '.svelte.md', '.md', '.svx'],
   preprocess: [
+    // vitePreprocess(),
     // inject certain components to every MD file to be considered by MDSvex when the component is rendered.
     mdsvexGlobalComponents({
       componentsDir: `$lib/components`,
@@ -73,21 +72,17 @@ const config = {
     sveltePreprocess({
       postcss: true
     }),
-    // vitePreprocess(),
-    importAssets() // imports static assets to accommodate static builds, should be after mdsvex, otherwise encoding of
+    importAssets() // imports static assets to accommodate static builds, should be after mdsvex, otherwise encoding
   ],
 
   kit: {
-    adapter: adapter({
-      // default options are shown. On some platforms
-      // these options are set automatically — see below
-      // pages: 'build',
-      // assets: 'build',
-      // fallback: null, //'200.html',
-      // entries: ['/abc', '/arr'],
-      // precompress: true
-      // strict: true
-    })
+    // adapter-auto only supports some environments, see https://svelte.dev/docs/kit/adapter-auto for a list.
+    // If your environment is not supported, or you settled on a specific environment, switch out the adapter.
+    // See https://svelte.dev/docs/kit/adapters for more information about adapters.
+    adapter: adapter(),
+    alias: {
+      $plugins: 'plugins'
+    }
   }
 };
 

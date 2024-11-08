@@ -1,9 +1,11 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [
-    './src/**/*.{html,js,mjs,svelte,ts,md,svx}',
-    './plugins/**/*.{html,js,mjs,svelte,ts,md,svx}'
-  ],
+import aspectRatio from '@tailwindcss/aspect-ratio';
+import containerQueries from '@tailwindcss/container-queries';
+import forms from '@tailwindcss/forms';
+import typography from '@tailwindcss/typography';
+import type { Config } from 'tailwindcss';
+
+export default {
+  content: ['./src/**/*.{html,js,svelte,ts}', './plugins/**/*.{html,js,mjs,svelte,ts,md,svx}'],
   darkMode: 'class',
   theme: {
     extend: {
@@ -200,5 +202,5 @@ module.exports = {
       }
     }
   },
-  plugins: [require('@tailwindcss/typography'), require('@tailwindcss/forms')]
-};
+  plugins: [typography, forms, containerQueries, aspectRatio]
+} satisfies Config;

@@ -1,17 +1,16 @@
 @import 'tailwindcss/base';
 @import 'theme.css';
-@import 'prism-highlight.css';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
 /* Make it easier to denote keyboard keys in blogs */
 kbd {
-    @apply px-2 py-1.5 text-sm align-middle font-semibold border rounded-lg border-outline bg-surface-variant text-on-surface-variant;
+    @apply rounded-lg border border-outline bg-surface-variant px-2 py-1.5 align-middle text-sm font-semibold text-on-surface-variant;
 }
 
 /* AutoLink for every header with '#' */
 :where(h1, h2, h3, h4, h5, h6) .icon-link {
-    @apply relative before:absolute before:content-['#'] before:text-primary before:top-1 before:left-[-1.3ch] before:leading-none before:opacity-0 before:transition-all before:duration-300 before:ease-in before:hover:underline;
+    @apply relative before:absolute before:left-[-1.3ch] before:top-1 before:leading-none before:text-primary before:opacity-0 before:transition-all before:duration-300 before:ease-in before:content-['#'] before:hover:underline;
 }
 
 :where(h1, h2, h3, h4, h5, h6):hover .icon-link::before {
@@ -34,22 +33,22 @@ pre.shiki {
 .shiki span.line:before {
     counter-increment: linenumber; /* increment the counter by 1 */
     content: counter(linenumber); /* add current counter value as text */
-    @apply w-7 mr-3 inline-flex text-right text-secondary-palette-60 border-r-[0.1rem] border-secondary-palette-60;
+    @apply mr-3 inline-flex w-7 border-r-[0.1rem] border-secondary-palette-60 text-right text-secondary-palette-60;
 }
 /* override line number with diff indicator for adding */
 .shiki span.plus:before {
     content: '\ff0b'; /* add current counter value as text */
-    @apply text-green-500 font-extrabold;
+    @apply font-extrabold text-green-500;
 }
 
 /* override line number with diff  indicator for removing*/
 .shiki span.minus:before {
     content: '\2014'; /* add current counter value as text */
-    @apply text-red-400 font-extrabold;
+    @apply font-extrabold text-red-400;
 }
 
 .shiki {
-    @apply !bg-elevation-1 !m-0 px-4;
+    @apply !m-0 !bg-elevation-1 px-4;
 }
 
 .shiki code {
@@ -66,7 +65,7 @@ pre.shiki {
 }
 
 .shiki .line.highlight {
-    @apply -mx-8 px-8 bg-elevation-3;
+    @apply -mx-8 bg-elevation-3 px-8;
 }
 
 :root.dark .shiki,
